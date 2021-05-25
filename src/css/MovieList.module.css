@@ -1,5 +1,6 @@
 .heading {
     color:var(--main-header);
+    margin-bottom: 10px;
 }
 
 .filterLine {
@@ -15,4 +16,38 @@
 .filterLine a {
     text-decoration: none;
     color: #E9E9E9;
+}
+
+.featuredMovieWrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 170px;
+    margin-bottom: 40px;
+}
+
+.featuredMovieWrapper img {
+    width: 100%;
+}
+
+.headerImg {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.imgOverlay {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: 25% 70%;
+    column-gap: 5%;
+    margin-left: 10px;
+    align-items: end;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.date {
+    color: var(--secondary-header);
+    font-size: 1.3rem;
 }

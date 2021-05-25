@@ -14,7 +14,7 @@ function MovieList() {
                     <h3>På bio nu</h3>
                     <a href="#">Visa filter</a>
                 </div>
-                {/* MovieList component here */}
+                {/* ---> MovieList component here <---- */}
             </div>
         </div>
     )
