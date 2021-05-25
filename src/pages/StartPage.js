@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 const StartPage = () => {
     return(
         <div className={styles.startPageWrapper}>
-            <h1>Start Sida</h1>
             <Hero />
         </div>
     )
