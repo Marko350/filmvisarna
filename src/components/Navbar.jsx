@@ -6,16 +6,17 @@ const Navbar = () => {
   return (
     <nav className={navbar}>
       <i class="fas fa-bars"></i>
-      <div className={links}>
-        <NavLink to="/">Startsidan</NavLink>
-        <NavLink to="/movies">Alla Filmer</NavLink>
-        <NavLink to="search">Sök Filmer</NavLink>
-        <NavLink to="/about">Om oss</NavLink>
-        <span>Logga in/Registrera</span>
-      </div>
       <div className={pic}>
         <img src={logo} alt="Logo" />
       </div>
+      <div className={links}>
+        <NavLink to="/">Startsidan</NavLink> <span></span>
+        <NavLink to="/movies">Alla Filmer</NavLink> <span></span>
+        <NavLink to="search">Sök Filmer</NavLink> <span></span>
+        <NavLink to="/about">Om oss</NavLink> <span></span>
+        <p style={{ cursor: "pointer" }}>Logga in/Registrera</p>
+      </div>
+
       <i class="fas fa-user"></i>
     </nav>
   );
