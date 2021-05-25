@@ -10,7 +10,7 @@ const uri =
 // Routes
 const movieRoutes = require("./routes/movieRoutes");
 const screensRoutes = require("./routes/screensRoutes");
-// const showingsRoutes = require("./routes/showingsRoutes");
+const showingsRoutes = require("./routes/showingsRoutes");
 
 // Server Setup
 const app = express();
@@ -44,7 +44,7 @@ mongoose
 // Routes setup
 app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/screens", screensRoutes);
-// app.use("/api/v1/showings", showingsRoutes);
+app.use("/api/v1/showings", showingsRoutes);
 
 // Start Server
 app.listen(port, (err) => {
