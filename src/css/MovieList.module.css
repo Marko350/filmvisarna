@@ -1,0 +1,18 @@
+.heading {
+    color:var(--main-header);
+}
+
+.filterLine {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--main-header);
+}
+
+.filterLine h3 {
+    font-size: 1.1rem;
+}
+
+.filterLine a {
+    text-decoration: none;
+    color: #E9E9E9;
+}
