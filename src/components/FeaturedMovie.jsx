@@ -5,9 +5,7 @@ import posterImg from '../assets/200px-CasablancaPoster-Gold.jpg';
 function FeaturedMovie() {
     return (
         <div className={styles.featuredMovieWrapper}>
-            <div className={styles.headerImg}>
-                <img src={headerImg} alt="Casablanca placeholder" />
-            </div>
+            <img src={headerImg} alt="Casablanca placeholder" />
             <div className={styles.imgOverlay}>
                 <img src={posterImg} alt="Casablanca poster placeholer" />
                 <div className="movie-info">
