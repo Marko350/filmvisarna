@@ -12,16 +12,25 @@ const MovieProvider = (props) => {
     setAllMovies(movies);
   }
 
-  // Run based on id in route on movie details page on load
-  const getMovieById = async (id) => {
-    let movie = await fetch(`/api/v1/movies/${id}`);
+  // Run based on id in route on movie details-page on load
+  const getMovieById = async (movieId) => {
+    let movie = await fetch(`/api/v1/movies/${movieId}`);
     movie = await movie.json();
     console.log(movie);
+  }
+
+  // Use on booking-page to get the correct showing with info about booked seats etc
+  // * Note: Might want to remove array from model since we will only have one screen and one movie here
+  const getShowingById = async (showingId) => {
+    let showing = await fetch (`/api/v1/showings/${showingId}`);
+    showing = await showing.json();
+    console.log(showing);
   }
 
   useEffect(() => {
     getAllMovies();
     getMovieById('60acacd346075c18aeee45b4');
+    getShowingById('60acc75a2e0da01dfcbd1854');
   }, [])
 
   const values = {
