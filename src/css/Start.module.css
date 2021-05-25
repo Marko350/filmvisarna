@@ -5,3 +5,9 @@
   padding: 2rem;
   margin: 1rem;
 }
+
+.startHeader {
+  color: var(--main-header);
+  margin: 1rem;
+  border-bottom: 5px solid white;
+}
