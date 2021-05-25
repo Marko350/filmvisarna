@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+    --main-font: 'Poppins';
+    --special-font: 'Pattaya';
+    --ticket-font: 'Roboto Mono';
+    --card-background: #434343;
+    --card-shadow: 3px 3px 6px #00000075;
+    --card-padding: 20px;
+    --main-header: #7C96AC;
+    --secondary-header: #CF8D83;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #262626;
+    color: #E9E9E9;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+}
+
+button {
+    padding: 10px 25px;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: var(--main-header);
+    font-family: var(--main-font);
+    font-weight: 500;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+        max-width: 1000px;
+    }
+}
