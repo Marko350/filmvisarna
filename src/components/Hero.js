@@ -1,3 +1,5 @@
+import styles from "../css/HeroComp.module.css";
+
 const Hero = () => {
     return(
         <div className={styles.heroWrapper}>
