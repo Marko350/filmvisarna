@@ -1,5 +1,6 @@
 import styles from '../css/MovieList.module.css';
 import FeaturedMovie from '../components/FeaturedMovie';
+import MovieCardList from '../components/MovieCardList';
 
 function MovieList() {
     return (
@@ -14,7 +15,7 @@ function MovieList() {
                     <h3>På bio nu</h3>
                     <a href="#">Visa filter</a>
                 </div>
-                {/* ---> MovieList component here <---- */}
+                <MovieCardList />
             </div>
         </div>
     )
