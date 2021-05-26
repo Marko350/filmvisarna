@@ -11,7 +11,7 @@ function App() {
         <MovieProvider>
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
-          <Route exact path="/movie-details" component={MovieDetails} />
+          <Route exact path="/movie-list/:id" component={MovieDetails} />
         </MovieProvider>
       </BrowserRouter>
     </div>
