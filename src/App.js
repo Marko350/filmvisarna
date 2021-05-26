@@ -2,6 +2,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import MovieProvider from "./contexts/MovieContext";
 import MovieList from "./pages/MovieList";
 import StartPage from "./pages/StartPage";
+import Start from "./pages/Start";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <MovieProvider>
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
+          <Route exact path="/test" component={Start} />
         </MovieProvider>
       </BrowserRouter>
     </div>
