@@ -29,6 +29,10 @@ const MovieProvider = (props) => {
     return showing;
   }
 
+  const getShowingsByMovieAndDate = async (movieId, date) => {
+    
+  }
+
   useEffect(() => {
     getAllMovies();
     getMovieById('60acacd346075c18aeee45b4');
