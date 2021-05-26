@@ -5,8 +5,10 @@ import Posters from "../components/Poters";
 const StartPage = () => {
     return(
         <div className={styles.startPageWrapper}>
-            <Hero />
-            <Posters />
+                <Hero />
+            <div className="container">
+                <Posters />
+            </div>
         </div>
     )
 }
