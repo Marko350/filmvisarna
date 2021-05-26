@@ -21,12 +21,11 @@ const getShowingById = async (req, res) => {
 };
 
 const getShowingsByMovieAndDate = async (req, res) => {
-    console.log(req.query)
     let queryObj = {
         movieId: req.query.movieId,
         date: req.query.date,
     }
-    
+
     try {
         // Add sort by time when we have more than one showing on the same date
         let showings = await Showings.find(queryObj).exec();

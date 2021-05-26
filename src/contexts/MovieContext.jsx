@@ -38,7 +38,16 @@ const MovieProvider = (props) => {
     // Send down querys in route to back-end
     let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
     showings = await showings.json();
-    console.log('showings by movie:', showings);
+    console.log('Showings by movie and date:', showings);
+    return showings;
+  }
+
+  // Use for schedule on start-page
+  // Might need to populate in back-end with movie-title and poster-link
+  const getShowingsByCurrentDate = async () => {
+    let showings = await fetch('/api/v1/showings/todaysShowings');
+    showings = await showings.json();
+    console.log('All showings today:', showings);
     return showings;
   }
 
@@ -47,6 +56,7 @@ const MovieProvider = (props) => {
     getMovieById('60acacd346075c18aeee45b4');
     getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
+    getShowingsByCurrentDate();
   }, [])
 
   const values = {
