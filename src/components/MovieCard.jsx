@@ -2,14 +2,14 @@ import styles from '../css/MovieCard.module.css';
 
 function MovieCard({ movie }) {
     return (
-        <div className="movie-card">
+        <div className={styles.movieCard}>
             <img src={movie.poster} alt={movie.name} />
-            <div className="movie-card-info">
+            <div className={styles.movieInfo}>
                 <h4>{movie.title}</h4>
-                <div className="movie-info-details">
-                    <p>{movie.genre}</p>
-                    <p>{movie.length} min</p>
-                    <p>{movie.ageLimit} år</p>
+                <div className={styles.movieInfoDetails}>
+                    <p className={styles.movieGenre}>{movie.genre}</p>
+                    <p className={styles.movieLength}>{movie.length} min</p>
+                    <p className={styles.movieAgeLimit}>{movie.ageLimit} år</p>
                 </div>
             </div>
         </div>

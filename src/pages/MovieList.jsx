@@ -13,7 +13,7 @@ function MovieList() {
                 <h2 className={styles.heading}>Alla filmer</h2>
                 <div className={styles.filterLine}>
                     <h3>På bio nu</h3>
-                    <a href="/movie-list">Visa filter</a>
+                    <p>Visa filter</p> {/* Make onClick when filter component is done */}
                 </div>
                 <MovieCardList />
             </div>
