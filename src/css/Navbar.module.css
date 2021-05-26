@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  max-height: 80px;
 }
 
 .navbar a {
@@ -26,8 +27,8 @@
 }
 
 .pic img {
-  width: 60%;
-  height: 70%;
+  max-width: 70%;
+  max-height: 70%;
   margin: auto;
 }
 
