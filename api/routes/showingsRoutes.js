@@ -5,6 +5,7 @@ const showingsController = require("../controllers/showingsController");
 
 router.post("", showingsController.addShowing);
 router.get("", showingsController.getShowingsByMovieAndDate);
+router.get("/todaysShowings", showingsController.getShowingByTodaysDate);
 router.get("/:showingsId", showingsController.getShowingById);
 
 module.exports = router;
