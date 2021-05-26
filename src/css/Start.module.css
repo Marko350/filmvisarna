@@ -1,5 +1,5 @@
 .startWrapper {
-  background-color: rgb(238, 238, 238);
+  background-color: #434343;
 }
 
 .startWrapper p {
@@ -19,30 +19,5 @@
   color: var(--main-header);
   margin: 1rem;
   border-bottom: 5px solid white;
-}
-
-.mainButton {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  cursor: pointer;
-}
-
-.mainButton img {
-  width: 100%;
-  filter: drop-shadow(0px 3px 2px rgba(34, 34, 34, 0.466)); 
-}
-
-.mainButton:active img {
-  filter: initial;
-}
-
-.btnLabel {
-  z-index: 10;
-  position: absolute;
-  font-size: 1.4rem;
-  padding-bottom: .2rem;
 }
 

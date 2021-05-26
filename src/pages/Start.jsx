@@ -21,9 +21,8 @@ const Start = () => {
   return ( 
     <div className={`container ${style.startWrapper}`}>
       <h1 className={style.startHeader}>Heading</h1>
-      <p>Hej</p>
-      <div className={style.mainButton}>
-        <h4 className={style.btnLabel}>Logga in</h4>
+      <div className="mainBtn btnSmall">
+        <h4 className="btnLabel">Logga in</h4>
         <img src={button}></img>
       </div>
       { content }
