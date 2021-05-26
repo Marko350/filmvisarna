@@ -20,8 +20,28 @@ const getShowingById = async (req, res) => {
     });
 };
 
+const getShowingsByMovieAndDate = async (req, res) => {
+    // Move this current date to a state in front end
+    // Send down current date to with movieId from params to this route on page load
+    let date = new Date().toISOString().slice(0, 10);
+    console.log(date);
+    console.log(req.body)
+    let queryObj = {
+        movieId: req.body.movieId,
+        date: req.body.date ? req.body.date : date,
+    }
+    try {
+        let showings = await Showings.find(queryObj).exec();
+        if (!showings.length) {
+            res.json({ error: 'No showings for this date' })
+        }
+    } catch (err) {
+        res.json({ error: 'Something went wrong', err });
+    }
+}
 
 module.exports = {
     addShowing,
-    getShowingById
+    getShowingById,
+    getShowingsByMovieAndDate,
 }
