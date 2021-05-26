@@ -31,12 +31,18 @@ const getShowingsByMovieAndDate = async (req, res) => {
         date: req.body.date ? req.body.date : date,
     }
     try {
+        // Add sort by time when we have more than one showing on the same date
         let showings = await Showings.find(queryObj).exec();
         if (!showings.length) {
-            res.json({ error: 'No showings for this date' })
+            res.json({ error: 'No showings for this date' });
+            return;
+        } else {
+            res.json(showings);
+            return;
         }
     } catch (err) {
         res.json({ error: 'Something went wrong', err });
+        return;
     }
 }
 
