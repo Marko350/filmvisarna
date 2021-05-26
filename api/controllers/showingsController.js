@@ -25,10 +25,10 @@ const getShowingsByMovieAndDate = async (req, res) => {
     // Send down current date to with movieId from params to this route on page load
     let date = new Date().toISOString().slice(0, 10);
     console.log(date);
-    console.log(req.body)
+    console.log(req.query)
     let queryObj = {
-        movieId: req.body.movieId,
-        date: req.body.date ? req.body.date : date,
+        movieId: req.query.movieId,
+        date: req.query.date ? req.query.date : date,
     }
     try {
         // Add sort by time when we have more than one showing on the same date
