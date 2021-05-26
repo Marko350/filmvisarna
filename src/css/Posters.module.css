@@ -1,9 +1,7 @@
-.postersContainer {
+.postersWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
-
-    margin-top: 1rem;
 }
 
 .posterContainerOne {
@@ -19,7 +17,7 @@
     height: 90%;
 }
 
-
+/* IMAGE STYLES*/
 .imgOne {
     width: 100%;
     height: 100%;
@@ -33,17 +31,116 @@
 .imgThree {
     width: 100%;
 }
+/* -END- IMGAE STYLES*/
 
 .schema {
     background-color: var(--card-background);
     margin-top: 1rem;
     padding: 1.7rem;
+    box-shadow: var(--card-shadow);
 }
 
+/* FONT STYLES */
 .schema h2 {
     color: var(--secondary-header);
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.schema p {
+    font-size: 18px;
+}
+
+.postersHeading {
+    color: var(--main-header);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
 }
 
 .margin {
     margin-top: 0.7rem;
+}
+/* -END- FONT STYLES */
+
+@media only screen and (min-width: 768px) {
+    .postersWrapper {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .posterContainerOne {
+        width: 100%;
+    }
+
+    .posterContainerTwo {
+        width: 100%;
+    }
+
+    /* IMAGE STYLES*/
+    .imgOne {
+        width: 100%;
+    }
+
+    .imgTwo {
+        padding-right: 7.5px;
+    }
+
+    .imgThree {
+        padding-left: 7.5px;
+    }
+
+    .imgTwo, .imgThree {
+        width: 50%;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    /* -END- IMGAE STYLES*/
+
+    .posterContainerTwo {
+        flex-direction: row;
+    }
+
+    .mainWrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .schema {
+        width: 80%;
+        margin-top: 0;
+        margin-left: 15px;
+        padding: 30px;
+    }
+
+    /* FONT STYLES */
+    .schema h2 {
+        font-size: 30px;
+    }
+
+    .schema p {
+        font-size: 25px;
+    }
+    /* -END- FONT STYLES */
+}
+
+  @media only screen and (min-width: 1200px) {
+
+    .schema {
+        padding: 50px;
+    }
+
+    /* FONT STYLES */
+    .schema p {
+        font-size: 30px;
+    }
+
+    .schema h2 {
+        font-size: 35px;
+    }
+    /* -END- FONT STYLES */
+
+    .margin {
+        margin-top: 50px;
+    }
 }

@@ -8,7 +8,9 @@ const Posters = () => {
     const renderPosters = () => {
         return(
             <div>
-                <div className={styles.postersContainer}>
+                <h2 className={styles.postersHeading}>Dagens visningar</h2>
+                <div className={styles.mainWrapper}>
+                <div className={styles.postersWrapper}>
                     <div className={styles.posterContainerOne}>
                         <img className={styles.imgOne} src={allMovies[0].poster} alt={allMovies[0].title} />
                     </div>
@@ -37,6 +39,8 @@ const Posters = () => {
                         <p>This Gun For Hire</p>
                     </div>
                 </div>
+            </div>
+
             </div>
         );
     };
