@@ -17,6 +17,7 @@ const MovieProvider = (props) => {
     let movie = await fetch(`/api/v1/movies/${movieId}`);
     movie = await movie.json();
     console.log(movie);
+    return movie;
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
@@ -25,6 +26,7 @@ const MovieProvider = (props) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
     console.log(showing);
+    return showing;
   }
 
   useEffect(() => {
