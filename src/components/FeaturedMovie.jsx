@@ -10,13 +10,13 @@ function FeaturedMovie({ movie }) {
             </div>
             <div className={styles.imgWrapper}>
                 <img className={styles.posterImg} src={movie.poster} alt={`${movie.title} poster`} />
-                <div className="movie-info">
+                <div className={styles.movieInfo}>
                     <p className={styles.title}>{movie.title}</p>
                     <p className={styles.date}>21/5 - 3/6</p>
-                    <p className={styles.dateDesktop}>Visas hos Filmvisarna från den 21/5 till den 3/6</p>
+                    <p className={styles.dateDesktop}>Visas hos Filmvisarna från den <span className={styles.redText}>21/5</span> till den <span className={styles.redText}>3/6</span></p>
                 </div>
-                <div className={styles.buyTickets}>Köp Biljetter</div>
             </div>
+            <div className={styles.buyTickets}>Köp Biljetter</div>
         </div>
     )
 }
