@@ -1,10 +1,16 @@
 import MovieCard from './MovieCard';
+import { MovieContext } from '../contexts/MovieContext';
+import { useContext } from 'react';
 
 function MovieCardList() {
+
+    const { allMovies } = useContext(MovieContext);
+
     return (
-        <div>
-            <h1>Movie card list works</h1>
-            <MovieCard />
+        <div className="movie-card-list">
+            { allMovies && allMovies.map((movie, i) => (
+                <MovieCard key={i} movie={movie} />
+            ))}
         </div>
     )
 }

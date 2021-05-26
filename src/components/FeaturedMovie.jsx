@@ -1,4 +1,4 @@
-import styles from '../css/MovieList.module.css';
+import styles from '../css/FeaturedMovie.module.css';
 import headerImg from '../assets/Placeholder-featuredMovie(1).jpg';
 import posterImg from '../assets/200px-CasablancaPoster-Gold.jpg';
 

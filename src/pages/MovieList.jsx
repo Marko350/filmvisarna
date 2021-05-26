@@ -13,7 +13,7 @@ function MovieList() {
                 <h2 className={styles.heading}>Alla filmer</h2>
                 <div className={styles.filterLine}>
                     <h3>På bio nu</h3>
-                    <a href="#">Visa filter</a>
+                    <a href="/movie-list">Visa filter</a>
                 </div>
                 <MovieCardList />
             </div>
