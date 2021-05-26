@@ -29,14 +29,24 @@ const MovieProvider = (props) => {
     return showing;
   }
 
+  // Use on movie details-page to get showings for specific movie
   const getShowingsByMovieAndDate = async (movieId, date) => {
-    
+    // Will set date to current date if not date is sent into function
+    if (!date) {
+      date = new Date().toISOString().slice(0, 10);
+    }
+    // Send down querys in route to back-end
+    let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
+    showings = await showings.json();
+    console.log('showings by movie:', showings);
+    return showings;
   }
 
   useEffect(() => {
     getAllMovies();
     getMovieById('60acacd346075c18aeee45b4');
     getShowingById('60acc75a2e0da01dfcbd1854');
+    getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
   }, [])
 
   const values = {
