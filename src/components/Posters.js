@@ -8,6 +8,7 @@ const Posters = () => {
     const renderPosters = () => {
         return(
             <div>
+                {/*Använder allmovies så länge, sen får vi ta bilderna från "dagens visningar(?)" eller liknade */}
                 <h2 className={styles.postersHeading}>Dagens visningar</h2>
                 <div className={styles.mainWrapper}>
                 <div className={styles.postersWrapper}>
@@ -31,7 +32,7 @@ const Posters = () => {
                         <p>Woman On Run</p>
                     </div>
 
-
+                    {/*Hårdkoda detta sålänge, blir någon form av map in le futura :P*/}
                     <div className={styles.margin}>
                         <h2>Time</h2>
                         <p>Woman On Run</p>
