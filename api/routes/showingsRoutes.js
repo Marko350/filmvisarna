@@ -7,5 +7,6 @@ router.post("", showingsController.addShowing);
 router.get("/movie-date", showingsController.getShowingsByMovieAndDate);
 router.get("/todaysShowings", showingsController.getShowingByTodaysDate);
 router.get("/:showingsId", showingsController.getShowingById);
+router.put("/:showingsId/add-seats", showingsController.addSeats);
 
 module.exports = router;

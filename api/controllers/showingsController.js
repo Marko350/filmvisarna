@@ -54,10 +54,24 @@ const getShowingByTodaysDate = async (req, res) => {
     }
 };
 
+const addSeats = async (req, res) => {
+    try {
+        await Showings.findOneAndUpdate(
+            { _id: req.params.showingsId },
+            { $push: { bookedSeats: { $each: req.body.seats } } }
+        ).exec();
+        res.json({ success: "Seats added successfully" });
+    } catch(err) {
+        res.json({ error: err});
+        console.log(err);
+    }
+}
+
 
 module.exports = {
     addShowing,
     getShowingById,
     getShowingsByMovieAndDate,
     getShowingByTodaysDate,
+    addSeats
 }
