@@ -7,7 +7,7 @@ const MovieProvider = (props) => {
   const [todaysShowings, setTodaysShowings] = useState(null);
 
   useEffect(() => {
-  console.log(todaysShowings)
+  console.log("Dagens visningar:", todaysShowings)
   }, [todaysShowings])
 
   const getAllMovies = async () => {
@@ -52,6 +52,14 @@ const MovieProvider = (props) => {
     showings = await showings.json();
     console.log('All showings today:', showings);
     setTodaysShowings(showings)
+    removeDuplicates(showings);
+  }
+
+  //for filtering out showing time duplicates 
+  function removeDuplicates(showingsArr) {
+    let uniq = [];
+    showingsArr.filter(showing => !uniq[showing.time] && (uniq[showing.time] = []))
+    console.log("This is new array uniq:", uniq);
   }
 
   useEffect(() => {
