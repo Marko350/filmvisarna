@@ -1,5 +1,5 @@
 .container {
-  width: 250px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -7,6 +7,7 @@
 .container h1 {
   font-size: 20px;
   margin-bottom: 1rem;
+  color: #7c96ac;
 }
 
 .container img {
@@ -37,4 +38,24 @@
 .imageContainer {
   width: 35%;
   display: flex;
+}
+
+@media only screen and (min-width: 450px) {
+  .movieInfo {
+    font-size: 15px;
+  }
+
+  .ticketInfo {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .movieInfo {
+    font-size: 18px;
+  }
+
+  .ticketInfo {
+    margin-left: 2rem;
+  }
 }

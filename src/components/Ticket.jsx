@@ -15,7 +15,7 @@ const Ticket = () => {
 
   return (
     <div className={container}>
-      <h1>Ticket</h1>
+      <h1>Din biljett</h1>
       <div className={ticketInfo}>
         <div className={imageContainer}>
           <img
