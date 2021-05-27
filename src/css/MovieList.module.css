@@ -16,3 +16,12 @@
 .filterLine p {
     font-size: 1.1rem;
 }
+
+@media (min-width: 768px) {
+
+    .filterLine p:hover {
+        color: #c7c7c7;
+        cursor: pointer;
+    }
+
+}
