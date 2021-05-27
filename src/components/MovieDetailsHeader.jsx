@@ -1,9 +1,22 @@
 import styles from '../css/MovieDetailsHeader.module.css';
+import { useContext, useEffect } from "react";
+import { MovieContext } from "../contexts/MovieContext";
 
-function MovieDetailsHeader() {
+function MovieDetailsHeader({movieId}) {
+
+    const {movieById, getMovieById} = useContext(MovieContext);
+
+    useEffect(() => {
+        getMovieById(movieId);
+    }, [])
+
     return (
+
         <div className="container">
-            <div className={styles.testDiv1}>Header Test</div>
+       
+            { movieById && <div className={styles.testDiv1}>Header Test {movieById.title}</div>}
+            
+
         </div>
     )
 }
