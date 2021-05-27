@@ -52,14 +52,30 @@ const MovieProvider = (props) => {
     showings = await showings.json();
     console.log('All showings today:', showings);
     setTodaysShowings(showings)
-    removeDuplicates(showings);
+    removeDuplicates(showings, "time");
   }
 
-  //for filtering out showing time duplicates 
-  function removeDuplicates(showingsArr) {
+  //for filtering out showing time duplicates
+  function removeDuplicates(showings, time) {
     let uniq = [];
-    showingsArr.filter(showing => !uniq[showing.time] && (uniq[showing.time] = []))
+    // showings.filter(showing => !uniq.time && uniq.push(showing.time))
+    uniq = showings
+       .map(showing => showing[time])
+       .map((showing, i, final) => final.indexOf(showing) === i && i)
+       .filter(showing => showings[showing]).map(showing => showings[showing]); 
+
+
+
     console.log("This is new array uniq:", uniq);
+
+    // showingsArr.forEach((showing) => {
+    // uniq.forEach((obj) => {
+    //   if(showing.time === obj) {
+    //     obj.time.push(showing.movieId);
+    //     console.log("this is version 2 of uniq:", console.log(uniq))
+    //   }
+    // })
+  // })
   }
 
   useEffect(() => {
