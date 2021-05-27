@@ -57,21 +57,41 @@ const MovieProvider = (props) => {
 
   //for filtering out showing time duplicates
   function removeDuplicates(showings, time) {
+
     let uniq = [];
-    // showings.filter(showing => !uniq.time && uniq.push(showing.time))
     uniq = showings
        .map(showing => showing[time])
        .map((showing, i, final) => final.indexOf(showing) === i && i)
        .filter(showing => showings[showing]).map(showing => showings[showing]);
 
-    console.log("This is new array uniq:", uniq);
+      let times = [];
+       uniq.forEach((showing) => {
+         times.push(showing.time);
+         console.log("this is times:", times);
+       })
 
-    let newArr = [];
-    uniq.forEach((showing) => {
-      let tempArr = showings.filter(movie => movie.time === showing.time);
-      newArr.push([showing, tempArr]);
-      console.log("this is new arr", newArr);
-    })
+
+
+    // uniq.forEach((showing) => {
+    //   showings.forEach((org) => {
+    //     if(showing.time === org.time) {
+    //       uniq.push(org.movieId);
+    //       console.log("newnew:", uniq);
+    //     }
+    //   })
+    // })
+
+    // let newArr = [];
+    // uniq.forEach((showing) => {
+    //   let tempArr = showings.filter(movie => movie.time === showing.time);
+    //   // newArr.push([tempArr]);
+    //   tempArr.forEach((showing) => {
+    //     newArr.push(showing.movieId);
+    //   })
+
+    //   console.log("this is temp:", tempArr);
+    //   console.log("this is new arr", newArr);
+    // })
   }
 
   useEffect(() => {
