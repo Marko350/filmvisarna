@@ -1,0 +1,31 @@
+.featuredMovieWrapper {
+    max-height: 300px;
+    position: relative;
+    display: flex;
+}
+
+.featuredMovieWrapper img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.imgOverlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: grid;
+    grid-template-columns: 25% 70%;
+    column-gap: 5%;
+    align-items: end;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.date {
+    color: var(--secondary-header);
+    font-size: 1.3rem;
+}

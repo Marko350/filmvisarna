@@ -1,0 +1,6 @@
+.movieCardList {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 15px;
+    margin: 17px 0;
+}

@@ -1,5 +1,6 @@
 import styles from '../css/MovieList.module.css';
 import FeaturedMovie from '../components/FeaturedMovie';
+import MovieCardList from '../components/MovieCardList';
 
 function MovieList() {
     return (
@@ -12,9 +13,9 @@ function MovieList() {
                 <h2 className={styles.heading}>Alla filmer</h2>
                 <div className={styles.filterLine}>
                     <h3>På bio nu</h3>
-                    <a href="#">Visa filter</a>
+                    <p>Visa filter</p> {/* Make onClick when filter component is done */}
                 </div>
-                {/* ---> MovieList component here <---- */}
+                <MovieCardList />
             </div>
         </div>
     )

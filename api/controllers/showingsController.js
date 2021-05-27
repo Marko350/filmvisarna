@@ -20,8 +20,44 @@ const getShowingById = async (req, res) => {
     });
 };
 
+const getShowingsByMovieAndDate = async (req, res) => {
+    let queryObj = {
+        movieId: req.query.movieId,
+        date: req.query.date,
+    }
+
+    try {
+        // Add sort by time when we have more than one showing on the same date
+        let showings = await Showings.find(queryObj).sort({ time: 1 }).exec();
+        if (!showings.length) {
+            res.json({ error: 'No showings for this date' });
+            return;
+        } else {
+            res.json(showings);
+            return;
+        }
+    } catch (err) {
+        res.json({ error: 'Something went wrong', err });
+        return;
+    }
+}
+
+const getShowingByTodaysDate = async (req, res) => {
+    let queryDate = new Date().toISOString().slice(0, 10);
+    let todaysShowings = await Showings.find({'date': queryDate}).populate('movieId', 'title poster').exec();
+    if (!todaysShowings.length) {
+        res.json({ error: 'There are no showings today' });
+        return;
+    } else {
+        res.json(todaysShowings);
+        return;
+    }
+};
+
 
 module.exports = {
     addShowing,
-    getShowingById
+    getShowingById,
+    getShowingsByMovieAndDate,
+    getShowingByTodaysDate,
 }
