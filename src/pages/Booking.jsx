@@ -1,4 +1,4 @@
-import Tickets from "../components/Tikets";
+import Tickets from "../components/Tickets";
 
 const Booking = () => {
   return (
