@@ -12,6 +12,10 @@ function MovieCard({ movie }) {
                     <p className={styles.movieAgeLimit}>{movie.ageLimit} år</p>
                 </div>
             </div>
+            <div className={styles.readMore}>
+                <p>Läs mer</p>
+                <i className="fas fa-caret-right"></i>
+            </div>
         </div>
     )
 }

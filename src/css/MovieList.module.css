@@ -1,6 +1,6 @@
 .heading {
     color:var(--main-header);
-    margin: 40px 0 10px 0;
+    margin: 30px 0 10px 0;
 }
 
 .filterLine {
@@ -11,4 +11,22 @@
 
 .filterLine h3 {
     font-size: 1.1rem;
+}
+
+.filterLine p {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+
+    .heading {
+        color:var(--main-header);
+        margin: 40px 0 10px 0;
+    }
+
+    .filterLine p:hover {
+        color: #c7c7c7;
+        cursor: pointer;
+    }
+
 }
