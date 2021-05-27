@@ -1,7 +1,7 @@
 import styles from '../css/MovieDetailsHeader.module.css';
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
-import playbtn from "../assets/play-button.svg";
+import playbtn from "../assets/playicon.png";
 
 function MovieDetailsHeader({movieId}) {
 
