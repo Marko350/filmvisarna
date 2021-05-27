@@ -7,13 +7,13 @@ const MovieProvider = (props) => {
   const [todaysShowings, setTodaysShowings] = useState(null);
 
   useEffect(() => {
-  console.log("Dagens visningar:", todaysShowings)
+  // console.log("Dagens visningar:", todaysShowings)
   }, [todaysShowings])
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
-    console.log(movies);
+    // console.log(movies);
     setAllMovies(movies);
   }
 
@@ -29,7 +29,7 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
-    console.log(showing);
+    // console.log(showing);
     return showing;
   }
 
@@ -42,7 +42,7 @@ const MovieProvider = (props) => {
     // Send down querys in route to back-end
     let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
     showings = await showings.json();
-    console.log('Showings by movie and date:', showings);
+    // console.log('Showings by movie and date:', showings);
     return showings;
   }
 
@@ -50,7 +50,7 @@ const MovieProvider = (props) => {
   const getShowingsByCurrentDate = async () => {
     let showings = await fetch('/api/v1/showings/todaysShowings');
     showings = await showings.json();
-    console.log('All showings today:', showings);
+    // console.log('All showings today:', showings);
     setTodaysShowings(showings)
     removeDuplicates(showings, "time");
   }
@@ -62,20 +62,16 @@ const MovieProvider = (props) => {
     uniq = showings
        .map(showing => showing[time])
        .map((showing, i, final) => final.indexOf(showing) === i && i)
-       .filter(showing => showings[showing]).map(showing => showings[showing]); 
-
-
+       .filter(showing => showings[showing]).map(showing => showings[showing]);
 
     console.log("This is new array uniq:", uniq);
 
-    // showingsArr.forEach((showing) => {
-    // uniq.forEach((obj) => {
-    //   if(showing.time === obj) {
-    //     obj.time.push(showing.movieId);
-    //     console.log("this is version 2 of uniq:", console.log(uniq))
-    //   }
-    // })
-  // })
+    let newArr = [];
+    uniq.forEach((showing) => {
+      let tempArr = showings.filter(movie => movie.time === showing.time);
+      newArr.push([showing, tempArr]);
+      console.log("this is new arr", newArr);
+    })
   }
 
   useEffect(() => {
