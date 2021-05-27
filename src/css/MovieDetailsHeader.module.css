@@ -8,15 +8,36 @@
     position: relative;
 }
 
-
-
-.movieDetailsPoster{
-    width: auto;
-    height: 130px;
+.posterTitleGenre{
+    display: flex;
     position: absolute;
     bottom: 10px;
     left: 10px;
 
+}
+
+.movieDetailsPoster{
+    width: auto;
+    height: 130px;
+}
+
+.titleGenre{
+    margin-left: 10px;
+    align-self: flex-end;
+}
+
+.detailsTitle{
+    font-size: 0.8rem;
+}
+
+.detailsGenre{
+    font-size: 0.6rem;
+    color: var(--secondary-header);
+}
+
+.detailsGenreLength{
+    display: flex;
+    
 }
 
 .playbtn{

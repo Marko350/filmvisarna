@@ -16,7 +16,16 @@ function MovieDetailsHeader({movieId}) {
         <div className={styles.moviePosterContainer} >
             <img src={headerImg} className={styles.movieDetailsPlaceHolder} />
              { movieById && 
+                <div className={styles.posterTitleGenre}>
                     <img src={movieById.poster} alt={movieById.name} className={styles.movieDetailsPoster} />
+                    <div className={styles.titleGenre}>
+                        <h1 className={styles.detailsTitle}>{movieById.title}</h1>
+                        <div className={styles.detailsGenreLength}>
+                            <p className={styles.detailsGenre}>{movieById.genre} &nbsp;</p>
+                            <p className={styles.detailsGenre}>&nbsp; {movieById.length} min</p>
+                        </div>
+                    </div>
+                </div>
             }
             <img src={playbtn} className={styles.playbtn} />
         </div>
