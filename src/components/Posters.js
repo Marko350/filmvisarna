@@ -8,40 +8,27 @@ const Posters = () => {
     const renderPosters = () => {
         return(
             <div>
-                {/*Använder allmovies så länge, sen får vi ta bilderna från "dagens visningar(?)" eller liknade */}
                 <h2 className={styles.postersHeading}>Dagens visningar</h2>
                 <div className={styles.mainWrapper}>
-                <div className={styles.postersWrapper}>
-                    <div className={styles.posterContainerOne}>
-                        <img className={styles.imgOne} src={todaysShowings[0].movieId[0].poster} alt={todaysShowings[0].title} />
+                    <div className={styles.postersWrapper}>
+                        <div className={styles.posterContainerOne}>
+                            <img className={styles.imgOne} src={todaysShowings[0].movieId[0].poster} alt={todaysShowings[0].title} />
+                        </div>
+                        <div className={styles.posterContainerTwo }>
+                            <img className={styles.imgTwo} src={todaysShowings[1].movieId[0].poster} alt={todaysShowings[1].title} />
+                            <img className={styles.imgThree} src={todaysShowings[2].movieId[0].poster} alt={todaysShowings[2].title} />
+                        </div>
                     </div>
-                    <div className={styles.posterContainerTwo }>
-                        <img className={styles.imgTwo} src={todaysShowings[1].movieId[0].poster} alt={todaysShowings[1].title} />
-                        <img className={styles.imgThree} src={todaysShowings[2].movieId[0].poster} alt={todaysShowings[2].title} />
-                    </div>
-                </div>
-                <div className={styles.schema}>
-                    <div>
-                        <h2>Time</h2>
-                        <p>Star wars: Return of the jedi</p>
-                    </div>
-
-                    <div className={styles.margin}>
-                        <h2>Time</h2>
-                        <p>The big Sleep</p>
-                        <p>Woman On Run</p>
-                    </div>
-
-                    {/*Hårdkoda detta sålänge, blir någon form av map in le futura :P*/}
-                    <div className={styles.margin}>
-                        <h2>Time</h2>
-                        <p>Woman On Run</p>
-                        <p>Star wars: Return of the jedi</p>
-                        <p>This Gun For Hire</p>
+                    <div className={styles.schema}>
+                        {/*Lopping showing time and movie-title */}
+                        {todaysShowings.map((showing, i) => (
+                            <div className={styles.margin} key={i}>
+                                <h2>{showing.time}</h2>
+                                <p>{showing.movieId[0].title}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
-
             </div>
         );
     };
