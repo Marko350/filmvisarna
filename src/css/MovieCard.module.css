@@ -40,3 +40,68 @@
     padding-left: 8px;
     border-left: 1px solid #777;
 }
+
+.readMore {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .movieCard {
+        grid-template-columns: 12% 63% 17%;
+        column-gap: 4%;
+    }
+
+    .readMore {
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+        align-items: center;
+        padding-right: 24px;
+    }
+
+    .readMore:hover {
+        color: var(--secondary-header);
+        cursor: pointer;
+    }
+
+    .readMore p {
+        padding-right: 10px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .movieCard {
+        grid-template-columns: 100%;
+        grid-template-rows: 470px 25px;
+        border-bottom: none;
+        padding-bottom: 0;
+        row-gap: 4px;
+        align-items: start;
+    }
+
+    .movieCard img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .movieCard h4 {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .movieInfo {
+        margin-bottom: 0;
+    }
+
+    .movieInfoDetails {
+        display: none;
+    }
+
+    .readMore {
+        display: none;
+    }
+
+}
