@@ -20,6 +20,10 @@
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     background-color: #262626;
     color: #E9E9E9;
