@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  max-height: 80px;
+}
+
+.navbar a {
+  color: #e9e9e9;
+  text-decoration: none;
+}
+
+.links {
+  display: none;
+}
+
+.filmStrip {
+  display: none;
+}
+
+.navbar i {
+  font-size: 30px;
+  padding: 1.3rem;
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+}
+
+.pic img {
+  max-width: 70%;
+  max-height: 70%;
+  margin: auto;
+}
+
+.hamburgerLinks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #262626;
+  width: 100%;
+  top: 75px;
+  height: 100vh;
+  padding-top: 1rem;
+  z-index: 1;
+  border-top: 1px solid white;
+}
+
+.hamburgerLinks a {
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.filmStripDesktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    max-height: 100%;
+  }
+
+  .filmStrip {
+    display: inline;
+  }
+
+  .pic img {
+    width: 30%;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .links {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-around;
+  }
+
+  .links a,
+  .links p {
+    padding: 10px;
+  }
+
+  .navbar span {
+    border-left: 7px solid #808080;
+  }
+
+  .navbar i,
+  .hamburgerLinks {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .filmStripDesktop {
+    display: inline;
+  }
+
+  .filmStrip {
+    display: none;
+  }
+
+  .links {
+    width: 850px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .links a,
+  .links p {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 22px;
+    min-width: 145px;
+    text-align: center;
+  }
+
+  .navbar span {
+    border-left: 4px solid #808080;
+  }
+}

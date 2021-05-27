@@ -1,3 +1,7 @@
+.startWrapper {
+  background-color: #434343;
+}
+
 .startWrapper p {
   color: red;
   border: 1px solid white;
