@@ -7,7 +7,7 @@ function MovieDetails(props) {
 
     console.log(props);
     return (
-        <div>
+        <div className="container">
             <MovieDetailsHeader movieId={movieId} />
         </div>
     )
