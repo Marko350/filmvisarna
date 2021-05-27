@@ -4,6 +4,11 @@ export const MovieContext = createContext();
 
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
+  const [todaysShowings, setTodaysShowings] = useState(null);
+
+  useEffect(() => {
+  console.log(todaysShowings)
+  }, [todaysShowings])
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -46,7 +51,7 @@ const MovieProvider = (props) => {
     let showings = await fetch('/api/v1/showings/todaysShowings');
     showings = await showings.json();
     console.log('All showings today:', showings);
-    return showings;
+    setTodaysShowings(showings)
   }
 
   useEffect(() => {
@@ -61,6 +66,7 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
+    todaysShowings
   }
 
   return (

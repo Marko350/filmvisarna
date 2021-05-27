@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
 
 const Posters = () => {
-    const {allMovies} = useContext(MovieContext);
+    const {todaysShowings} = useContext(MovieContext);
 
     const renderPosters = () => {
         return(
@@ -13,11 +13,11 @@ const Posters = () => {
                 <div className={styles.mainWrapper}>
                 <div className={styles.postersWrapper}>
                     <div className={styles.posterContainerOne}>
-                        <img className={styles.imgOne} src={allMovies[0].poster} alt={allMovies[0].title} />
+                        <img className={styles.imgOne} src={todaysShowings[0].movieId[0].poster} alt={todaysShowings[0].title} />
                     </div>
                     <div className={styles.posterContainerTwo }>
-                        <img className={styles.imgTwo} src={allMovies[1].poster} alt={allMovies[1].title} />
-                        <img className={styles.imgThree} src={allMovies[2].poster} alt={allMovies[2].title} />
+                        <img className={styles.imgTwo} src={todaysShowings[1].movieId[0].poster} alt={todaysShowings[1].title} />
+                        <img className={styles.imgThree} src={todaysShowings[2].movieId[0].poster} alt={todaysShowings[2].title} />
                     </div>
                 </div>
                 <div className={styles.schema}>
@@ -47,7 +47,7 @@ const Posters = () => {
     };
 
     // If allMovies is "true" call on renderPosters() to display page, if not p-tag will show
-    return allMovies ? renderPosters() : <p>Loading...</p>
+    return todaysShowings ? renderPosters() : <p>Loading...</p>
 };
 
 export default Posters;
