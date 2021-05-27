@@ -40,3 +40,48 @@
     padding-left: 8px;
     border-left: 1px solid #777;
 }
+
+.readMore {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .movieCard {
+        grid-template-columns: 12% 63% 17%;
+        column-gap: 4%;
+        cursor: pointer;
+    }
+
+    .readMore {
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+        align-items: center;
+        padding-right: 24px;
+    }
+
+    .readMore:hover {
+        color: var(--secondary-header);
+        cursor: pointer;
+    }
+
+    .readMore p {
+        padding-right: 10px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .movieCard {
+        grid-template-columns: 8% 69% 17%;
+        column-gap: 3%;
+
+    }
+
+    .movieCard h4 {
+        font-size: 1.4rem;
+    }
+
+}

@@ -4,6 +4,7 @@ export const MovieContext = createContext();
 
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
+  const [oneMovie, setOneMovie] = useState(null);
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -17,7 +18,7 @@ const MovieProvider = (props) => {
     let movie = await fetch(`/api/v1/movies/${movieId}`);
     movie = await movie.json();
     console.log(movie);
-    return movie;
+    setOneMovie(movie);
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
@@ -51,7 +52,6 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    getMovieById('60acacd346075c18aeee45b4');
     getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
@@ -61,6 +61,7 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
+    oneMovie
   }
 
   return ( 
