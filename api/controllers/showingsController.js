@@ -54,6 +54,7 @@ const getShowingByTodaysDate = async (req, res) => {
     }
 };
 
+// Placeholder function
 const addSeats = async (req, res) => {
     try {
         await Showings.findOneAndUpdate(
@@ -65,7 +66,7 @@ const addSeats = async (req, res) => {
         res.json({ error: err});
         console.log(err);
     }
-}
+};
 
 
 module.exports = {
