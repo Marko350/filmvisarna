@@ -11,12 +11,9 @@ function MovieDetailsHeader({movieId}) {
     }, [])
 
     return (
-        <div className="container">
+        <div className={styles.moviePosterContainer} >
             { movieById && 
-                <div className={styles.container}>
-                    <img src={movieById.poster} alt={movieById.name} />
-                    
-                </div>
+                    <img src={movieById.poster} alt={movieById.name} className={styles.movieDetailsPoster} />
             }
         </div>
     )
