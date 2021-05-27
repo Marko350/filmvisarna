@@ -21,18 +21,14 @@ const getShowingById = async (req, res) => {
 };
 
 const getShowingsByMovieAndDate = async (req, res) => {
-    // Move this current date to a state in front end
-    // Send down current date to with movieId from params to this route on page load
-    let date = new Date().toISOString().slice(0, 10);
-    console.log(date);
-    console.log(req.body)
     let queryObj = {
-        movieId: req.body.movieId,
-        date: req.body.date ? req.body.date : date,
+        movieId: req.query.movieId,
+        date: req.query.date,
     }
+
     try {
         // Add sort by time when we have more than one showing on the same date
-        let showings = await Showings.find(queryObj).exec();
+        let showings = await Showings.find(queryObj).sort({ time: 1 }).exec();
         if (!showings.length) {
             res.json({ error: 'No showings for this date' });
             return;
@@ -48,7 +44,7 @@ const getShowingsByMovieAndDate = async (req, res) => {
 
 const getShowingByTodaysDate = async (req, res) => {
     let queryDate = new Date().toISOString().slice(0, 10);
-    let todaysShowings = await Showings.find({'date': queryDate}).exec();
+    let todaysShowings = await Showings.find({'date': queryDate}).populate('movieId', 'title poster').exec();
     if (!todaysShowings.length) {
         res.json({ error: 'There are no showings today' });
         return;

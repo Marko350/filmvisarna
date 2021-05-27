@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { MovieContext } from '../contexts/MovieContext';
 import style from '../css/Start.module.css';
+import button from '../assets/buttonImg/btn-small.png';
 
 const Start = () => {
   const { allMovies } = useContext(MovieContext);
@@ -20,7 +21,10 @@ const Start = () => {
   return ( 
     <div className={`container ${style.startWrapper}`}>
       <h1 className={style.startHeader}>Heading</h1>
-      <p>Hej</p>
+      <div className="mainBtn btnSmall">
+        <h4 className="btnLabel">Logga in</h4>
+        <img src={button}></img>
+      </div>
       { content }
     </div>
    );
