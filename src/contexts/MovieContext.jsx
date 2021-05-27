@@ -21,7 +21,6 @@ const MovieProvider = (props) => {
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
-  // * Note: Might want to remove array from model since we will only have one screen and one movie here
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
@@ -31,7 +30,7 @@ const MovieProvider = (props) => {
 
   // Use on movie details-page to get showings for specific movie
   const getShowingsByMovieAndDate = async (movieId, date) => {
-    // Will set date to current date if not date is sent into function
+    // Will set date to current date if date is not sent into function
     if (!date) {
       date = new Date().toISOString().slice(0, 10);
     }
@@ -43,7 +42,6 @@ const MovieProvider = (props) => {
   }
 
   // Use for schedule on start-page
-  // Might need to populate in back-end with movie-title and poster-link
   const getShowingsByCurrentDate = async () => {
     let showings = await fetch('/api/v1/showings/todaysShowings');
     showings = await showings.json();
