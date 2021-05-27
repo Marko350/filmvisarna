@@ -11,12 +11,13 @@ function MovieDetailsHeader({movieId}) {
     }, [])
 
     return (
-
         <div className="container">
-       
-            { movieById && <div className={styles.testDiv1}>Header Test {movieById.title}</div>}
-            
-
+            { movieById && 
+                <div className={styles.container}>
+                    <img src={movieById.poster} alt={movieById.name} />
+                    
+                </div>
+            }
         </div>
     )
 }

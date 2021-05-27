@@ -8,7 +8,6 @@ function MovieDetails(props) {
     console.log(props);
     return (
         <div className="container">
-            <div className={styles.testDiv}>TEST</div>
             <MovieDetailsHeader movieId={movieId} />
         </div>
     )
