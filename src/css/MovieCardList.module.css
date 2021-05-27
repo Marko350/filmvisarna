@@ -4,14 +4,3 @@
     row-gap: 15px;
     margin: 17px 0;
 }
-
-@media (min-width: 1200px) {
-
-    .movieCardList {
-        display: grid;
-        grid-template-columns: 32% 32% 32%;
-        column-gap: 2%;
-        margin: 25px 0;
-    }
-
-}

@@ -50,6 +50,7 @@
     .movieCard {
         grid-template-columns: 12% 63% 17%;
         column-gap: 4%;
+        cursor: pointer;
     }
 
     .readMore {
@@ -74,34 +75,13 @@
 @media (min-width: 1200px) {
 
     .movieCard {
-        grid-template-columns: 100%;
-        grid-template-rows: 470px 25px;
-        border-bottom: none;
-        padding-bottom: 0;
-        row-gap: 4px;
-        align-items: start;
-    }
+        grid-template-columns: 8% 69% 17%;
+        column-gap: 3%;
 
-    .movieCard img {
-        height: 100%;
-        object-fit: cover;
     }
 
     .movieCard h4 {
-        font-size: 1rem;
-        margin-bottom: 0;
-    }
-
-    .movieInfo {
-        margin-bottom: 0;
-    }
-
-    .movieInfoDetails {
-        display: none;
-    }
-
-    .readMore {
-        display: none;
+        font-size: 1.4rem;
     }
 
 }
