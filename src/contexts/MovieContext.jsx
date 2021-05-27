@@ -5,15 +5,20 @@ export const MovieContext = createContext();
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [todaysShowings, setTodaysShowings] = useState(null);
+  const [today, setToday] = useState(null);
 
   useEffect(() => {
-  // console.log("Dagens visningar:", todaysShowings)
+  console.log("Dagens visningar:", todaysShowings)
   }, [todaysShowings])
+
+  useEffect(() => {
+    console.log("this is today:", today);
+  }, [today])
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
-    // console.log(movies);
+    console.log(movies);
     setAllMovies(movies);
   }
 
@@ -29,7 +34,7 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
-    // console.log(showing);
+    console.log(showing);
     return showing;
   }
 
@@ -50,7 +55,7 @@ const MovieProvider = (props) => {
   const getShowingsByCurrentDate = async () => {
     let showings = await fetch('/api/v1/showings/todaysShowings');
     showings = await showings.json();
-    // console.log('All showings today:', showings);
+    console.log('All showings today:', showings);
     setTodaysShowings(showings)
     removeDuplicates(showings, "time");
   }
@@ -64,35 +69,22 @@ const MovieProvider = (props) => {
        .map((showing, i, final) => final.indexOf(showing) === i && i)
        .filter(showing => showings[showing]).map(showing => showings[showing]);
 
-      let times = [];
-       uniq.forEach((showing) => {
-         times.push(showing.time);
-         console.log("this is times:", times);
-       })
+    let times = [];
+    uniq.forEach((showing) => {
+      times.push(showing.time);
+      console.log("this is times:", times);
+    });
 
+    let timesAndMovies = [];
+    times.forEach((time) => {
+      let temp = showings.filter(movie => movie.time === time);
+      timesAndMovies.push({time, temp});
 
-
-    // uniq.forEach((showing) => {
-    //   showings.forEach((org) => {
-    //     if(showing.time === org.time) {
-    //       uniq.push(org.movieId);
-    //       console.log("newnew:", uniq);
-    //     }
-    //   })
-    // })
-
-    // let newArr = [];
-    // uniq.forEach((showing) => {
-    //   let tempArr = showings.filter(movie => movie.time === showing.time);
-    //   // newArr.push([tempArr]);
-    //   tempArr.forEach((showing) => {
-    //     newArr.push(showing.movieId);
-    //   })
-
-    //   console.log("this is temp:", tempArr);
-    //   console.log("this is new arr", newArr);
-    // })
-  }
+      if(timesAndMovies.length > 0) {
+        setToday(timesAndMovies);
+      }
+    });
+  };
 
   useEffect(() => {
     getAllMovies();
@@ -106,7 +98,9 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
-    todaysShowings
+    todaysShowings,
+    today
+
   }
 
   return (
