@@ -5,7 +5,7 @@ const SeatMap = () => {
   const [chosenSeats, setChosenSeats] = useState([]);
   const [bookedSeats, setBookedSeats] = useState(['a1', 'a2', 'a3', 'b2', 'b3', 'c4', 'c5'])
   let rows = ['a', 'b', 'c', 'd'];
-  let seatsPerRow = 8;
+  let seatsPerRow = 10;
 
 
   const handleSeatClick = (e) => {
@@ -25,16 +25,21 @@ const SeatMap = () => {
         rowSeats.push
           (<div key={i} className={`${style.seat} ${seatClass}`} onClick={handleSeatClick} data-seat={`${row}${i}`}>{i}</div>)
       }
-      return <div className={style.seatRow} key={index}>{rowSeats}<div>{row}</div></div>
+      return <div className={style.seatRow} key={index}>{rowSeats}<div className={style.rowName}>{row}</div></div>
     })
     seatsContent = allSeatsHtml;
   }
 
   return ( 
     <div className={style.seatMapWrapper}> 
-      <div className={style.screenIndicator}>filmduken</div>
-      <div className={style.seatsWrapper}>
-        {seatsContent}
+      <div className={style.seatMap}>
+        <div className={style.screenIndicator}>filmduken</div>
+        <div className={style.seatsWrapper}>
+          {seatsContent}
+        </div>
+        <div>Valda platser: {chosenSeats.map((seat, i) => 
+          <span className={style.yourSeats} key={i}>{seat}</span>)}
+        </div>
       </div>
     </div>
    );
