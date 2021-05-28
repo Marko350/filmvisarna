@@ -4,6 +4,7 @@ import MovieList from "./pages/MovieList";
 import StartPage from "./pages/StartPage";
 import Start from "./pages/Start";
 import Navbar from "./components/Navbar";
+import Test from './pages/Test';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Navbar />
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
+          <Route exact path="/movie-list/:id" component={Test} />
           <Route exact path="/test" component={Start} />
         </MovieProvider>
       </BrowserRouter>
