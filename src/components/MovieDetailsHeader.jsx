@@ -2,7 +2,7 @@ import styles from '../css/MovieDetailsHeader.module.css';
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
 import playbtn from "../assets/playicon.png";
-import headerImg from '../assets/Placeholder-featuredMovie(1).jpg';
+import headerImg from '../assets/casablanca.jpeg';
 
 function MovieDetailsHeader({movieId}) {
 

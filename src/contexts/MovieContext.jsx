@@ -15,6 +15,7 @@ const MovieProvider = (props) => {
 
   // Run based on id in route on movie details-page on load
   const getMovieById = async (movieId) => {
+    console.log("MovieId: ", movieId);
     let movie = await fetch(`/api/v1/movies/${movieId}`);
     movie = await movie.json();
     console.log(movie);
@@ -53,7 +54,6 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    getMovieById();
     getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
