@@ -23,11 +23,11 @@ const Navbar = () => {
   return (
     <nav className={navbar}>
       {!displayMenu ? (
-        <i class="fas fa-bars" onClick={toggleNavMenu}></i>
+        <i className="fas fa-bars" onClick={toggleNavMenu}></i>
       ) : (
         <i
           style={{ fontSize: "35px" }}
-          class="fas fa-times"
+          className="fas fa-times"
           onClick={toggleNavMenu}
         ></i>
       )}
@@ -60,7 +60,7 @@ const Navbar = () => {
         src={FilmStripDesktop}
         alt="Filmstrip picture"
       />
-      <i class="fas fa-user"></i>
+      <i className="fas fa-user"></i>
       {displayMenu && (
         <ul className={hamburgerLinks}>
           <NavLink onClick={toggleNavMenu} to="/">
