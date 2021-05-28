@@ -116,10 +116,6 @@ const MovieProvider = (props) => {
   };
 
   useEffect(() => {
-    console.log("posterssss", todaysPosters)
-  }, [todaysPosters])
-
-  useEffect(() => {
     getAllMovies();
     getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
