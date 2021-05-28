@@ -55,7 +55,6 @@ const MovieProvider = (props) => {
     setTodaysShowings(showings)
     removeDuplicates(showings, "time");
     fixPosters(showings, "poster");
-    console.log("this is movieiD", showings.title);
   }
 
   function removeDuplicates(showings, time) {
@@ -89,10 +88,14 @@ const MovieProvider = (props) => {
   };
 
   function fixPosters(showings, poster) {
+
+    let imgArr = [];
     showings.map((show, i) => {
       console.log("array movieId", show.movieId);
       show.movieId.map((movie) => {
         console.log("keys in movieId", movie.title);
+        imgArr.push({ poster: movie.poster });
+        console.log("this is imgArr:", imgArr);
       })
     })
   }
