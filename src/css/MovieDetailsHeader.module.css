@@ -5,6 +5,7 @@
     width: 100%;
     height: 25vh;  
     object-fit: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -13,7 +14,6 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-
 }
 
 .movieDetailsPoster{
@@ -36,8 +36,7 @@
 }
 
 .detailsGenreLength{
-    display: flex;
-    
+    display: flex;   
 }
 
 .playbtn{
@@ -50,5 +49,50 @@
     transform: translate(-50%, -50%);
 }
 
+
+@media screen and (min-width: 768px) {
+    .movieDetailsPlaceHolder{
+        height: 30vh; 
+        overflow: hidden;
+        position: relative;
+        width: 100%; 
+    }
+
+    .movieDetailsPoster{
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0; 
+    }
+    .detailsTitle{
+        font-size: 1.4rem;
+    }
+    
+    .detailsGenre{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .detailsTitle{
+        font-size: 1.8rem;
+    }
+    
+    .detailsGenre{
+        font-size: 1.3rem;
+    }
+
+    .posterTitleGenre{
+        bottom: 0px;
+    }
+}
+
+
+/*
+    
+(min-width: 768px)
+    
+(min-width: 1200px)
+*/
 
 
