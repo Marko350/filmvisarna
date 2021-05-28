@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.container h1 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #7c96ac;
+}
+
+.container img {
+  max-width: 100%;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  padding-left: 20px;
+  width: 75%;
+}
+
+.ticketInfo {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 56px;
+  left: 30px;
+  width: 80%;
+}
+
+.ticketInfo img {
+  border-radius: 3px;
+}
+
+.imageContainer {
+  width: 35%;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .movieInfo {
+    font-size: 18px;
+  }
+
+  .ticketInfo {
+    margin-left: 2rem;
+  }
+
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .ticketInfo {
+    top: 62px;
+    left: 20px;
+  }
+}
