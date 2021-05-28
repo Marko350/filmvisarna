@@ -10,7 +10,7 @@ function MovieDetails(props) {
     return (
         <div className="container">
             <MovieDetailsHeader movieId={movieId} />
-            <MovieDetailsInfo/>
+            <MovieDetailsInfo movieId={movieId}/>
         </div>
     )
 }
