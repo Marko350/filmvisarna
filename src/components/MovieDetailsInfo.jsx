@@ -16,14 +16,14 @@ function MovieDetailsInfo({movieId}) {
            <h1 className={styles.testh1}>TEST</h1> 
            { movieById && 
                 <div className={styles.infoTextSection}>
-                    <h3>Premiär:</h3> <p> KOLLA UPP</p>
-                    <h3>Genre:</h3> <p> {movieById.genre}</p>
-                    <h3>Längd:</h3> <p>{movieById.length} min</p>
-                    <h3>Språk: </h3> <p>{movieById.language}</p>
+                    <h3 className={styles.infoHeading}>Premiär:</h3> <p> KOLLA UPP</p>
+                    <h3 className={styles.infoHeading}>Genre:</h3> <p> {movieById.genre}</p>
+                    <h3 className={styles.infoHeading}>Längd:</h3> <p>{movieById.length} min</p>
+                    <h3 className={styles.infoHeading}>Språk: </h3> <p>{movieById.language}</p>
                     <br></br>
-                    <h3>Regissör: </h3> <p>{movieById.director}</p>
+                    <h3 className={styles.infoHeading}>Regissör: </h3> <p>{movieById.director}</p>
                     <br></br>
-                    <h3>Skådespelare:</h3> <p>{movieById.actors}</p>
+                    <h3 className={styles.infoHeading}>Skådespelare:</h3> <p>{movieById.actors}</p>
                     <br></br>
                     <p>{movieById.description}</p>
 
