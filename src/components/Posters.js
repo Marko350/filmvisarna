@@ -20,10 +20,14 @@ const Posters = () => {
                         </div>
                     </div>
                     <div className={styles.schema}>
-                        {todaysSchema.map((t, i) => (
+                        {todaysSchema.map((today, i) => (
                             <div className={styles.margin} key={i}>
-                                <h2>{t.time}</h2>
+                                <h2>{today.time}</h2>
+                                {today.temp.map((showing) => (
+                                    <p>{showing.movieId[0].title}</p>
+                                ))}
                             </div>
+
                         ))}
                     </div>
                 </div>
