@@ -11,7 +11,7 @@ function MovieDetails(props) {
         <div className="container">
             <MovieDetailsHeader movieId={movieId} />
             {/* MovieDetails info in the middle */}
-            <Showings />
+            <Showings movieId={movieId} />
         </div>
     )
 }

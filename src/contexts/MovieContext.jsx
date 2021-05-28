@@ -5,6 +5,8 @@ export const MovieContext = createContext();
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [movieById, setMovieById] = useState(null);
+  const [movieShowings, setMovieShowings] = useState(null);
+  const [showingsList, setShowingsList] = useState([]);
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -27,8 +29,8 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
-    console.log(showing);
-    return showing;
+    console.log("Showing by id: ", showing);
+    setShowingsList([...showingsList, showing]);
   }
 
   // Use on movie details-page to get showings for specific movie
@@ -41,7 +43,7 @@ const MovieProvider = (props) => {
     let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
     showings = await showings.json();
     console.log('Showings by movie and date:', showings);
-    return showings;
+    setMovieShowings(showings);
   }
 
   // Use for schedule on start-page
@@ -54,8 +56,7 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    getShowingById('60acc75a2e0da01dfcbd1854');
-    getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
+    // getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByCurrentDate();
   }, [])
 
@@ -63,7 +64,10 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
-    movieById
+    movieById,
+    getShowingsByMovieAndDate,
+    movieShowings,
+    getShowingById
   }
 
   return ( 
