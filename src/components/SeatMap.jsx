@@ -3,15 +3,38 @@ import style from '../css/SeatMap.module.css';
 
 const SeatMap = () => {
   const [chosenSeats, setChosenSeats] = useState([]);
-  const [bookedSeats, setBookedSeats] = useState(['a1', 'a2', 'a3', 'b2', 'b3', 'c4', 'c5'])
-  let rows = ['a', 'b', 'c', 'd'];
+  const [bookedSeats, setBookedSeats] = useState(['a1', 'a2', 'a3', 'b2', 'b3', 'c4', 'c5']);
+  const [hover, setHover] = useState('');
+  let rows = ['a', 'b', 'c', 'd', 'e'];
   let seatsPerRow = 10;
+  let numOfSeats = 5;
 
 
   const handleSeatClick = (e) => {
     let seat = e.target.getAttribute('data-seat');
-    setChosenSeats([...chosenSeats, seat]);
-    console.log(seat)
+    let ok = true;
+    hover.forEach(seat => {
+      if (bookedSeats.includes(seat)) ok = false;
+    })
+    console.log(hover);
+    ok && setChosenSeats(hover);
+  }
+
+  const handleMouseEnter = (e) => {
+    let hoverRow = e.target.getAttribute('data-seat')[0];
+    let hoverSeat = e.target.getAttribute('data-seat').slice(1);
+    let startSeat = Number(hoverSeat) - Math.floor(numOfSeats / 2);
+    if (startSeat <= 0) startSeat = 1;
+    if ((startSeat + numOfSeats) > 10) startSeat = 11 - numOfSeats; 
+    let hoverArray = [];
+    for (let i = 0; i < numOfSeats; i++) {
+      hoverArray.push(hoverRow + (startSeat + i))
+    }
+    setHover(hoverArray);
+  }
+
+  const handleMouseLeave = () => {
+    setHover('');
   }
 
   let seatsContent = 'Laddar...';
@@ -23,7 +46,9 @@ const SeatMap = () => {
           bookedSeats.includes(`${row}${i}`) && style.booked || chosenSeats.includes(`${row}${i}`) && style.chosen;
           
         rowSeats.push
-          (<div key={i} className={`${style.seat} ${seatClass}`} onClick={handleSeatClick} data-seat={`${row}${i}`}>{i}</div>)
+          (<div key={i} className={`${style.seat} ${seatClass} ${hover.includes(`${row}${i}`) && style.hoverSeat}`} onClick={handleSeatClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} data-seat={`${row}${i}`}>
+            <span className={style.seatNrCss}>{i}</span>
+          </div>)
       }
       return <div className={style.seatRow} key={index}>{rowSeats}<div className={style.rowName}>{row}</div></div>
     })
