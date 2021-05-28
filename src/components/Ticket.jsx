@@ -11,8 +11,6 @@ import { MovieContext } from "../contexts/MovieContext";
 const Ticket = () => {
   const { getMovieById } = useContext(MovieContext);
 
-  console.log(getMovieById("60acacd346075c18aeee45b4"));
-
   return (
     <div className={container}>
       <h1>Din biljett</h1>
@@ -20,7 +18,7 @@ const Ticket = () => {
         <div className={imageContainer}>
           <img
             src="https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
-            alt=""
+            alt="Poster"
           />
         </div>
         <div className={movieInfo}>
@@ -32,7 +30,7 @@ const Ticket = () => {
           <span>Totalt pris: 250kr</span>
         </div>
       </div>
-      <img src={TicketPicture} alt="Ticket picture" />
+      <img src={TicketPicture} alt="Ticket" />
     </div>
   );
 };
