@@ -6,7 +6,6 @@ const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [movieById, setMovieById] = useState(null);
   const [movieShowings, setMovieShowings] = useState(null);
-  const [showingsList, setShowingsList] = useState([]);
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -30,7 +29,7 @@ const MovieProvider = (props) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
     console.log("Showing by id: ", showing);
-    setShowingsList([...showingsList, showing]);
+    return showing;
   }
 
   // Use on movie details-page to get showings for specific movie
@@ -56,7 +55,7 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    // getShowingById('60acc75a2e0da01dfcbd1854');
+    getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByCurrentDate();
   }, [])
 
@@ -66,8 +65,7 @@ const MovieProvider = (props) => {
     getMovieById,
     movieById,
     getShowingsByMovieAndDate,
-    movieShowings,
-    getShowingById
+    movieShowings
   }
 
   return ( 

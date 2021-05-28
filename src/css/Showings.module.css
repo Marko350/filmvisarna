@@ -14,3 +14,27 @@
     padding: 1px 3px;
     margin-bottom: 6px;
 }
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.scheduleItem {
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-background);
+    padding: 3px 6px;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    width: 48%;
+}
+
+.time{
+    margin-right: 10px;
+}
+
+.screen {
+    font-size: 0.7rem;
+}

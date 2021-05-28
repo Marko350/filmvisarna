@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { MovieContext } from '../contexts/MovieContext';
 import styles from '../css/Showings.module.css';
-import SingleShowing from './SingleShowing';
 
 function Showings({ movieId }) {
 
@@ -11,6 +10,7 @@ function Showings({ movieId }) {
 
     useEffect(() => {
         getShowingsByMovieAndDate(movieId, date);
+        // eslint-disable-next-line
     }, []);
 
     return (
@@ -25,9 +25,12 @@ function Showings({ movieId }) {
                     min={date}
                     max="2021-12-31" />
             </div>
-            <div className="schedule">
+            <div className={styles.schedule}>
                 {movieShowings && movieShowings.map(showing => (
-                    <SingleShowing key={showing._id} />
+                    <div key={showing._id} className={styles.scheduleItem}>
+                        <p className={styles.time}>{showing.time}</p>
+                        <p className={styles.screen}>{showing.screenId[0].name}</p>
+                    </div>
                 ))}
             </div>
         </div>
