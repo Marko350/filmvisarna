@@ -6,7 +6,7 @@ import { MovieContext } from '../contexts/MovieContext';
 
 function MovieList() {
 
-    const { getMovieById, oneMovie } = useContext(MovieContext);
+    const { getMovieById, movieById } = useContext(MovieContext);
 
     useEffect(() => {
         getMovieById("60acacd346075c18aeee45b3");
@@ -17,7 +17,7 @@ function MovieList() {
         <div className="container">
             <div className="header">
                 <h2 className={styles.heading}>I fokus</h2>
-                {oneMovie && <FeaturedMovie movie={oneMovie} />}
+                {movieById && <FeaturedMovie movie={movieById} />}
             </div>
             <div className="movie-list">
                 <h2 className={styles.heading}>Alla filmer</h2>
