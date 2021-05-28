@@ -32,13 +32,13 @@
 .posterTitleGenre{
     display: flex;
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 5px;
+    left: 5px;
 }
 
 .movieDetailsPoster{
     width: auto;
-    height: 130px;
+    height: 100px;
 }
 
 .titleGenre{
