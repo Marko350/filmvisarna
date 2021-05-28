@@ -1,3 +1,22 @@
 .infoHeading{
     color: var(--secondary-header);
 }
+
+.btnContainer{
+
+}
+
+.infoBtn{
+    margin: 0 auto;
+    height: 4rem;
+    width: 95%;
+}
+
+.infoBtnName{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+    font-size: 1.2rem;
+}

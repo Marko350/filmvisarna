@@ -1,6 +1,7 @@
 import styles from '../css/MovieDetailsInfo.module.css';
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
+import infoBtn from "../assets/buttonImg/btn-medium.png";
 
 function MovieDetailsInfo({movieId}) {
 
@@ -13,9 +14,12 @@ function MovieDetailsInfo({movieId}) {
 
     return (
         <div className="container">
-           <h1 className={styles.testh1}>TEST</h1> 
            { movieById && 
-                <div className={styles.infoTextSection}>
+                <div className={styles.infoSection}>
+                    <div className={styles.btnContainer}>
+                        <img src={infoBtn} alt="Knapp för att boka biljett" className={styles.infoBtn} />
+                        <h2 className={styles.infoBtnName}>Biljetter</h2>
+                    </div>
                     <h3 className={styles.infoHeading}>Premiär:</h3> <p> KOLLA UPP</p>
                     <h3 className={styles.infoHeading}>Genre:</h3> <p> {movieById.genre}</p>
                     <h3 className={styles.infoHeading}>Längd:</h3> <p>{movieById.length} min</p>
