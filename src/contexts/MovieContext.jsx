@@ -60,21 +60,23 @@ const MovieProvider = (props) => {
     removeDuplicates(showings, "time");
   }
 
-  //for filtering out showing time duplicates
   function removeDuplicates(showings, time) {
 
+    //for filtering out duplicates, removing obj with the same "time" value
     let uniq = [];
     uniq = showings
        .map(showing => showing[time])
        .map((showing, i, final) => final.indexOf(showing) === i && i)
        .filter(showing => showings[showing]).map(showing => showings[showing]);
 
+    //pusching in key "time" to new array
     let times = [];
     uniq.forEach((showing) => {
       times.push(showing.time);
       console.log("this is times:", times);
     });
 
+    //adding back movie obj to the "right time"
     let timesAndMovies = [];
     times.forEach((time) => {
       let temp = showings.filter(movie => movie.time === time);
@@ -82,6 +84,7 @@ const MovieProvider = (props) => {
 
     });
 
+    //setting state-variable only when array is finished
     if(timesAndMovies.length) {
       setTodaysSchema(timesAndMovies);
     }
