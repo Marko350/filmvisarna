@@ -1,0 +1,163 @@
+.featuredMovieWrapper {
+    max-height: 250px;
+    position: relative;
+    display: flex;
+}
+
+.gradientWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.headerImg {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.gradient {
+    background: linear-gradient(
+        180deg,
+        #26262610 40%,
+        #262626 95%
+      );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+.imgWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.posterImg {
+    width: 22%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-right: 10px;
+    padding: 0 0 8px 8px;
+}
+
+.movieInfo {
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.date {
+    color: var(--secondary-header);
+    font-size: 1.2rem;
+}
+
+.dateDesktop {
+    display: none;
+}
+
+.buyTickets {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .gradientWrapper {
+        justify-content: flex-end;
+    }
+
+    .headerImg {
+        width: 85%;
+    }
+
+    .posterImg {
+        width: 27%;
+        padding: 0;
+        margin-right: 15px;
+    }
+
+    .movieInfo {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .dateDesktop {
+        display: block;
+    }
+
+    .redText {
+        color: #e2b397;
+        font-weight: 500;
+    }
+
+    .buyTickets {
+        display: block;
+        background-color: #C42417;
+        width: 85px;
+        height: 85px;
+        padding: 13px 8px 8px 8px;
+        text-align: center;
+        border-radius: 50px;
+        font-family: var(--special-font);
+        font-size: 1.2rem;
+        transform: rotate(5deg);
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .buyTickets:hover {
+        background-color: #961c11;
+        cursor: pointer;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .featuredMovieWrapper {
+        max-height: 300px;
+    }
+
+    .headerImg {
+        max-height: 300px;
+    }
+
+    .posterImg {
+        width: 29%;
+        max-height: 300px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .dateDesktop {
+        font-size: 1.2rem;
+    }
+
+    .buyTickets {
+        top: 205px;
+        right: 20px;
+    }
+
+}
