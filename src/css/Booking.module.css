@@ -1,0 +1,44 @@
+.container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.btnContainer {
+  margin: 1.5rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: absolute;
+}
+
+.btn p {
+  position: absolute;
+  left: 55px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.btnContainer img {
+  width: 150px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 400px;
+    margin-top: 2rem;
+  }
+
+  .btnContainer img {
+    width: 200px;
+  }
+
+  .btn p {
+    font-size: 1.3rem;
+    left: 70px;
+    top: 30px;
+  }
+}

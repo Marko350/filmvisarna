@@ -1,53 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
-    --main-font: 'Poppins';
-    --special-font: 'Pattaya';
-    --ticket-font: 'Roboto Mono';
-    --card-background: #434343;
-    --card-shadow: 3px 3px 6px #00000075;
-    --card-padding: 20px;
-    --main-header: #7C96AC;
-    --secondary-header: #CF8D83;
+  --main-font: "Poppins";
+  --special-font: "Pattaya";
+  --ticket-font: "Roboto Mono";
+  --card-background: #434343;
+  --card-shadow: 3px 3px 6px #00000075;
+  --card-padding: 20px;
+  --main-header: #7c96ac;
+  --secondary-header: #cf8d83;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body {
-    background-color: #262626;
-    color: #E9E9E9;
-    font-family: var(--main-font);
+  background-color: #262626;
+  color: #e9e9e9;
+  font-family: var(--main-font);
 }
 
-h1, h2, h3, h4 {
-    font-weight: 500;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
 }
 
 button {
-    padding: 10px 25px;
-    border: 3px solid white;
-    border-radius: 15px;
-    background-color: var(--main-header);
-    font-family: var(--main-font);
-    font-weight: 500;
-    color: white;
-    font-size: 1.1rem;
+  padding: 10px 25px;
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: var(--main-header);
+  font-family: var(--main-font);
+  font-weight: 500;
+  color: white;
+  font-size: 1.1rem;
 }
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* BUTTON */
@@ -56,45 +59,45 @@ button {
 /* Will need some testing later, on the real pages */
 
 .mainBtn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .btnSmall {
-    width: 200px;
+  width: 200px;
 }
 
 .btnMedium {
-    width: 300px;
+  width: 300px;
 }
 
 .btnLarge {
-    width: 100%
+  width: 100%;
 }
-  
+
 .mainBtn img {
-    width: 100%;
-    filter: drop-shadow(0px 3px 3px rgba(34, 34, 34, 0.603)); 
+  width: 100%;
+  filter: drop-shadow(0px 3px 3px rgba(34, 34, 34, 0.603));
 }
-  
+
 .mainBtn:active img {
-    filter: initial;
+  filter: initial;
 }
 
 .btnLabel {
-    z-index: 10;
-    position: absolute;
-    color: white;
-    font-size: 1.4rem;
-    padding-bottom: .2rem;
+  z-index: 10;
+  position: absolute;
+  color: white;
+  font-size: 1.4rem;
+  padding-bottom: 0.2rem;
 }
 
 @media (min-width: 768px) {
-    .container {
-        width: 80%;
-        max-width: 1000px;
-    }
+  .container {
+    width: 80%;
+    max-width: 1000px;
+  }
 }
