@@ -1,5 +1,6 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import MovieProvider from "./contexts/MovieContext";
+import Booking from "./pages/Booking";
 import MovieList from "./pages/MovieList";
 import StartPage from "./pages/StartPage";
 import Start from "./pages/Start";

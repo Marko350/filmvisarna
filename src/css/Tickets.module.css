@@ -1,0 +1,51 @@
+.container {
+  padding: 1rem;
+}
+
+.container img {
+  margin-left: 2rem;
+}
+
+.container p {
+  position: relative;
+}
+
+.container h1 {
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tickets,
+.barnTicket {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.tickets p {
+  position: absolute;
+  left: 53px;
+  top: 15px;
+}
+
+.barnTicket p {
+  position: absolute;
+  left: 73px;
+  top: 15px;
+}
+
+.counter {
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.counter i {
+  padding: 0 1rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+.counter span {
+  font-size: 1.2rem;
+}
