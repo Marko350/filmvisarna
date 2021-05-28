@@ -23,7 +23,7 @@ const Schema = () => {
     }
 
     // If todaysSchema is "true" call on renderPosters() to display page, if not p-tag will show
-    return todaysSchema ? renderPosters() : <p>Loading...</p>
+    return todaysSchema ? renderPosters() : <p>Finns inga visningar tillgängliga...</p>
 }
 
 export default Schema;

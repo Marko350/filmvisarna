@@ -54,8 +54,12 @@ const MovieProvider = (props) => {
     showings = await showings.json();
     console.log('All showings today:', showings);
     setTodaysShowings(showings)
-    removeDuplicates(showings, "time");
-    fixPosters(showings, "poster");
+
+    //preventing errors
+    if(showings.length) {
+      removeDuplicates(showings, "time");
+      fixPosters(showings, "poster");
+    };
   }
 
   function removeDuplicates(showings, time) {
