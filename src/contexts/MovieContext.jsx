@@ -4,7 +4,7 @@ export const MovieContext = createContext();
 
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
-  const [oneMovie, setOneMovie] = useState(null);
+  const [movieById, setMovieById] = useState(null);
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -15,10 +15,12 @@ const MovieProvider = (props) => {
 
   // Run based on id in route on movie details-page on load
   const getMovieById = async (movieId) => {
+    console.log("MovieId: ", movieId);
     let movie = await fetch(`/api/v1/movies/${movieId}`);
     movie = await movie.json();
     console.log(movie);
-    setOneMovie(movie);
+    setMovieById(movie);
+    //return movie;
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
@@ -61,7 +63,7 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
-    oneMovie
+    movieById
   }
 
   return ( 

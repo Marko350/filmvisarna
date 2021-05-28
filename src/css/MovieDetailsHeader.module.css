@@ -1,0 +1,148 @@
+.moviePosterContainer{
+    position: relative;
+    margin-top: 2rem;
+}
+.movieDetailsPlaceHolder{
+    width: 100%;
+    height: 27vh;  
+    object-fit: cover;
+    background-position: center;
+    position: relative;
+}
+
+.gradientWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.gradient {
+    background: linear-gradient(
+        180deg,
+        #26262610 40%,
+        #262626 95%
+      );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+.posterTitleGenre{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.movieDetailsPoster{
+    width: auto;
+    height: 100px;
+}
+
+.titleGenre{
+    margin-left: 10px;
+    align-self: flex-end;
+}
+
+.detailsTitle{
+    font-size: 1rem;
+}
+
+.detailsGenre{
+    font-size: 0.8rem;
+    color: var(--secondary-header);
+}
+
+.detailsGenreLength{
+    display: flex;   
+}
+
+.playbtn{
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media screen and (min-width: 768px) {
+    .movieDetailsPlaceHolder{
+        height: 30vh; 
+        overflow: hidden;
+        position: relative;
+        width: 100%; 
+    }
+
+    .movieDetailsPoster{
+        height: 190px;
+    }
+
+    .posterTitleGenre{
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .titleGenre{
+        padding-bottom: 10px;
+    }
+    .detailsTitle{
+        font-size: 1.4rem;
+    }
+    
+    .detailsGenre{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .movieDetailsPlaceHolder{
+        height: 35vh; 
+    }
+
+    .gradient {
+        background: linear-gradient(
+            180deg,
+            #26262610 40%,
+            #262626 95%
+          );
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    
+    }
+   
+
+    .movieDetailsPoster{
+        position: relative;
+        height: 35vh;
+    }
+
+
+    .detailsTitle{
+        font-size: 2.3rem;
+    }
+    
+    .detailsGenre{
+        font-size: 1.7rem;
+    }
+
+    .posterTitleGenre{
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+
+
+
