@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
 
 const Posters = () => {
-    const {today} = useContext(MovieContext);
+    const {todaysSchema} = useContext(MovieContext);
 
     const renderPosters = () => {
         return(
@@ -12,15 +12,15 @@ const Posters = () => {
                 <div className={styles.mainWrapper}>
                     <div className={styles.postersWrapper}>
                         <div className={styles.posterContainerOne}>
-                            <img className={styles.imgOne} src={today[0].temp[0].movieId[0].poster} alt="poster" />
+                            <img className={styles.imgOne} src={todaysSchema[0].temp[0].movieId[0].poster} alt="poster" />
                         </div>
                         <div className={styles.posterContainerTwo}>
-                            <img className={styles.imgTwo} src={today[0].temp[1].movieId[0].poster} alt="poster"  />
-                            <img className={styles.imgThree} src={today[0].temp[0].movieId[0].poster} alt="poster"  />
+                            <img className={styles.imgTwo} src={todaysSchema[0].temp[1].movieId[0].poster} alt="poster"  />
+                            <img className={styles.imgThree} src={todaysSchema[0].temp[0].movieId[0].poster} alt="poster"  />
                         </div>
                     </div>
                     <div className={styles.schema}>
-                        {today.map((t, i) => (
+                        {todaysSchema.map((t, i) => (
                             <div className={styles.margin} key={i}>
                                 <h2>{t.time}</h2>
                             </div>
@@ -32,7 +32,7 @@ const Posters = () => {
     };
 
     // If allMovies is "true" call on renderPosters() to display page, if not p-tag will show
-    return today ? renderPosters() : <p>Loading...</p>
+    return todaysSchema ? renderPosters() : <p>Loading...</p>
 };
 
 export default Posters;

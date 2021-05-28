@@ -5,15 +5,15 @@ export const MovieContext = createContext();
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [todaysShowings, setTodaysShowings] = useState(null);
-  const [today, setToday] = useState(null);
+  const [todaysSchema, setTodaysSchema] = useState(null);
 
   useEffect(() => {
   console.log("Dagens visningar:", todaysShowings)
   }, [todaysShowings])
 
   useEffect(() => {
-    console.log("this is today:", today);
-  }, [today])
+    console.log("this is today:", todaysSchema);
+  }, [todaysSchema])
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -83,7 +83,7 @@ const MovieProvider = (props) => {
     });
 
     if(timesAndMovies.length) {
-      setToday(timesAndMovies);
+      setTodaysSchema(timesAndMovies);
     }
   };
 
@@ -100,7 +100,7 @@ const MovieProvider = (props) => {
     allMovies,
     getMovieById,
     todaysShowings,
-    today
+    todaysSchema
 
   }
 
