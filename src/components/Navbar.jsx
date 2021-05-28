@@ -41,11 +41,11 @@ const Navbar = () => {
           }}
         />
       </div>
-      <img className={filmStrip} src={FilmStrip} alt="Filmstrip picture" />
+      <img className={filmStrip} src={FilmStrip} alt="Filmstrip" />
       <img
         className={filmStripDesktop}
         src={FilmStripDesktop}
-        alt="Filmstrip picture"
+        alt="Filmstrip"
       />
       <div className={links}>
         <NavLink to="/">Startsidan</NavLink> <span></span>
@@ -54,11 +54,11 @@ const Navbar = () => {
         <NavLink to="/about">Om oss</NavLink> <span></span>
         <p style={{ cursor: "pointer" }}>Logga in/Registrera</p>
       </div>
-      <img className={filmStrip} src={FilmStrip} alt="Filmstrip picture" />
+      <img className={filmStrip} src={FilmStrip} alt="Filmstrip" />
       <img
         className={filmStripDesktop}
         src={FilmStripDesktop}
-        alt="Filmstrip picture"
+        alt="Filmstrip"
       />
       <i className="fas fa-user"></i>
       {displayMenu && (

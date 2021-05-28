@@ -10,12 +10,13 @@ function MovieDetailsHeader({movieId}) {
 
     useEffect(() => {
         getMovieById(movieId);
+        // eslint-disable-next-line
     }, [])
 
     return (
         <div className={styles.moviePosterContainer} >
             <div className={styles.gradientWrapper}>
-                <img src={headerImg} className={styles.movieDetailsPlaceHolder} />
+                <img src={headerImg} alt="placeholder" className={styles.movieDetailsPlaceHolder} />
                 <div className={styles.gradient}></div>
             </div>
              { movieById && 
@@ -30,7 +31,7 @@ function MovieDetailsHeader({movieId}) {
                     </div>
                 </div>
             }
-            <img src={playbtn} className={styles.playbtn} />
+            <img src={playbtn} alt="play" className={styles.playbtn} />
         </div>
     )
 }

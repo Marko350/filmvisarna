@@ -6,7 +6,6 @@ import StartPage from "./pages/StartPage";
 import MovieDetails from "./pages/MovieDetails";
 import Start from "./pages/Start";
 import Navbar from "./components/Navbar";
-import Test from './pages/Test';
 
 function App() {
   return (
