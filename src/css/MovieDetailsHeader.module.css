@@ -1,5 +1,6 @@
 .moviePosterContainer{
     position: relative;
+    margin-top: 2rem;
 }
 .movieDetailsPlaceHolder{
     width: 100%;
@@ -58,11 +59,22 @@
         width: 100%; 
     }
 
-    .movieDetailsPoster{
-        height: 100%;
+    .posterTitleGenre{
+        display: flex;
         position: absolute;
-        right: 0;
-        top: 0; 
+        bottom: -10px;
+        left: 0px;
+    }
+
+    .movieDetailsPoster{
+        position: relative;
+        height: 30.8vh;
+        padding-bottom: 8px;
+
+    }
+
+    .titleGenre{
+        padding-bottom: 10px;
     }
     .detailsTitle{
         font-size: 1.4rem;
