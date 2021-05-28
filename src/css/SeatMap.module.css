@@ -1,9 +1,35 @@
 .seatMapWrapper {
   background-color: grey;
+  padding: .5rem;
   min-height: 300px;
 }
 
 .screenIndicator {
   text-align: center;
   border-bottom: 1px solid black;
+}
+
+.seatRow {
+  display: flex;
+  align-items: center;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: .3rem;
+  border: 1px solid black;
+}
+
+.free {
+  background-color: rgb(116, 116, 116);
+}
+
+.booked {
+  background-color: #894A4A;
+}
+
+.chosen {
+  background-color: #7C96AC;
 }
