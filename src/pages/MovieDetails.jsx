@@ -1,5 +1,6 @@
 import styles from '../css/MovieDetails.module.css';
 import MovieDetailsHeader from "../components/MovieDetailsHeader";
+import Showings from '../components/Showings';
 
 function MovieDetails(props) {
 
@@ -9,6 +10,8 @@ function MovieDetails(props) {
     return (
         <div className="container">
             <MovieDetailsHeader movieId={movieId} />
+            {/* MovieDetails info in the middle */}
+            <Showings />
         </div>
     )
 }
