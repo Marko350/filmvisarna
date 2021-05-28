@@ -6,6 +6,7 @@ const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [todaysShowings, setTodaysShowings] = useState(null);
   const [todaysSchema, setTodaysSchema] = useState(null);
+  const [todaysPosters, setTodaysPoster] = useState(null);
 
   useEffect(() => {
     console.log("this is today:", todaysSchema);
@@ -84,21 +85,32 @@ const MovieProvider = (props) => {
     //setting state-variable only when array is finished
     if(timesAndMovies.length) {
       setTodaysSchema(timesAndMovies);
-    }
+    };
   };
 
   function fixPosters(showings, poster) {
 
-    let imgArr = [];
-    showings.map((show, i) => {
-      console.log("array movieId", show.movieId);
+    let posterArr = [];
+    showings.map((show) => {
       show.movieId.map((movie) => {
-        console.log("keys in movieId", movie.title);
-        imgArr.push({ poster: movie.poster });
-        console.log("this is imgArr:", imgArr);
-      })
-    })
-  }
+        //creating new array of obj with posters
+        posterArr.push({ poster: movie.poster });
+      });
+    });
+
+    //filtering out duplicates, creating new array
+    let uniq = [];
+    uniq = [...new Map(posterArr.map(obj => [obj[poster], obj])).values()]
+    console.log("This is uniq arr:", uniq);
+
+    if(uniq.length) {
+      setTodaysPoster(uniq);
+    };
+  };
+
+  useEffect(() => {
+    console.log("posterssss", todaysPosters)
+  }, [todaysPosters])
 
   useEffect(() => {
     getAllMovies();
@@ -113,7 +125,8 @@ const MovieProvider = (props) => {
     allMovies,
     getMovieById,
     todaysShowings,
-    todaysSchema
+    todaysSchema,
+    todaysPosters
 
   }
 
