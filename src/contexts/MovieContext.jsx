@@ -8,10 +8,6 @@ const MovieProvider = (props) => {
   const [todaysSchema, setTodaysSchema] = useState(null);
 
   useEffect(() => {
-  console.log("Dagens visningar:", todaysShowings)
-  }, [todaysShowings])
-
-  useEffect(() => {
     console.log("this is today:", todaysSchema);
   }, [todaysSchema])
 
@@ -58,6 +54,8 @@ const MovieProvider = (props) => {
     console.log('All showings today:', showings);
     setTodaysShowings(showings)
     removeDuplicates(showings, "time");
+    fixPosters(showings, "poster");
+    console.log("this is movieiD", showings.title);
   }
 
   function removeDuplicates(showings, time) {
@@ -89,6 +87,15 @@ const MovieProvider = (props) => {
       setTodaysSchema(timesAndMovies);
     }
   };
+
+  function fixPosters(showings, poster) {
+    showings.map((show, i) => {
+      console.log("array movieId", show.movieId);
+      show.movieId.map((movie) => {
+        console.log("keys in movieId", movie.title);
+      })
+    })
+  }
 
   useEffect(() => {
     getAllMovies();
