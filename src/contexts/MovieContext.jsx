@@ -80,10 +80,11 @@ const MovieProvider = (props) => {
       let temp = showings.filter(movie => movie.time === time);
       timesAndMovies.push({time, temp});
 
-      if(timesAndMovies.length > 0) {
-        setToday(timesAndMovies);
-      }
     });
+
+    if(timesAndMovies.length) {
+      setToday(timesAndMovies);
+    }
   };
 
   useEffect(() => {
