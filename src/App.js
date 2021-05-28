@@ -5,7 +5,6 @@ import MovieList from "./pages/MovieList";
 import StartPage from "./pages/StartPage";
 import Start from "./pages/Start";
 import Navbar from "./components/Navbar";
-import Booking from "./pages/Booking";
 
 function App() {
   return (
