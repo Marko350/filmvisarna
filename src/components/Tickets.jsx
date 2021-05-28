@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { container } from "../css/Tickets.module.css";
 import Ticket from "../assets/ticket.png";
-import { tickets, barnTicket, counter } from "../css/Tickets.module.css";
+import {
+  tickets,
+  barnTicket,
+  counter,
+  ticketNumber,
+} from "../css/Tickets.module.css";
 
 const Tickets = () => {
   const [standardTicket, setStandardTicket] = useState(0);
@@ -19,7 +24,9 @@ const Tickets = () => {
             onClick={() => setStandardTicket(standardTicket - 1)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{standardTicket}</span>
+          <div className={ticketNumber}>
+            <span>{standardTicket}</span>
+          </div>
           <i
             onClick={() => setStandardTicket(standardTicket + 1)}
             className="fas fa-plus-circle"
@@ -34,7 +41,9 @@ const Tickets = () => {
             onClick={() => setPensionerTicket(pensionerTicket - 1)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{pensionerTicket}</span>
+          <div className={ticketNumber}>
+            <span>{pensionerTicket}</span>
+          </div>
           <i
             onClick={() => setPensionerTicket(pensionerTicket + 1)}
             className="fas fa-plus-circle"
@@ -49,7 +58,9 @@ const Tickets = () => {
             onClick={() => setChildTicket(childTicket - 1)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{childTicket}</span>
+          <div className={ticketNumber}>
+            <span>{childTicket}</span>
+          </div>
           <i
             onClick={() => setChildTicket(childTicket + 1)}
             className="fas fa-plus-circle"
