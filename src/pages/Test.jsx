@@ -1,3 +1,5 @@
+// For testing route to MovieDetails, remove later
+
 function Test(props) {
 
     const id = props.match.params.id;

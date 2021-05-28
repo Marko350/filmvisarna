@@ -14,7 +14,7 @@ function App() {
           <Navbar />
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
-          <Route exact path="/movie-list/:id" component={Test} />
+          <Route exact path="/movie-list/:id" component={Test} /> {/* Change component to MovieDetails */}
           <Route exact path="/test" component={Start} />
         </MovieProvider>
       </BrowserRouter>
