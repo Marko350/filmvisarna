@@ -14,7 +14,10 @@ function MovieDetailsHeader({movieId}) {
 
     return (
         <div className={styles.moviePosterContainer} >
-            <img src={headerImg} className={styles.movieDetailsPlaceHolder} />
+            <div className={styles.gradientWrapper}>
+                <img src={headerImg} className={styles.movieDetailsPlaceHolder} />
+                <div className={styles.gradient}></div>
+            </div>
              { movieById && 
                 <div className={styles.posterTitleGenre}>
                     <img src={movieById.poster} alt={movieById.name} className={styles.movieDetailsPoster} />
