@@ -1,8 +1,16 @@
+import { useHistory } from 'react-router';
 import styles from '../css/MovieCard.module.css';
 
 function MovieCard({ movie }) {
+
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push(`/movie-list/${movie._id}`);
+    };
+
     return (
-        <div className={styles.movieCard}>
+        <div className={styles.movieCard} onClick={handleClick}>
             <img src={movie.poster} alt={movie.name} />
             <div className={styles.movieInfo}>
                 <h4>{movie.title}</h4>
