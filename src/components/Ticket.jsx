@@ -11,8 +11,6 @@ import { MovieContext } from "../contexts/MovieContext";
 const Ticket = () => {
   const { getMovieById } = useContext(MovieContext);
 
-  console.log(getMovieById("60acacd346075c18aeee45b4"));
-
   return (
     <div className={container}>
       <h1>Din biljett</h1>
