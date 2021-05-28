@@ -1,0 +1,15 @@
+.datepickerLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--main-header);
+}
+
+.datepickerLine h2 {
+    color: var(--main-header);
+}
+
+.datepickerLine input {
+    padding: 1px 3px;
+    margin-bottom: 6px;
+}
