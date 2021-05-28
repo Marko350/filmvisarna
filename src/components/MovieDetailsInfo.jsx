@@ -20,8 +20,13 @@ function MovieDetailsInfo({movieId}) {
                     <h3>Genre:</h3> <p> {movieById.genre}</p>
                     <h3>Längd:</h3> <p>{movieById.length} min</p>
                     <h3>Språk: </h3> <p>{movieById.language}</p>
+                    <br></br>
                     <h3>Regissör: </h3> <p>{movieById.director}</p>
+                    <br></br>
                     <h3>Skådespelare:</h3> <p>{movieById.actors}</p>
+                    <br></br>
+                    <p>{movieById.description}</p>
+
                 </div>
             }
         </div>
