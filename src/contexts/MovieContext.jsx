@@ -130,7 +130,7 @@ const MovieProvider = (props) => {
     getAllMovies,
     allMovies,
     getMovieById,
-    movieById
+    movieById,
     todaysShowings,
     todaysSchema,
     todaysPosters
