@@ -10,18 +10,27 @@ import {
 import { MovieContext } from "../contexts/MovieContext";
 
 const Tickets = () => {
-  const { setTickets } = useContext(MovieContext);
+  const { setTickets, setChosenSeats } = useContext(MovieContext);
   const [standardTicket, setStandardTicket] = useState(0);
   const [pensionerTicket, setPensionerTicket] = useState(0);
   const [childTicket, setChildTicket] = useState(0);
 
+  let seatsPerRow = 10;
+
   useEffect(() => {
-    setTickets({
+      setTickets({
       standard: standardTicket,
       senior: pensionerTicket,
       child: childTicket
     })
+    setChosenSeats([]);
   }, [standardTicket, pensionerTicket, childTicket])
+
+  const addSeatFunc = (state, setFunc) => {
+    console.log();
+    if (standardTicket + pensionerTicket + childTicket >= seatsPerRow) return;
+    setFunc(state + 1);
+  }
 
   return (
     <div className={container}>
@@ -38,7 +47,7 @@ const Tickets = () => {
             <span>{standardTicket}</span>
           </div>
           <i
-            onClick={() => setStandardTicket(standardTicket + 1)}
+            onClick={() => addSeatFunc(standardTicket, setStandardTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
@@ -55,7 +64,7 @@ const Tickets = () => {
             <span>{pensionerTicket}</span>
           </div>
           <i
-            onClick={() => setPensionerTicket(pensionerTicket + 1)}
+            onClick={() => addSeatFunc(pensionerTicket, setPensionerTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
@@ -72,7 +81,7 @@ const Tickets = () => {
             <span>{childTicket}</span>
           </div>
           <i
-            onClick={() => setChildTicket(childTicket + 1)}
+            onClick={() => addSeatFunc(childTicket, setChildTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
