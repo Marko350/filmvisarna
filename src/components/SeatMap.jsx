@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { MovieContext } from '../contexts/MovieContext';
 import style from '../css/SeatMap.module.css';
 
 const SeatMap = () => {
-  const [chosenSeats, setChosenSeats] = useState([]);
+  const {chosenSeats, setChosenSeats} = useContext(MovieContext);
   const [bookedSeats, setBookedSeats] = useState(['a1', 'a2', 'a3', 'b2', 'b3', 'c4', 'c5']);
   const [hover, setHover] = useState('');
   let rows = ['a', 'b', 'c', 'd', 'e'];
@@ -56,7 +57,8 @@ const SeatMap = () => {
   }
 
   return ( 
-    <div className={style.seatMapWrapper}> 
+    <div className={style.seatMapWrapper}>
+      <h2>Välj platser</h2>
       <div className={style.seatMap}>
         <div className={style.screenIndicator}>
           <div className={style.screenLine}></div>

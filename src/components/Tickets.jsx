@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { container } from "../css/Tickets.module.css";
 import Ticket from "../assets/ticket.png";
 import {
@@ -7,15 +7,25 @@ import {
   counter,
   ticketNumber,
 } from "../css/Tickets.module.css";
+import { MovieContext } from "../contexts/MovieContext";
 
 const Tickets = () => {
+  const { setTickets } = useContext(MovieContext);
   const [standardTicket, setStandardTicket] = useState(0);
   const [pensionerTicket, setPensionerTicket] = useState(0);
   const [childTicket, setChildTicket] = useState(0);
 
+  useEffect(() => {
+    setTickets({
+      standard: standardTicket,
+      senior: pensionerTicket,
+      child: childTicket
+    })
+  }, [standardTicket, pensionerTicket, childTicket])
+
   return (
     <div className={container}>
-      <h1>Välj antal biljetter</h1>
+      <h2>Välj antal biljetter</h2>
       <div className={tickets}>
         <p>Standard</p>
         <img src={Ticket} alt="Ticket" />

@@ -1,4 +1,6 @@
 .container {
+  max-width: 400px;
+  margin: 0 auto;
   margin-top: 1rem;
 }
 
@@ -6,7 +8,7 @@
   position: relative;
 }
 
-.container h1 {
+.container h2 {
   font-size: 20px;
   margin-bottom: 1rem;
   color: var(--main-header);
@@ -64,7 +66,7 @@
     margin-bottom: 2rem;
   }
 
-  .container h1 {
+  .container h2 {
     font-size: 25px;
   }
 

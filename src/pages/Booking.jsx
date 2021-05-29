@@ -1,11 +1,16 @@
+import { useContext } from 'react';
 import Ticket from "../components/Ticket";
 import Tickets from "../components/Tickets";
 import Btn from "../assets/buttonImg/btn-small.png";
-import { container, btn, btnContainer } from "../css/Booking.module.css";
+import { container, btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
+import { MovieContext } from '../contexts/MovieContext';
+
 const Booking = () => {
+  const { getShowingById } = useContext(MovieContext);
+
   return (
-    <div className={container}>
+    <div className={`container ${bookingWrapper}`}>
       <Tickets />
       <SeatMap />
       <Ticket />

@@ -6,6 +6,14 @@ const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [movieById, setMovieById] = useState(null);
 
+  // Booking-data
+  const [chosenSeats, setChosenSeats] = useState([]);
+  const [tickets, setTickets] = useState({
+    standard: 0,
+    senior: 0,
+    child: 0
+  })
+
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
@@ -59,11 +67,19 @@ const MovieProvider = (props) => {
     getShowingsByCurrentDate();
   }, [])
 
+  useEffect(() => {
+    console.log('Tickets from context:', tickets);
+  }, [tickets]);
+
   const values = {
     getAllMovies,
     allMovies,
     getMovieById,
-    movieById
+    movieById,
+    chosenSeats,
+    setChosenSeats,
+    getShowingById,
+    setTickets,
   }
 
   return ( 
