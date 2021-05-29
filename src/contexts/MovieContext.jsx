@@ -13,6 +13,19 @@ const MovieProvider = (props) => {
     senior: 0,
     child: 0
   })
+  
+  // Example ticket-object to send in function later:
+  // const ticket = {
+  //   bookingNr: '',
+  //   showingId: 'id',
+  //   seats: [],
+  //   movieTitle: '',
+  //   poster: '',
+  //   date: '2021-06-30',
+  //   time: '18:00',
+  //   ticketTypes: {standard: 0, senior: 0, child: 0},
+  //   totalPrice: 0,
+  // }
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -35,7 +48,6 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
-    console.log(showing);
     return showing;
   }
 

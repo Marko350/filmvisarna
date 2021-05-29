@@ -5,11 +5,8 @@ import {
   ticketInfo,
   imageContainer,
 } from "../css/Ticket.module.css";
-import { useContext } from "react";
-import { MovieContext } from "../contexts/MovieContext";
 
 const Ticket = () => {
-  const { getMovieById } = useContext(MovieContext);
 
   return (
     <div className={container}>

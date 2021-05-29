@@ -2,20 +2,19 @@ import { useState, useContext, useEffect } from 'react';
 import { MovieContext } from '../contexts/MovieContext';
 import style from '../css/SeatMap.module.css';
 
-const SeatMap = () => {
+const SeatMap = ({ showing }) => {
   const { chosenSeats, setChosenSeats, tickets } = useContext(MovieContext);
-  const [bookedSeats, setBookedSeats] = useState(['a1', 'a2', 'a3', 'b2', 'b3', 'c4', 'c5']);
-  const [hover, setHover] = useState('');
-  let rows = ['a', 'b', 'c', 'd', 'e'];
-  let seatsPerRow = 10;
   const [numOfSeats, setNumOfSeats] = useState(0);
+  const [hover, setHover] = useState('');
+  const bookedSeats = showing.bookedSeats;
+  const rows = showing.screenId[0].rows;
+  const seatsPerRow = showing.screenId[0].seatsPerRow;
 
   useEffect(() => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child)
   }, [tickets]);
 
   const handleSeatClick = (e) => {
-    let seat = e.target.getAttribute('data-seat');
     let ok = true;
     hover.forEach(seat => {
       if (bookedSeats.includes(seat)) ok = false;
@@ -46,8 +45,7 @@ const SeatMap = () => {
     let allSeatsHtml = rows.map((row, index) => {
       let rowSeats = [];
       for (let i = 1; i <= seatsPerRow; i++) {
-        let seatClass = 
-          bookedSeats.includes(`${row}${i}`) && style.booked || chosenSeats.includes(`${row}${i}`) && style.chosen;
+        let seatClass = (bookedSeats.includes(`${row}${i}`) && style.booked) || (chosenSeats.includes(`${row}${i}`) && style.chosen);
           
         rowSeats.push
           (<div key={i} className={`${style.seat} ${seatClass} ${hover.includes(`${row}${i}`) && style.hoverSeat}`} onClick={handleSeatClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} data-seat={`${row}${i}`}>

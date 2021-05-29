@@ -24,6 +24,7 @@ const Tickets = () => {
       child: childTicket
     })
     setChosenSeats([]);
+    // eslint-disable-next-line
   }, [standardTicket, pensionerTicket, childTicket])
 
   const addSeatFunc = (state, setFunc) => {
