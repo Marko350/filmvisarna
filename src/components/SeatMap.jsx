@@ -58,12 +58,16 @@ const SeatMap = () => {
   return ( 
     <div className={style.seatMapWrapper}> 
       <div className={style.seatMap}>
-        <div className={style.screenIndicator}>filmduken</div>
+        <div className={style.screenIndicator}>
+          <div className={style.screenLine}></div>
+          <h4 className={style.screenHeading}>Filmduken</h4>
+        </div>
         <div className={style.seatsWrapper}>
           {seatsContent}
         </div>
-        <div>Valda platser: {chosenSeats.map((seat, i) => 
-          <span className={style.yourSeats} key={i}>{seat}</span>)}
+        <div className={style.seatsDiv}>
+          <div>Valda platser:</div>
+          {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
         </div>
       </div>
     </div>
