@@ -79,10 +79,6 @@ const MovieProvider = (props) => {
     getShowingsByCurrentDate();
   }, [])
 
-  useEffect(() => {
-    console.log('Tickets from context:', tickets);
-  }, [tickets]);
-
   const values = {
     getAllMovies,
     allMovies,

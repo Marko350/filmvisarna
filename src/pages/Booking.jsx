@@ -7,7 +7,7 @@ import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 
 const Booking = () => {
-  const { getShowingById, chosenSeats } = useContext(MovieContext);
+  const { getShowingById, chosenSeats, tickets } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
 
   const getShowing = async () => {
@@ -20,8 +20,23 @@ const Booking = () => {
   }, []);
 
   const handleBookingBtn = () => {
-    console.log(chosenSeats);
-    // handle sending booking to back-end
+    // Creating ticket-object
+    // Will send ticket to back-end later
+    let price = showing.movieId[0].price
+    let totalPrice = (price * tickets.standard) + ((price * .8) * tickets.senior) + ((price * .7) * tickets.child);
+
+    const ticketObj = {
+      showingId: showing._id,
+      seats: chosenSeats,
+      date: showing.date,
+      time: showing.time,
+      ticketTypes: tickets,
+      movieTitle: showing.movieId[0].title,
+      poster: showing.movieId[0].poster,
+      price,
+      totalPrice
+    }
+    console.log('Ticket:', ticketObj)
   }
 
   if (showing) {
@@ -34,7 +49,7 @@ const Booking = () => {
         <div>
           <Tickets />
           <SeatMap showing={showing}/>
-          <Ticket />
+          <Ticket showing={showing}/>
           <div
             onClick={handleBookingBtn}
             className={btnContainer}
