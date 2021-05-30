@@ -13,7 +13,7 @@ const Schema = () => {
                         <div className={styles.margin} key={i}>
                             <h2>{today.time}</h2>
                             {today.temp.map((showing) => (
-                                <p>{showing.movieId[0].title}</p>
+                                <p key={showing._id}>{showing.movieId[0].title}</p>
                             ))}
                         </div>
                     ))}
