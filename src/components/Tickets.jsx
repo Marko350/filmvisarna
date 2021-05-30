@@ -9,19 +9,22 @@ import {
 } from "../css/Tickets.module.css";
 import { MovieContext } from "../contexts/MovieContext";
 
-const Tickets = () => {
+const Tickets = ({ showing }) => {
   const { setTickets, setChosenSeats } = useContext(MovieContext);
   const [standardTicket, setStandardTicket] = useState(0);
   const [pensionerTicket, setPensionerTicket] = useState(0);
   const [childTicket, setChildTicket] = useState(0);
 
-  let seatsPerRow = 10;
+  const seatsPerRow = showing.screenId[0].seatsPerRow;
 
   useEffect(() => {
-      setTickets({
+    let price = showing.movieId[0].price
+    let totalPrice = (price * standardTicket) + ((price * .8) * pensionerTicket) + ((price * .7) * childTicket);
+    setTickets({
       standard: standardTicket,
       senior: pensionerTicket,
-      child: childTicket
+      child: childTicket,
+      totalPrice,
     })
     setChosenSeats([]);
     // eslint-disable-next-line

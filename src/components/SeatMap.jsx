@@ -28,7 +28,7 @@ const SeatMap = ({ showing }) => {
     let hoverSeat = e.target.getAttribute('data-seat').slice(1);
     let startSeat = Number(hoverSeat) - Math.floor(numOfSeats / 2);
     if (startSeat <= 0) startSeat = 1;
-    if ((startSeat + numOfSeats) > 10) startSeat = 11 - numOfSeats; 
+    if ((startSeat + numOfSeats) > seatsPerRow) startSeat = (seatsPerRow + 1) - numOfSeats; 
     let hoverArray = [];
     for (let i = 0; i < numOfSeats; i++) {
       hoverArray.push(hoverRow + (startSeat + i))

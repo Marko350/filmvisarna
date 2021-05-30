@@ -22,8 +22,8 @@ const Booking = () => {
   const handleBookingBtn = () => {
     // Creating ticket-object
     // Will send ticket to back-end later
-    let price = showing.movieId[0].price
-    let totalPrice = (price * tickets.standard) + ((price * .8) * tickets.senior) + ((price * .7) * tickets.child);
+    // let price = showing.movieId[0].price
+    // let totalPrice = (price * tickets.standard) + ((price * .8) * tickets.senior) + ((price * .7) * tickets.child);
 
     const ticketObj = {
       showingId: showing._id,
@@ -33,8 +33,8 @@ const Booking = () => {
       ticketTypes: tickets,
       movieTitle: showing.movieId[0].title,
       poster: showing.movieId[0].poster,
-      price,
-      totalPrice
+      // price,
+      // totalPrice
     }
     console.log('Ticket:', ticketObj)
   }
@@ -47,7 +47,7 @@ const Booking = () => {
     <div className={`container ${bookingWrapper}`}>
       { showing && 
         <div>
-          <Tickets />
+          <Tickets showing={showing}/>
           <SeatMap showing={showing}/>
           <Ticket showing={showing}/>
           <div
