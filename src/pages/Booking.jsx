@@ -7,7 +7,7 @@ import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 
 const Booking = () => {
-  const { getShowingById, chosenSeats, tickets } = useContext(MovieContext);
+  const { getShowingById, chosenSeats, tickets, addSeats } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
 
   const getShowing = async () => {
@@ -34,7 +34,8 @@ const Booking = () => {
         movieTitle: showing.movieId[0].title,
         poster: showing.movieId[0].poster,
       }
-      console.log('Ticket:', ticketObj)
+      console.log('Ticket:', ticketObj);
+      addSeats(showing._id, chosenSeats);
     } else {
       console.log('Need to choose your seats');
     }
