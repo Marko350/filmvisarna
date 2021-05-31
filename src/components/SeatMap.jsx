@@ -5,7 +5,7 @@ import style from '../css/SeatMap.module.css';
 const SeatMap = ({ showing }) => {
   const { chosenSeats, setChosenSeats, tickets } = useContext(MovieContext);
   const [numOfSeats, setNumOfSeats] = useState(0);
-  const [hover, setHover] = useState('');
+  const [hover, setHover] = useState([]);
   const bookedSeats = showing.bookedSeats;
   const rows = showing.screenId[0].rows;
   const seatsPerRow = showing.screenId[0].seatsPerRow;
@@ -15,6 +15,8 @@ const SeatMap = ({ showing }) => {
   }, [tickets]);
 
   const handleSeatClick = (e) => {
+    // Check if any seat from hover-array is in bookedSeats-array
+    // Add seats to chosenSeats-array in context
     let ok = true;
     hover.forEach(seat => {
       if (bookedSeats.includes(seat)) ok = false;
@@ -24,6 +26,9 @@ const SeatMap = ({ showing }) => {
   }
 
   const handleMouseEnter = (e) => {
+    // Pick out seat that mouse is hovering over
+    // Pick out start seat (based on how many seats from Tickets.jsx)
+    // Push all hovered seats into hover-array
     let hoverRow = e.target.getAttribute('data-seat')[0];
     let hoverSeat = e.target.getAttribute('data-seat').slice(1);
     let startSeat = Number(hoverSeat) - Math.floor(numOfSeats / 2);
@@ -37,7 +42,8 @@ const SeatMap = ({ showing }) => {
   }
 
   const handleMouseLeave = () => {
-    setHover('');
+    // Set hover-array to empty array on mouse leave
+    setHover([]);
   }
 
   let seatsContent = 'Laddar...';
@@ -45,8 +51,10 @@ const SeatMap = ({ showing }) => {
     let allSeatsHtml = rows.map((row, index) => {
       let rowSeats = [];
       for (let i = 1; i <= seatsPerRow; i++) {
+        // Render out seat with css based on booked / chosen / hover
         let seatClass = (bookedSeats.includes(`${row}${i}`) && style.booked) || (chosenSeats.includes(`${row}${i}`) && style.chosen);
           
+        // Add name of seat to data-seat attribute ('a1', 'a2', etc)
         rowSeats.push
           (<div key={i} className={`${style.seat} ${seatClass} ${hover.includes(`${row}${i}`) && style.hoverSeat}`} onClick={handleSeatClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} data-seat={`${row}${i}`}>
             <span className={style.seatNrCss}>{i}</span>

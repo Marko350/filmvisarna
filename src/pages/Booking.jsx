@@ -11,7 +11,7 @@ const Booking = () => {
   const [showing, setShowing] = useState(null);
 
   const getShowing = async () => {
-    let show = await getShowingById('60acc70f2e0da01dfcbd1853');
+    let show = await getShowingById('60b49e79018d1e4968847012');
     setShowing(show);
   }
 
@@ -22,21 +22,22 @@ const Booking = () => {
   const handleBookingBtn = () => {
     // Creating ticket-object
     // Will send ticket to back-end later
-    // let price = showing.movieId[0].price
-    // let totalPrice = (price * tickets.standard) + ((price * .8) * tickets.senior) + ((price * .7) * tickets.child);
 
-    const ticketObj = {
-      showingId: showing._id,
-      seats: chosenSeats,
-      date: showing.date,
-      time: showing.time,
-      ticketTypes: tickets,
-      movieTitle: showing.movieId[0].title,
-      poster: showing.movieId[0].poster,
-      // price,
-      // totalPrice
+    // Check if there are any seats in the chosenSeats-array
+    if (chosenSeats.length) {
+      const ticketObj = {
+        showingId: showing._id,
+        seats: chosenSeats,
+        date: showing.date,
+        time: showing.time,
+        ticketTypes: tickets,
+        movieTitle: showing.movieId[0].title,
+        poster: showing.movieId[0].poster,
+      }
+      console.log('Ticket:', ticketObj)
+    } else {
+      console.log('Need to choose your seats');
     }
-    console.log('Ticket:', ticketObj)
   }
 
   if (showing) {

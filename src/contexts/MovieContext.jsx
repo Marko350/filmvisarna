@@ -11,21 +11,9 @@ const MovieProvider = (props) => {
   const [tickets, setTickets] = useState({
     standard: 0,
     senior: 0,
-    child: 0
+    child: 0,
+    totalPrice: 0
   })
-  
-  // Example ticket-object to send in function later:
-  // const ticket = {
-  //   bookingNr: '',
-  //   showingId: 'id',
-  //   seats: [],
-  //   movieTitle: '',
-  //   poster: '',
-  //   date: '2021-06-30',
-  //   time: '18:00',
-  //   ticketTypes: {standard: 0, senior: 0, child: 0},
-  //   totalPrice: 0,
-  // }
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -74,8 +62,6 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    getShowingById('60acc75a2e0da01dfcbd1854');
-    getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
   }, [])
 

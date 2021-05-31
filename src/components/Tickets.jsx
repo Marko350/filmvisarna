@@ -31,10 +31,14 @@ const Tickets = ({ showing }) => {
   }, [standardTicket, pensionerTicket, childTicket])
 
   const addSeatFunc = (state, setFunc) => {
-    console.log();
     if (standardTicket + pensionerTicket + childTicket >= seatsPerRow) return;
     setFunc(state + 1);
   }
+
+  const minusSeatFunc = (state, setState) => { 
+    if (state === 0) return;     
+    setState(state - 1);   
+  };
 
   return (
     <div className={container}>
@@ -44,7 +48,7 @@ const Tickets = ({ showing }) => {
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setStandardTicket(standardTicket - 1)}
+            onClick={() => minusSeatFunc(standardTicket, setStandardTicket)}
             className="fas fa-minus-circle"
           ></i>
           <div className={ticketNumber}>
@@ -61,7 +65,7 @@ const Tickets = ({ showing }) => {
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setPensionerTicket(pensionerTicket - 1)}
+            onClick={() => minusSeatFunc(pensionerTicket, setPensionerTicket)}
             className="fas fa-minus-circle"
           ></i>
           <div className={ticketNumber}>
@@ -78,7 +82,7 @@ const Tickets = ({ showing }) => {
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setChildTicket(childTicket - 1)}
+            onClick={() => minusSeatFunc(childTicket, setChildTicket)}
             className="fas fa-minus-circle"
           ></i>
           <div className={ticketNumber}>
