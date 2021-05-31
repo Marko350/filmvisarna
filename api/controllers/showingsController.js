@@ -28,7 +28,7 @@ const getShowingsByMovieAndDate = async (req, res) => {
 
     try {
         // Add sort by time when we have more than one showing on the same date
-        let showings = await Showings.find(queryObj).sort({ time: 1 }).exec();
+        let showings = await Showings.find(queryObj).populate('screenId').sort({ time: 1 }).exec(); // Added populate screen to get screen name in showings component
         if (!showings.length) {
             res.json({ error: 'No showings for this date' });
             return;

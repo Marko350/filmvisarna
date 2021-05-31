@@ -8,10 +8,10 @@ function MovieList() {
 
   const { getMovieById, movieById } = useContext(MovieContext);
 
-  useEffect(() => {
-    getMovieById("60b49a37b62f8359984329e7");
-    // eslint-disable-next-line
-  }, []);
+    useEffect(() => {
+        getMovieById("60b49a37b62f8359984329e7");
+        // eslint-disable-next-line
+    }, []);
 
   return (
     <div className="container">
