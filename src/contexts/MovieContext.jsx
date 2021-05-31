@@ -60,13 +60,33 @@ const MovieProvider = (props) => {
     return showings;
   }
 
+  // Placeholder function
+  const addSeats = async (showingsId, bookedSeats) => {
+    const seatsObj = {
+      seats: bookedSeats
+    };
+    let result = await fetch(`/api/v1/showings/${showingsId}/add-seats`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(seatsObj)
+    });
+    result = await result.json();
+    return result;
+  }
+
   useEffect(() => {
     getAllMovies();
+    // getShowingById('60acc75a2e0da01dfcbd1854');
+    // getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
+    // addSeats('60acbd0cceadf61dd85e83c3', []) // Put strings in the array
   }, [])
 
   const values = {
     getAllMovies,
+    getShowingsByMovieAndDate,
     allMovies,
     getMovieById,
     movieById,
