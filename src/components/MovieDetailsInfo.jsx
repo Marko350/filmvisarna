@@ -19,17 +19,25 @@ function MovieDetailsInfo({movieId}) {
                         <img src={infoBtn} alt="Knapp för att boka biljett" className="mainBtn btnSmall" />
                         <h2 className={styles.infoBtnName}>Biljetter</h2>
                     </div>
-                    <h3 className={styles.infoHeading}>Utgivningsår:</h3> <p>{movieById.year}</p>
-                    <h3 className={styles.infoHeading}>Genre:</h3> <p> {movieById.genre}</p>
-                    <h3 className={styles.infoHeading}>Längd:</h3> <p>{movieById.length} min</p>
-                    <h3 className={styles.infoHeading}>Språk: </h3> <p>{movieById.language}</p>
+                    <div className={styles.infoHeadingP} >
+                        <h3 className={styles.infoHeading}>Utgivningsår:</h3> <p >{movieById.year}</p>
+                    </div>
+                    <div className={styles.infoHeadingP} >
+                        <h3 className={styles.infoHeading}>Genre:</h3> <p>{movieById.genre}</p>
+                    </div>  
+                    <div className={styles.infoHeadingP} >                 
+                        <h3 className={styles.infoHeading}>Längd:</h3> <p>{movieById.length} min</p>
+                    </div>  
+                    <div className={styles.infoHeadingP} >   
+                        <h3 className={styles.infoHeading}>Språk: </h3> <p>{movieById.language}</p>
+                    </div>                     
                     <br></br>
                     <h3 className={styles.infoHeading}>Regissör: </h3> <p>{movieById.director}</p>
                     <br></br>
                     <h3 className={styles.infoHeading}> Skådespelare: </h3>
                         {movieById.actors.map(actor => <p className={styles.actorList}>{actor}</p>)}
                     <br></br>
-                    <p>{movieById.description}</p>
+                    <p className={styles.movieInfoP} >{movieById.description}</p>
                 </div>
             }
         </div> 

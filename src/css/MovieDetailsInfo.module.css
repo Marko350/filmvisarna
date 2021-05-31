@@ -29,3 +29,11 @@
 .actorList{
     color: white;
 }
+
+.infoHeadingP{
+    display: flex;
+}
+
+.movieInfoP{
+    font-size: 0.95rem;
+}
