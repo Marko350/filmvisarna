@@ -6,12 +6,15 @@ import { container, btn, btnContainer, bookingWrapper } from "../css/Booking.mod
 import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 
-const Booking = () => {
+const Booking = (props) => {
+
+  const showingId = props.match.params.showingId;
+
   const { getShowingById, chosenSeats, tickets, addSeats } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
 
   const getShowing = async () => {
-    let show = await getShowingById('60b49e79018d1e4968847012');
+    let show = await getShowingById(showingId);
     setShowing(show);
   }
 
