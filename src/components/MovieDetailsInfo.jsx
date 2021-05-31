@@ -19,7 +19,7 @@ function MovieDetailsInfo({movieId}) {
                         <img src={infoBtn} alt="Knapp för att boka biljett" className="mainBtn btnSmall" />
                         <h2 className={styles.infoBtnName}>Biljetter</h2>
                     </div>
-                    <h3 className={styles.infoHeading}>Premiär:</h3> <p> KOLLA UPP</p>
+                    <h3 className={styles.infoHeading}>Utgivningsår:</h3> <p>{movieById.year}</p>
                     <h3 className={styles.infoHeading}>Genre:</h3> <p> {movieById.genre}</p>
                     <h3 className={styles.infoHeading}>Längd:</h3> <p>{movieById.length} min</p>
                     <h3 className={styles.infoHeading}>Språk: </h3> <p>{movieById.language}</p>
