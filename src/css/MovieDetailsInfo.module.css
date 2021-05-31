@@ -39,6 +39,37 @@
     padding-top: 3px;
 }
 
-.movieInfoP{
+.movieInfoDesc{
     font-size: 0.9rem;
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .btnContainer{
+        display: none;
+    }
+
+    .movieDetailsLaptop{
+        display: flex;
+        padding-top: 3.5rem;
+        margin: 0 auto;
+    }
+    .movieDetailsColumn{
+        margin-right: 5rem;
+    }
+
+    .infoHeading{
+        font-size: 1.3rem;
+    }
+
+    .infoP{
+        font-size: 1.2rem;
+    }
+
+    .movieInfoDesc{
+        font-size: 1.1rem;
+        line-height: 1.7;
+        width: 60%;
+    }
 }
