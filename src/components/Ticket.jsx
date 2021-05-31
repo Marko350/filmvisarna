@@ -6,11 +6,27 @@ import {
   movieInfo,
   ticketInfo,
   imageContainer,
+  ticketTypes
 } from "../css/Ticket.module.css";
 
 const Ticket = ({ showing }) => {
   const { tickets } = useContext(MovieContext);
   console.log('showing in ticket', showing);
+
+  const renderTicketTypes = () => {
+    let price = showing.movieId[0].price;
+    if (tickets.standard > 0 || tickets.senior > 0 || tickets.child > 0) {
+      return (
+        <div className={ticketTypes}>
+          { tickets.standard > 0 && <p>Standard: {tickets.standard}</p> }
+          { tickets.senior > 0 && <p>Pensionär: {tickets.senior}</p> }
+          { tickets.child > 0 && <p>Barn: {tickets.child}</p> }  
+        </div>
+      )  
+    } else {
+      return <div className={ticketTypes}>Inga biljetter valda</div>
+    }
+  }
 
   return (
     <div className={container}>
@@ -26,10 +42,10 @@ const Ticket = ({ showing }) => {
         <div className={movieInfo}>
           <span>{showing.movieId[0].title}</span>
           <span>{showing.date} - {showing.time}</span>
-          { tickets.standard > 0 && <span>Standard: {tickets.standard}</span> }
-          { tickets.senior > 0 && <span>Pensionär: {tickets.senior}</span> }
-          { tickets.child > 0 && <span>Barn: {tickets.child}</span> }
-          <span>Totalt pris: {tickets.totalPrice} kr</span>
+          <hr />
+          { renderTicketTypes() }
+          <hr />
+          <span>Totalt pris: {tickets.totalPrice} kr</span> 
         </div>
       </div>
       <img src={TicketPicture} alt="Ticket" />
