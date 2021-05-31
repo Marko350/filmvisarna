@@ -4,7 +4,10 @@ function ConfirmationPage() {
 
     return (
         <div className="container">
-            <p className={styles.testParagraph} >TEST</p>
+            <div className={styles.textContainer}>
+                <h1>TACK!</h1>
+                <p>Din bokning var framgångsrik.</p>
+            </div>
         </div>
     )
 }
