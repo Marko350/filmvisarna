@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import Ticket from "../components/Ticket";
 import Tickets from "../components/Tickets";
 import Btn from "../assets/buttonImg/btn-small.png";
-import { container, btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
+import { btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 

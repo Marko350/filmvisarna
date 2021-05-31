@@ -14,7 +14,6 @@ const Ticket = ({ showing }) => {
   console.log('showing in ticket', showing);
 
   const renderTicketTypes = () => {
-    let price = showing.movieId[0].price;
     if (tickets.standard > 0 || tickets.senior > 0 || tickets.child > 0) {
       return (
         <div className={ticketTypes}>
@@ -34,7 +33,6 @@ const Ticket = ({ showing }) => {
       <div className={ticketInfo}>
         <div className={imageContainer}>
           <img
-            // src="https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
             src={showing.movieId[0].poster}
             alt="Poster"
           />
