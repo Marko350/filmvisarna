@@ -5,3 +5,7 @@
 .confirmationH1{
     color: var(--main-header);
 }
+
+.confirmationBox{
+    background-color: #434343;
+}
