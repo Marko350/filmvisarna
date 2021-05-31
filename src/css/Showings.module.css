@@ -35,13 +35,45 @@
     align-items: center;
     box-shadow: var(--card-shadow);
     width: 48%;
+    margin-bottom: 15px;
     cursor: pointer;
 }
 
-.time{
+.time {
     margin-right: 10px;
 }
 
 .screen {
     font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+
+    .scheduleItem {
+        width: 49%;
+    }
+
+    .time {
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .screen {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .scheduleItem {
+        width: 32%;
+        margin-bottom: 20px;
+    }
+
+    .datepickerLine {
+        margin: 35px 0 20px 0;
+        padding-bottom: 5px;
+    }
+
 }
