@@ -55,7 +55,7 @@ const MovieProvider = (props) => {
 
   useEffect(() => {
     getAllMovies();
-    getShowingById('60acc75a2e0da01dfcbd1854');
+    // getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByCurrentDate();
   }, [])
 
