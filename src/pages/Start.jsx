@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { MovieContext } from '../contexts/MovieContext';
 import style from '../css/Start.module.css';
 import button from '../assets/buttonImg/btn-small.png';
+import SeatMap from '../components/SeatMap';
 
 const Start = () => {
   const { allMovies } = useContext(MovieContext);
@@ -23,8 +24,9 @@ const Start = () => {
       <h1 className={style.startHeader}>Heading</h1>
       <div className="mainBtn btnSmall">
         <h4 className="btnLabel">Logga in</h4>
-        <img src={button}></img>
+        <img src={button} alt="button test page"></img>
       </div>
+      <SeatMap />
       { content }
     </div>
    );

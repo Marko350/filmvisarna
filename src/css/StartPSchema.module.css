@@ -1,0 +1,85 @@
+.schema {
+    background-color: var(--card-background);
+    margin-top: 1rem;
+    padding: 1.7rem;
+    box-shadow: var(--card-shadow);
+}
+
+/* FONT STYLES */
+.schema h2 {
+    color: var(--secondary-header);
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.movieLink {
+    font-size: 18px;
+}
+
+.movieLink:hover {
+    cursor: pointer;
+    font-size: 20px;
+}
+/* -END- FONT STYLES */
+
+.margin {
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .schemaWrapper {
+        width: 100%;
+    }
+
+    .schema {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 15px;
+        padding: 30px;
+        height: 100%;
+        /* width: 160%; */
+    }
+
+    /* FONT STYLES */
+    .schema h2 {
+        font-size: 30px;
+    }
+
+    .movieLink {
+        font-size: 25px;
+    }
+
+    .movieLink:hover {
+        font-size: 27px;
+    }
+    /* -END- FONT STYLES */
+
+    .margin {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .schema {
+        padding: 50px;
+    }
+
+    /* FONT STYLES */
+    .movieLink {
+        font-size: 30px;
+    }
+
+    .movieLink:hover {
+        font-size: 32px;
+    }
+
+    .schema h2 {
+        font-size: 35px;
+    }
+    /* -END- FONT STYLES */
+
+    .margin {
+        margin-bottom: 50px;
+    }
+}
