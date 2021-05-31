@@ -1,9 +1,11 @@
 import { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { MovieContext } from "../contexts/MovieContext";
 import styles from "../css/StartPSchema.module.css";
 
 const Schema = () => {
     const {todaysSchema} = useContext(MovieContext);
+    const historyHook = useHistory();
 
     const renderPosters = () => {
         return(
