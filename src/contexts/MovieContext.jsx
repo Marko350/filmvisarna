@@ -6,6 +6,26 @@ const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [movieById, setMovieById] = useState(null);
   const [movieShowings, setMovieShowings] = useState(null);
+  const [todaysShowings, setTodaysShowings] = useState(null);
+  const [todaysSchema, setTodaysSchema] = useState(null);
+  const [todaysPosters, setTodaysPoster] = useState(false);
+
+  useEffect(() => {
+    console.log("this is today:", todaysSchema);
+  }, [todaysSchema])
+
+  useEffect(() => {
+    console.log("detta är posters", todaysPosters);
+  }, [todaysPosters])
+
+  // Booking-data
+  const [chosenSeats, setChosenSeats] = useState([]);
+  const [tickets, setTickets] = useState({
+    standard: 0,
+    senior: 0,
+    child: 0,
+    totalPrice: 0
+  })
 
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
@@ -54,29 +74,112 @@ const MovieProvider = (props) => {
     let showings = await fetch('/api/v1/showings/todaysShowings');
     showings = await showings.json();
     console.log('All showings today:', showings);
-    return showings;
+    setTodaysShowings(showings)
+
+    //preventing errors
+    if(showings.length) {
+      removeDuplicates(showings, "time");
+      fixPosters(showings, "poster");
+    };
   }
+
+  // Placeholder function
+  const addSeats = async (showingsId, bookedSeats) => {
+    const seatsObj = {
+      seats: bookedSeats
+    };
+    let result = await fetch(`/api/v1/showings/${showingsId}/add-seats`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(seatsObj)
+    });
+    result = await result.json();
+    return result;
+  }
+
+  function removeDuplicates(showings, time) {
+
+    //for filtering out duplicates, removing obj with the same "time" value
+    let uniq = [];
+    uniq = showings
+       .map(showing => showing[time])
+       .map((showing, i, final) => final.indexOf(showing) === i && i)
+       .filter(showing => showings[showing]).map(showing => showings[showing]);
+
+    //pusching in key "time" to new array
+    let times = [];
+    uniq.forEach((showing) => {
+      times.push(showing.time);
+      console.log("this is times:", times);
+    });
+
+    //adding back movie obj to the "right time"
+    let timesAndMovies = [];
+    times.forEach((time) => {
+      let temp = showings.filter(movie => movie.time === time);
+      timesAndMovies.push({time, temp});
+
+    });
+
+    //setting state-variable only when array is finished
+    if(timesAndMovies.length) {
+      setTodaysSchema(timesAndMovies);
+    };
+  };
+
+  function fixPosters(showings, poster) {
+
+    let posterArr = [];
+    showings.map((show) => {
+      show.movieId.map((movie) => {
+        //creating new array of obj with posters
+        posterArr.push({ poster: movie.poster, id: movie._id});
+      });
+    });
+
+    //filtering out duplicates, creating new array
+    let uniq = [];
+    uniq = [...new Map(posterArr.map(obj => [obj[poster], obj])).values()]
+    console.log("This is uniq arr:", uniq);
+
+    if(uniq.length) {
+      setTodaysPoster(uniq);
+    };
+  };
 
   useEffect(() => {
     getAllMovies();
     // getShowingById('60acc75a2e0da01dfcbd1854');
     getShowingsByCurrentDate();
+    // addSeats('60acbd0cceadf61dd85e83c3', []) // Put strings in the array
   }, [])
 
   const values = {
     getAllMovies,
+    getShowingsByMovieAndDate,
     allMovies,
     getMovieById,
     movieById,
     getShowingsByMovieAndDate,
     movieShowings
+    todaysShowings,
+    todaysSchema,
+    todaysPosters,
+    chosenSeats,
+    setChosenSeats,
+    getShowingById,
+    setTickets,
+    tickets,
+    addSeats,
   }
 
-  return ( 
+  return (
     <MovieContext.Provider value={ values }>
       { props.children }
     </MovieContext.Provider>
    );
 }
- 
+
 export default MovieProvider;

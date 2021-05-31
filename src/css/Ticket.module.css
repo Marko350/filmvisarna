@@ -1,11 +1,11 @@
 .container {
-  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   position: relative;
   margin-top: 2rem;
 }
 
-.container h1 {
+.container h2 {
   font-size: 20px;
   margin-bottom: 1rem;
   color: #7c96ac;
@@ -50,7 +50,7 @@
     margin-left: 2rem;
   }
 
-  .container h1 {
+  .container h2 {
     font-size: 25px;
   }
 
