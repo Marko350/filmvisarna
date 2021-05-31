@@ -7,7 +7,7 @@ const MovieProvider = (props) => {
   const [movieById, setMovieById] = useState(null);
   const [todaysShowings, setTodaysShowings] = useState(null);
   const [todaysSchema, setTodaysSchema] = useState(null);
-  const [todaysPosters, setTodaysPoster] = useState(null);
+  const [todaysPosters, setTodaysPoster] = useState(false);
 
   useEffect(() => {
     console.log("this is today:", todaysSchema);
