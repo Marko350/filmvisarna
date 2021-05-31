@@ -17,6 +17,15 @@ const MovieProvider = (props) => {
     console.log("detta är posters", todaysPosters);
   }, [todaysPosters])
 
+  // Booking-data
+  const [chosenSeats, setChosenSeats] = useState([]);
+  const [tickets, setTickets] = useState({
+    standard: 0,
+    senior: 0,
+    child: 0,
+    totalPrice: 0
+  })
+
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
@@ -38,7 +47,6 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
-    console.log(showing);
     return showing;
   }
 
@@ -145,12 +153,18 @@ const MovieProvider = (props) => {
 
   const values = {
     getAllMovies,
+    getShowingsByMovieAndDate,
     allMovies,
     getMovieById,
     movieById,
     todaysShowings,
     todaysSchema,
-    todaysPosters
+    todaysPosters,
+    chosenSeats,
+    setChosenSeats,
+    getShowingById,
+    setTickets,
+    tickets
   }
 
   return (
