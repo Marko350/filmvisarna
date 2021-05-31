@@ -12,8 +12,13 @@
     font-size: 20px;
 }
 
-.schema p {
+.movieLink {
     font-size: 18px;
+}
+
+.movieLink:hover {
+    cursor: pointer;
+    font-size: 20px;
 }
 /* -END- FONT STYLES */
 
@@ -40,8 +45,12 @@
         font-size: 30px;
     }
 
-    .schema p {
+    .movieLink {
         font-size: 25px;
+    }
+
+    .movieLink:hover {
+        font-size: 27px;
     }
     /* -END- FONT STYLES */
 
@@ -57,8 +66,12 @@
     }
 
     /* FONT STYLES */
-    .schema p {
+    .movieLink {
         font-size: 30px;
+    }
+
+    .movieLink:hover {
+        font-size: 32px;
     }
 
     .schema h2 {

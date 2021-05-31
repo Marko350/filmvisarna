@@ -1,9 +1,15 @@
 import { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { MovieContext } from "../contexts/MovieContext";
 import styles from "../css/StartPSchema.module.css";
 
 const Schema = () => {
     const {todaysSchema} = useContext(MovieContext);
+    const historyHook = useHistory();
+
+    const clicktoRender = (id) => {
+        historyHook.push(`/movie-list/${id}`)
+    }
 
     const renderPosters = () => {
         return(
@@ -12,8 +18,8 @@ const Schema = () => {
                     {todaysSchema.map((today, i) => (
                         <div className={styles.margin} key={i}>
                             <h2>{today.time}</h2>
-                            {today.temp.map((showing) => (
-                                <p key={showing._id}>{showing.movieId[0].title}</p>
+                            {today.temp.map((showing, i) => (
+                                <p className={styles.movieLink} onClick={() => clicktoRender(showing.movieId[0]._id)} key={i}>{showing.movieId[0].title}</p>
                             ))}
                         </div>
                     ))}

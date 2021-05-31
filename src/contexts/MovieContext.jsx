@@ -5,6 +5,7 @@ export const MovieContext = createContext();
 const MovieProvider = (props) => {
   const [allMovies, setAllMovies] = useState(null);
   const [movieById, setMovieById] = useState(null);
+  const [movieShowings, setMovieShowings] = useState(null);
   const [todaysShowings, setTodaysShowings] = useState(null);
   const [todaysSchema, setTodaysSchema] = useState(null);
   const [todaysPosters, setTodaysPoster] = useState(false);
@@ -12,6 +13,10 @@ const MovieProvider = (props) => {
   useEffect(() => {
     console.log("this is today:", todaysSchema);
   }, [todaysSchema])
+
+  useEffect(() => {
+    console.log("detta är posters", todaysPosters);
+  }, [todaysPosters])
 
   // Booking-data
   const [chosenSeats, setChosenSeats] = useState([]);
@@ -43,6 +48,7 @@ const MovieProvider = (props) => {
   const getShowingById = async (showingId) => {
     let showing = await fetch (`/api/v1/showings/${showingId}`);
     showing = await showing.json();
+    console.log("Showing by id: ", showing);
     return showing;
   }
 
@@ -55,8 +61,12 @@ const MovieProvider = (props) => {
     // Send down querys in route to back-end
     let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
     showings = await showings.json();
-    // console.log('Showings by movie and date:', showings);
-    return showings;
+    console.log('Showings by movie and date:', showings);
+    if (showings.error) {
+      setMovieShowings(null);
+    } else {
+      setMovieShowings(showings);
+    }
   }
 
   // Use for schedule on start-page
@@ -125,7 +135,7 @@ const MovieProvider = (props) => {
     showings.map((show) => {
       show.movieId.map((movie) => {
         //creating new array of obj with posters
-        posterArr.push({ poster: movie.poster });
+        posterArr.push({ poster: movie.poster, id: movie._id});
       });
     });
 
@@ -142,7 +152,6 @@ const MovieProvider = (props) => {
   useEffect(() => {
     getAllMovies();
     // getShowingById('60acc75a2e0da01dfcbd1854');
-    // getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
     // addSeats('60acbd0cceadf61dd85e83c3', []) // Put strings in the array
   }, [])
@@ -153,6 +162,8 @@ const MovieProvider = (props) => {
     allMovies,
     getMovieById,
     movieById,
+    getShowingsByMovieAndDate,
+    movieShowings,
     todaysShowings,
     todaysSchema,
     todaysPosters,
