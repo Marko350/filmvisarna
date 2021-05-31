@@ -70,7 +70,7 @@ const addSeats = async (req, res) => {
 
 const removeBookedSeats = async (req, res) => {
     try {
-        let exists = await Showings.exists({ _id: reg.params.showingId }).exec();
+        let exists = await Showings.exists({ _id: req.params.showingsId });
 
         if(exists) {
             console.log("In removeBookedSeats:", exists);
@@ -78,6 +78,7 @@ const removeBookedSeats = async (req, res) => {
         return;
     } catch(err) {
         res.status(400).json({ error: "Something went wrong!" });
+        console.log(err);
         return;
     }
 }
