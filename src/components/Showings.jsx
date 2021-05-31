@@ -32,12 +32,14 @@ function Showings({ movieId }) {
                     onChange={handleChange} />
             </div>
             <div className={styles.schedule}>
-                {movieShowings && movieShowings.map(showing => (
+                {movieShowings ? (movieShowings.map(showing => (
                     <div key={showing._id} className={styles.scheduleItem}>
                         <p className={styles.time}>{showing.time}</p>
                         <p className={styles.screen}>{showing.screenId[0].name}</p>
                     </div>
-                ))}
+                ))) : (
+                    <p>Inga visningar detta datum</p>
+                )}
             </div>
         </div>
     )

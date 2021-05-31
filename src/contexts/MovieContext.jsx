@@ -42,7 +42,11 @@ const MovieProvider = (props) => {
     let showings = await fetch(`/api/v1/showings/movie-date?movieId=${movieId}&date=${date}`);
     showings = await showings.json();
     console.log('Showings by movie and date:', showings);
-    setMovieShowings(showings);
+    if (showings.error) {
+      setMovieShowings(null);
+    } else {
+      setMovieShowings(showings);
+    }
   }
 
   // Use for schedule on start-page
