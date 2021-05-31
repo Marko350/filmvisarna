@@ -19,7 +19,7 @@ const Schema = () => {
                         <div className={styles.margin} key={i}>
                             <h2>{today.time}</h2>
                             {today.temp.map((showing, i) => (
-                                <p className={styles.movieLink} onClick={() => clicktoRender(showing._id)} key={i}>{showing.movieId[0].title}</p>
+                                <p className={styles.movieLink} onClick={() => clicktoRender(showing.movieId[0]._id)} key={i}>{showing.movieId[0].title}</p>
                             ))}
                         </div>
                     ))}
