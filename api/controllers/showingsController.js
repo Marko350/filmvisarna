@@ -68,11 +68,25 @@ const addSeats = async (req, res) => {
     }
 };
 
+const removeBookedSeats = async (req, res) => {
+    try {
+        let exists = await Showings.exists({ _id: reg.params.showingId }).exec();
+
+        if(exists) {
+            console.log("In removeBookedSeats:", exists);
+        }
+        return;
+    } catch(err) {
+        res.status(400).json({ error: "Something went wrong!" });
+        return;
+    }
+}
 
 module.exports = {
     addShowing,
     getShowingById,
     getShowingsByMovieAndDate,
     getShowingByTodaysDate,
-    addSeats
+    addSeats,
+    removeBookedSeats
 }
