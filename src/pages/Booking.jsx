@@ -44,10 +44,6 @@ const Booking = (props) => {
     }
   }
 
-  if (showing) {
-    console.log('got showing', showing)
-  }
-
   return (
     <div className={`container ${bookingWrapper}`}>
       { showing && 

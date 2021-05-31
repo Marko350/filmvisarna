@@ -23,6 +23,11 @@
   width: 75%;
 }
 
+.ticketTypes {
+  margin: .2rem 0;
+  font-size: .95rem;
+}
+
 .ticketInfo {
   display: flex;
   position: absolute;

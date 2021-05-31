@@ -41,7 +41,6 @@ const MovieProvider = (props) => {
     movie = await movie.json();
     console.log(movie);
     setMovieById(movie);
-    //return movie;
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
@@ -152,6 +151,7 @@ const MovieProvider = (props) => {
   useEffect(() => {
     getAllMovies();
     // getShowingById('60acc75a2e0da01dfcbd1854');
+    // getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
     // addSeats('60acbd0cceadf61dd85e83c3', []) // Put strings in the array
   }, [])
