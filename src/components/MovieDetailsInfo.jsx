@@ -11,15 +11,6 @@ function MovieDetailsInfo({movieId}) {
         getMovieById(movieId);
     }, [])
 
-    let actor = movieById.actors.map((actor) => {
-        console.log(actor)
-        return (
-            <ul>{actor}</ul>
-        )
-    })
-   
-
-
     return (
         <div className="container">
            { movieById && 
@@ -35,9 +26,11 @@ function MovieDetailsInfo({movieId}) {
                     <br></br>
                     <h3 className={styles.infoHeading}>Regissör: </h3> <p>{movieById.director}</p>
                     <br></br>
-                    <h3 className={styles.infoHeading}>Skådespelare:</h3> <ul>{actor}</ul>
+                    <div className={styles.infoHeading}> Skådespelare: 
+                        {movieById.actors.map(actor => <ul className={styles.actorList}>{actor}</ul>)}
+                    </div>
                     <br></br>
-                    <p>{movieById.description}</p>
+
 
                 </div>
             }
