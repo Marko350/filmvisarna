@@ -164,7 +164,8 @@ const MovieProvider = (props) => {
     setChosenSeats,
     getShowingById,
     setTickets,
-    tickets
+    tickets,
+    addSeats,
   }
 
   return (
