@@ -16,7 +16,7 @@ function MovieDetailsInfo({movieId}) {
            { movieById && 
                 <div className={styles.infoSection}>
                     <div className={styles.btnContainer}>
-                        <img src={infoBtn} alt="Knapp för att boka biljett" className={styles.infoBtn} />
+                        <img src={infoBtn} alt="Knapp för att boka biljett" className="mainBtn btnSmall" />
                         <h2 className={styles.infoBtnName}>Biljetter</h2>
                     </div>
                     <h3 className={styles.infoHeading}>Premiär:</h3> <p> KOLLA UPP</p>
@@ -32,7 +32,7 @@ function MovieDetailsInfo({movieId}) {
                     <p>{movieById.description}</p>
                 </div>
             }
-        </div>
+        </div> 
     )
 }
 
