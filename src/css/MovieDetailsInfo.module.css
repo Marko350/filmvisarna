@@ -3,7 +3,8 @@
 }
 
 .btnContainer{
-
+    position: relative;
+    text-align: center;
 }
 
 .infoBtn{
@@ -13,10 +14,9 @@
 }
 
 .infoBtnName{
-    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -38%);
+    transform: translate(-50%, -60%);
     font-size: 1.2rem;
 }

@@ -20,7 +20,6 @@ const MovieProvider = (props) => {
     movie = await movie.json();
     console.log(movie);
     setMovieById(movie);
-    //return movie;
   }
 
   // Use on booking-page to get the correct showing with info about booked seats etc
