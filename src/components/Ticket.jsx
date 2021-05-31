@@ -8,6 +8,7 @@ import {
   imageContainer,
   ticketTypes
 } from "../css/Ticket.module.css";
+import style from "../css/Ticket.module.css";
 
 const Ticket = ({ showing }) => {
   const { tickets } = useContext(MovieContext);
@@ -28,8 +29,8 @@ const Ticket = ({ showing }) => {
   }
 
   return (
-    <div className={container}>
-      <h2>Din biljett</h2>
+    <div className={`${container} ${style.ticketWrapper}`}>
+      <h3>Din biljett</h3>
       <div className={ticketInfo}>
         <div className={imageContainer}>
           <img

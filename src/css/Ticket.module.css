@@ -2,22 +2,16 @@
   max-width: 400px;
   margin: 0 auto;
   position: relative;
-  margin-top: 2rem;
-}
-
-.container h2 {
-  font-size: 20px;
-  margin-bottom: 1rem;
-  color: #7c96ac;
 }
 
 .container img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .movieInfo {
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto Mono';
   font-size: 12px;
   padding-left: 20px;
   width: 75%;

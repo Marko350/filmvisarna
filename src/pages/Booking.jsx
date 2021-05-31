@@ -65,7 +65,18 @@ const Booking = (props) => {
               </div>
             </div>
           </div>
-          <Ticket showing={showing}/>
+          <div>
+            <h2>Sammanfattning</h2>
+            <hr className={style.hrGray} />
+            <Ticket showing={showing}/>
+            <div className={style.yourInfoWrapper}>
+              <h3>Dina uppgifter</h3>
+              <h4>E-post:</h4>
+              <p>lorem.andersson@gmail.com</p>
+              <h4>Telefonnummer:</h4>
+              <p>070-32 123 412</p>
+            </div>
+          </div>
           <div
             onClick={handleBookingBtn}
             className={btnContainer}

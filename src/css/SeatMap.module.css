@@ -54,9 +54,10 @@
 
 .rowName {
   text-transform: uppercase;
-  margin-left: .7rem;
+  margin-left: .3rem;
   min-width: 15px;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .seatRow {
@@ -66,20 +67,21 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: .07rem;
 }
 
 .seat {
   display: flex;
   align-items: center;
   flex: 1;
-  height: 45px;
+  height: 40px;
   justify-content: center;
-  font-size: 1rem;
+  font-size: .85rem;
   background-color: #FFFFFF;
-  color: rgb(54, 54, 54);
-  border-radius: 2px 2px 7px 7px;
+  color: rgb(123, 132, 151);
+  border-radius: 2px 2px 9px 9px;
   border: 1px solid black;
-  margin: .11rem;
+  margin: .09rem;
   text-align: center;
   cursor: pointer;
 }
