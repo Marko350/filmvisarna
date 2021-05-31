@@ -155,7 +155,7 @@ const MovieProvider = (props) => {
     movieById,
     todaysShowings,
     todaysSchema,
-    todaysPosters
+    todaysPosters,
     chosenSeats,
     setChosenSeats,
     getShowingById,
