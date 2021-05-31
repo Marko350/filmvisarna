@@ -1,4 +1,6 @@
 .container {
+  max-width: 400px;
+  margin: 0 auto;
   margin-top: 1rem;
 }
 
@@ -6,7 +8,7 @@
   position: relative;
 }
 
-.container h1 {
+.container h2 {
   font-size: 20px;
   margin-bottom: 1rem;
   color: var(--main-header);
@@ -34,13 +36,24 @@
 }
 
 .counter i {
-  padding: 0 0 0 1rem;
+  margin: 0 0 0 1rem;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .counter span {
   font-size: 1.4rem;
-  padding-left: 1rem;
+  margin-left: 1.1rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.ticketNumber {
+  width: 40px;
+  margin-left: 3px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -53,7 +66,7 @@
     margin-bottom: 2rem;
   }
 
-  .container h1 {
+  .container h2 {
     font-size: 25px;
   }
 
