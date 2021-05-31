@@ -1,10 +1,15 @@
 import styles from "../css/Posters.module.css";
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
+import { useHistory, UseHistory } from "react-router-dom";
 
 const Posters = () => {
     const {todaysPosters} = useContext(MovieContext);
+    const historyHook = useHistory();
 
+    const clickToRender = () => {
+        historyHook.push();
+    }
 
     const renderPosters = () => {
         return(
