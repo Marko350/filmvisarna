@@ -105,12 +105,12 @@
     height: 190px;
   }
 
-  .posterTitleGenre {
-    display: flex;
-    position: absolute;
-    bottom: 30px;
-    left: 15px;
-  }
+    .posterTitleGenre{
+        display: flex;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
 
   .titleGenre {
     padding-bottom: 10px;
