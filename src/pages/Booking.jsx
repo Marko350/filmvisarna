@@ -3,6 +3,7 @@ import Ticket from "../components/Ticket";
 import Tickets from "../components/Tickets";
 import Btn from "../assets/buttonImg/btn-small.png";
 import { btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
+import style from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 
@@ -48,8 +49,22 @@ const Booking = (props) => {
     <div className={`container ${bookingWrapper}`}>
       { showing && 
         <div>
-          <Tickets showing={showing}/>
-          <SeatMap showing={showing}/>
+          <div className={style.infoHeader}>
+            <h1>Boka biljetter</h1>
+            <p>{ showing.movieId[0].title}</p>
+            <p>{ showing.date} {showing.time}</p>
+          </div>
+          <hr className={style.hrGray} />
+          <div className={style.ticketsWrapper}>
+            <Tickets showing={showing}/>
+            <SeatMap showing={showing}/>
+            <div className={style.yourSeatsWrapper}>
+              <h4>Valda platser</h4>
+              <div className={style.chosenSeatsDisplay}>
+                {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
+              </div>
+            </div>
+          </div>
           <Ticket showing={showing}/>
           <div
             onClick={handleBookingBtn}

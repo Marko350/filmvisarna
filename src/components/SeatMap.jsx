@@ -67,7 +67,10 @@ const SeatMap = ({ showing }) => {
 
   return ( 
     <div className={style.seatMapWrapper}>
-      <h2>Välj platser: {numOfSeats}</h2>
+      <div className={style.seatMapHeader}>
+        <h2>Välj platser</h2>
+        <div className={style.seatMapNumber}><span>Antal:</span><span>{numOfSeats}</span></div>
+      </div>
       <div className={style.seatMap}>
         <div className={style.screenIndicator}>
           <div className={style.screenLine}></div>
@@ -75,10 +78,6 @@ const SeatMap = ({ showing }) => {
         </div>
         <div className={style.seatsWrapper}>
           {seatsContent}
-        </div>
-        <div className={style.seatsDiv}>
-          <div>Valda platser:</div>
-          {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
         </div>
       </div>
     </div>
