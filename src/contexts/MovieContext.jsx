@@ -67,6 +67,7 @@ const MovieProvider = (props) => {
 
   const values = {
     getAllMovies,
+    getShowingsByMovieAndDate,
     allMovies,
     getMovieById,
     movieById,
