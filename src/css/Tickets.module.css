@@ -1,0 +1,76 @@
+.container {
+  margin-top: 1rem;
+}
+
+.container p {
+  position: relative;
+}
+
+.container h1 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: var(--main-header);
+}
+
+.tickets,
+.barnTicket {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tickets p {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.barnTicket p {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+}
+
+.counter i {
+  padding: 0 0 0 1rem;
+  font-size: 1.4rem;
+}
+
+.counter span {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .tickets img,
+  .barnTicket img {
+    width: 150px;
+  }
+
+  .container {
+    margin-bottom: 2rem;
+  }
+
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .tickets p {
+    font-size: 1.2rem;
+    left: 30px;
+    top: 20px;
+  }
+
+  .barnTicket p {
+    font-size: 1.2rem;
+    left: 50px;
+    top: 20px;
+  }
+
+  .counter i,
+  .counter span {
+    font-size: 1.6rem;
+  }
+}

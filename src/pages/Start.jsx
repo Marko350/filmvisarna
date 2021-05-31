@@ -23,7 +23,7 @@ const Start = () => {
       <h1 className={style.startHeader}>Heading</h1>
       <div className="mainBtn btnSmall">
         <h4 className="btnLabel">Logga in</h4>
-        <img src={button}></img>
+        <img src={button} alt="button test page"></img>
       </div>
       { content }
     </div>
