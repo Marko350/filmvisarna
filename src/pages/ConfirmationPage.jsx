@@ -1,8 +1,10 @@
+import styles from "../css/ConfirmationPage.module.css";
+
 function ConfirmationPage() {
 
     return (
         <div className="container">
-            TEST
+            <p className={styles.testParagraph} >TEST</p>
         </div>
     )
 }
