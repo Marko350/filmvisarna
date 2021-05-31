@@ -1,12 +1,16 @@
-import styles from '../css/MovieList.module.css';
-import FeaturedMovie from '../components/FeaturedMovie';
-import MovieCardList from '../components/MovieCardList';
-import { useContext, useEffect } from 'react';
-import { MovieContext } from '../contexts/MovieContext';
+import styles from "../css/MovieList.module.css";
+import FeaturedMovie from "../components/FeaturedMovie";
+import MovieCardList from "../components/MovieCardList";
+import { useContext, useEffect } from "react";
+import { MovieContext } from "../contexts/MovieContext";
 
 function MovieList() {
+  const { getMovieById, movieById } = useContext(MovieContext);
 
-    const { getMovieById, movieById } = useContext(MovieContext);
+  useEffect(() => {
+    getMovieById("60b49a37b62f8359984329e7");
+    // eslint-disable-next-line
+  }, []);
 
     useEffect(() => {
         getMovieById("60b49a37b62f8359984329e7");
@@ -28,7 +32,10 @@ function MovieList() {
                 <MovieCardList />
             </div>
         </div>
-    )
+        <MovieCardList />
+      </div>
+    </div>
+  );
 }
 
 export default MovieList;
