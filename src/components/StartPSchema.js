@@ -7,8 +7,8 @@ const Schema = () => {
     const {todaysSchema} = useContext(MovieContext);
     const historyHook = useHistory();
 
-    const clicktoRender = () => {
-        historyHook.push()
+    const clicktoRender = (id) => {
+        historyHook.push(`/movie-list/${id}`)
     }
 
     const renderPosters = () => {
@@ -19,7 +19,7 @@ const Schema = () => {
                         <div className={styles.margin} key={i}>
                             <h2>{today.time}</h2>
                             {today.temp.map((showing) => (
-                                <p onClick={clicktoRender} key={showing._id}>{showing.movieId[0].title}</p>
+                                <p onClick={() => clicktoRender(showing._id)} key={showing._id}>{showing.movieId[0].title}</p>
                             ))}
                         </div>
                     ))}
