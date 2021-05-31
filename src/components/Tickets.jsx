@@ -1,27 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { container } from "../css/Tickets.module.css";
 import Ticket from "../assets/ticket.png";
-import { tickets, barnTicket, counter } from "../css/Tickets.module.css";
+import {
+  tickets,
+  barnTicket,
+  counter,
+  ticketNumber,
+} from "../css/Tickets.module.css";
+import { MovieContext } from "../contexts/MovieContext";
 
-const Tickets = () => {
+const Tickets = ({ showing }) => {
+  const { setTickets, setChosenSeats } = useContext(MovieContext);
   const [standardTicket, setStandardTicket] = useState(0);
   const [pensionerTicket, setPensionerTicket] = useState(0);
   const [childTicket, setChildTicket] = useState(0);
 
+  const seatsPerRow = showing.screenId[0].seatsPerRow;
+
+  useEffect(() => {
+    let price = showing.movieId[0].price
+    let totalPrice = (price * standardTicket) + ((price * .8) * pensionerTicket) + ((price * .7) * childTicket);
+    setTickets({
+      standard: standardTicket,
+      senior: pensionerTicket,
+      child: childTicket,
+      totalPrice,
+    })
+    setChosenSeats([]);
+    // eslint-disable-next-line
+  }, [standardTicket, pensionerTicket, childTicket])
+
+  const addSeatFunc = (state, setFunc) => {
+    if (standardTicket + pensionerTicket + childTicket >= seatsPerRow) return;
+    setFunc(state + 1);
+  }
+
+  const minusSeatFunc = (state, setState) => { 
+    if (state === 0) return;     
+    setState(state - 1);   
+  };
+
   return (
     <div className={container}>
-      <h1>Välj antal biljetter</h1>
+      <h2>Välj antal biljetter</h2>
       <div className={tickets}>
         <p>Standard</p>
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setStandardTicket(standardTicket - 1)}
+            onClick={() => minusSeatFunc(standardTicket, setStandardTicket)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{standardTicket}</span>
+          <div className={ticketNumber}>
+            <span>{standardTicket}</span>
+          </div>
           <i
-            onClick={() => setStandardTicket(standardTicket + 1)}
+            onClick={() => addSeatFunc(standardTicket, setStandardTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
@@ -31,12 +65,14 @@ const Tickets = () => {
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setPensionerTicket(pensionerTicket - 1)}
+            onClick={() => minusSeatFunc(pensionerTicket, setPensionerTicket)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{pensionerTicket}</span>
+          <div className={ticketNumber}>
+            <span>{pensionerTicket}</span>
+          </div>
           <i
-            onClick={() => setPensionerTicket(pensionerTicket + 1)}
+            onClick={() => addSeatFunc(pensionerTicket, setPensionerTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
@@ -46,12 +82,14 @@ const Tickets = () => {
         <img src={Ticket} alt="Ticket" />
         <div className={counter}>
           <i
-            onClick={() => setChildTicket(childTicket - 1)}
+            onClick={() => minusSeatFunc(childTicket, setChildTicket)}
             className="fas fa-minus-circle"
           ></i>
-          <span>{childTicket}</span>
+          <div className={ticketNumber}>
+            <span>{childTicket}</span>
+          </div>
           <i
-            onClick={() => setChildTicket(childTicket + 1)}
+            onClick={() => addSeatFunc(childTicket, setChildTicket)}
             className="fas fa-plus-circle"
           ></i>
         </div>
