@@ -9,7 +9,7 @@ function MovieList() {
     const { getMovieById, movieById } = useContext(MovieContext);
 
     useEffect(() => {
-        getMovieById("60acacd346075c18aeee45b3");
+        getMovieById("60b49a37b62f8359984329e7");
         // eslint-disable-next-line
     }, []);
 

@@ -34,7 +34,9 @@ const Booking = () => {
         movieTitle: showing.movieId[0].title,
         poster: showing.movieId[0].poster,
       }
-      console.log('Ticket:', ticketObj)
+      console.log('Ticket:', ticketObj);
+      console.log('Showing ID:', showing._id);
+      console.log('Seats:', chosenSeats);
     } else {
       console.log('Need to choose your seats');
     }
