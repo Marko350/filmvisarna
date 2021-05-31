@@ -36,6 +36,7 @@
     box-shadow: var(--card-shadow);
     width: 48%;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .time {

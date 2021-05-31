@@ -1,5 +1,6 @@
 import styles from '../css/MovieDetails.module.css';
 import MovieDetailsHeader from "../components/MovieDetailsHeader";
+import MovieDetailsInfo from "../components/MovieDetailsInfo";
 import Showings from '../components/Showings';
 
 function MovieDetails(props) {
@@ -10,7 +11,7 @@ function MovieDetails(props) {
     return (
         <div className="container">
             <MovieDetailsHeader movieId={movieId} />
-            {/* MovieDetails info in the middle */}
+            <MovieDetailsInfo movieId={movieId}/>
             <Showings movieId={movieId} />
         </div>
     )
