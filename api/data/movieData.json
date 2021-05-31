@@ -11,13 +11,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=S9ID5DHsX8g",
+    "trailer": "https://www.youtube.com/embed/S9ID5DHsX8g",
     "price": 120
   },
   {
     "title": "Jaws",
     "director": "Steven Spielberg",
-    "actors": ["Roy Scheider", "Robert Shaw", "Richard Dreyfuss", "Lorraine Gary"],
+    "actors": [
+      "Roy Scheider",
+      "Robert Shaw",
+      "Richard Dreyfuss",
+      "Lorraine Gary"
+    ],
     "genre": "Thriller",
     "length": 124,
     "year": 1975,
@@ -26,13 +31,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=4pxkU9GVAoA",
+    "trailer": "https://www.youtube.com/embed/4pxkU9GVAoA",
     "price": 140
   },
   {
     "title": "Breakfast At Tiffany's",
     "director": "Blake Edwards",
-    "actors": ["Audrey Hepburn", "George Peppard", "Patricia Neal", "Buddy Ebsen"],
+    "actors": [
+      "Audrey Hepburn",
+      "George Peppard",
+      "Patricia Neal",
+      "Buddy Ebsen"
+    ],
     "genre": "Drama",
     "length": 115,
     "year": 1961,
@@ -41,13 +51,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNGEwMTRmZTQtMDY4Ni00MTliLTk5ZmMtOWMxYWMyMTllMDg0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=hQ_O15kYlCI",
+    "trailer": "https://www.youtube.com/embed/hQ_O15kYlCI",
     "price": 140
   },
   {
     "title": "Blade Runner",
     "director": "Ridley Scott",
-    "actors": ["Harrison Ford", "Rutger Hauer", "Sean Young", "Edward James Olmos"],
+    "actors": [
+      "Harrison Ford",
+      "Rutger Hauer",
+      "Sean Young",
+      "Edward James Olmos"
+    ],
     "genre": "Sci-Fi",
     "length": 117,
     "year": 1982,
@@ -56,7 +71,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=eogpIG53Cis",
+    "trailer": "https://www.youtube.com/embed/eogpIG53Cis",
     "price": 120
   },
   {
@@ -71,7 +86,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=Wz719b9QUqY",
+    "trailer": "https://www.youtube.com/embed/Wz719b9QUqY",
     "price": 100
   },
   {
@@ -86,13 +101,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYjA1MGVlMGItNzgxMC00OWY4LWI4YjEtNTNmYWIzMGUxOGQzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=-X2DtiE7VLw",
+    "trailer": "https://www.youtube.com/embed/-X2DtiE7VLw",
     "price": 140
   },
   {
     "title": "Citizen Kane",
     "director": "Orson Welles",
-    "actors": ["Joseph Cotten", "Dorothy Comingore", "Agnes Moorehead", "Ruth Warrick"],
+    "actors": [
+      "Joseph Cotten",
+      "Dorothy Comingore",
+      "Agnes Moorehead",
+      "Ruth Warrick"
+    ],
     "genre": "Drama",
     "length": 119,
     "year": 1941,
@@ -101,13 +121,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=8dxh3lwdOFw",
+    "trailer": "https://www.youtube.com/embed/8dxh3lwdOFw",
     "price": 120
   },
   {
     "title": "Lawrence Of Arabia",
     "director": "David Lean",
-    "actors": ["Peter O'Toole", "Alec Guinness", "Anthony Quinn", "Jack Hawkins"],
+    "actors": [
+      "Peter O'Toole",
+      "Alec Guinness",
+      "Anthony Quinn",
+      "Jack Hawkins"
+    ],
     "genre": "Äventyr",
     "length": 228,
     "year": 1962,
@@ -116,13 +141,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=vOlRhGEhG7k",
+    "trailer": "https://www.youtube.com/embed/vOlRhGEhG7k",
     "price": 120
   },
   {
     "title": "The Godfather",
     "director": "Francis Ford Coppola",
-    "actors": ["Marlon Brando", "Al Pacino", "James Caan", "Richard S. Castellano"],
+    "actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Richard S. Castellano"
+    ],
     "genre": "Drama",
     "length": 175,
     "year": 1972,
@@ -131,7 +161,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=1x0GpEZnwa8",
+    "trailer": "https://www.youtube.com/embed/1x0GpEZnwa8",
     "price": 140
   },
   {
@@ -146,13 +176,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BY2I0MWFiZDMtNWQyYy00Njk5LTk3MDktZjZjNTNmZmVkYjkxXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=boekTHsOIY8",
+    "trailer": "https://www.youtube.com/embed/boekTHsOIY8",
     "price": 120
   },
   {
     "title": "Rocky",
     "director": "John G. Avildsen",
-    "actors": ["Sylester Stallone", "Talia Shire", "Burt Young", "Carl Weathers"],
+    "actors": [
+      "Sylester Stallone",
+      "Talia Shire",
+      "Burt Young",
+      "Carl Weathers"
+    ],
     "genre": "Drama",
     "length": 120,
     "year": 1976,
@@ -161,13 +196,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMTY5MDMzODUyOF5BMl5BanBnXkFtZTcwMTQ3NTMyNA@@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=3VUblDwa648",
+    "trailer": "https://www.youtube.com/embed/3VUblDwa648",
     "price": 120
   },
   {
     "title": "First Blood",
     "director": "Ted Kotcheff",
-    "actors": ["Sylester Stallone", "Brian Dennehy", "Richard Crenna", "Bill McKinney"],
+    "actors": [
+      "Sylester Stallone",
+      "Brian Dennehy",
+      "Richard Crenna",
+      "Bill McKinney"
+    ],
     "genre": "Action",
     "length": 93,
     "year": 1982,
@@ -176,7 +216,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BODBmOWU2YWMtZGUzZi00YzRhLWJjNDAtYTUwNWVkNDcyZmU5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=IAqLKlxY3Eo",
+    "trailer": "https://www.youtube.com/embed/IAqLKlxY3Eo",
     "price": 140
   },
   {
@@ -191,13 +231,19 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzk2M2Y3MzYtNGMzMi00Y2FjLTkwODQtNmExYWU3ZWY3NzExXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=FVDecBMyyZI",
+    "trailer": "https://www.youtube.com/embed/FVDecBMyyZI",
     "price": 120
   },
   {
     "title": "The Great Escape",
     "director": "John Sturges",
-    "actors": ["Steve McQueen", "James Garner", "Richard Attenborough", "James Donald", "Charles Bronson"],
+    "actors": [
+      "Steve McQueen",
+      "James Garner",
+      "Richard Attenborough",
+      "James Donald",
+      "Charles Bronson"
+    ],
     "genre": "Äventyr",
     "length": 172,
     "year": 1963,
@@ -206,13 +252,19 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzA2NmYxMWUtNzBlMC00MWM2LTkwNmQtYTFlZjQwODNhOWE0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=r9Q_WESQUVw",
+    "trailer": "https://www.youtube.com/embed/r9Q_WESQUVw",
     "price": 100
   },
   {
     "title": "Back To The Future",
     "director": "Robert Zemeckis",
-    "actors": ["Michael J. Fox", "Christopher Lloyd", "Lea Thompson", "Crispin Glover", "Thomas F. Wilson"],
+    "actors": [
+      "Michael J. Fox",
+      "Christopher Lloyd",
+      "Lea Thompson",
+      "Crispin Glover",
+      "Thomas F. Wilson"
+    ],
     "genre": "Äventyr",
     "length": 116,
     "year": 1985,
@@ -221,13 +273,19 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=qvsgGtivCgs",
+    "trailer": "https://www.youtube.com/embed/qvsgGtivCgs",
     "price": 120
   },
   {
     "title": "Raiders Of The Lost Ark",
     "director": "Steven Spielberg",
-    "actors": ["Harrison Ford", "Karen Allen", "Paul Freeman", "Ronald Lacey", "John Rhys-Davies"],
+    "actors": [
+      "Harrison Ford",
+      "Karen Allen",
+      "Paul Freeman",
+      "Ronald Lacey",
+      "John Rhys-Davies"
+    ],
     "genre": "Äventyr",
     "length": 115,
     "year": 1981,
@@ -236,13 +294,19 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=XkkzKHCx154",
+    "trailer": "https://www.youtube.com/embed/XkkzKHCx154",
     "price": 140
   },
   {
     "title": "Jurassic Park",
     "director": "Steven Spielberg",
-    "actors": ["Sam Neill", "Laura Dern", "Jeff Goldblum", "Richard Attenborough", "Bob Peck"],
+    "actors": [
+      "Sam Neill",
+      "Laura Dern",
+      "Jeff Goldblum",
+      "Richard Attenborough",
+      "Bob Peck"
+    ],
     "genre": "Äventyr",
     "length": 127,
     "year": 1993,
@@ -251,13 +315,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=QWBKEmWWL38",
+    "trailer": "https://www.youtube.com/embed/QWBKEmWWL38",
     "price": 140
   },
   {
     "title": "Halloween",
     "director": "John Carpenter",
-    "actors": ["Jamie Lee Curtis", "Donald Pleasence", "Nancy Kyes", "P.J. Soles"],
+    "actors": [
+      "Jamie Lee Curtis",
+      "Donald Pleasence",
+      "Nancy Kyes",
+      "P.J. Soles"
+    ],
     "genre": "Skräck",
     "length": 91,
     "year": 1978,
@@ -266,7 +335,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzk1OGU2NmMtNTdhZC00NjdlLWE5YTMtZTQ0MGExZTQzOGQyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=xHuOtLTQ_1I",
+    "trailer": "https://www.youtube.com/embed/xHuOtLTQ_1I",
     "price": 120
   },
   {
@@ -281,13 +350,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=vZ734NWnAHA",
+    "trailer": "https://www.youtube.com/embed/vZ734NWnAHA",
     "price": 140
   },
   {
     "title": "Vacation",
     "director": "Harold Ramis",
-    "actors": ["Chevy Chase", "Beverely D'Angelo", "Imogene Coca", "Randy Quaid"],
+    "actors": [
+      "Chevy Chase",
+      "Beverely D'Angelo",
+      "Imogene Coca",
+      "Randy Quaid"
+    ],
     "genre": "Komedi",
     "length": 98,
     "year": 1983,
@@ -296,13 +370,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmViMGQ4ZDktNzI3OC00YjVkLWJmZDgtOTI4N2FhNjhjNDVjXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=FHThGmVfE3A",
+    "trailer": "https://www.youtube.com/embed/FHThGmVfE3A",
     "price": 100
   },
   {
     "title": "The Breakfast Club",
     "director": "John Hughes",
-    "actors": ["Emilio Estevez", "Paul Gleason", "Anthony Michael Hall", "Molly Ringwald"],
+    "actors": [
+      "Emilio Estevez",
+      "Paul Gleason",
+      "Anthony Michael Hall",
+      "Molly Ringwald"
+    ],
     "genre": "Komedi",
     "length": 97,
     "year": 1985,
@@ -311,13 +390,18 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BOTM5N2ZmZTMtNjlmOS00YzlkLTk3YjEtNTU1ZmQ5OTdhODZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=BSXBvor47Zs",
+    "trailer": "https://www.youtube.com/embed/BSXBvor47Zs",
     "price": 120
   },
   {
     "title": "Yojimbo",
     "director": "Akira Kurosawa",
-    "actors": ["Toshiro Mifune", "Tatsuya Nakadai", "Yoko Tsukasa", "Isuzu Yamada"],
+    "actors": [
+      "Toshiro Mifune",
+      "Tatsuya Nakadai",
+      "Yoko Tsukasa",
+      "Isuzu Yamada"
+    ],
     "genre": "Action",
     "length": 110,
     "year": 1961,
@@ -326,7 +410,7 @@
     "language": "Japanska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BZThiZjAzZjgtNDU3MC00YThhLThjYWUtZGRkYjc2ZWZlOTVjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=y_1iT_GmHTE",
+    "trailer": "https://www.youtube.com/embed/y_1iT_GmHTE",
     "price": 120
   },
   {
@@ -341,13 +425,19 @@
     "language": "Svenska",
     "subtitles": "Inga",
     "poster": "https://m.media-amazon.com/images/M/MV5BZTBiZjNmMGEtNTM4OS00YmMzLTlhYzktZWQ1MzAwZWE2N2JkXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=Hf8QrgszdUQ",
+    "trailer": "https://www.youtube.com/embed/Hf8QrgszdUQ",
     "price": 120
   },
   {
     "title": "Alien",
     "director": "Ridley Scott",
-    "actors": ["Sigourney Weaver", "John Hurt", "Tom Skerritt", "Veronica Cartwright", "Ian Holm"],
+    "actors": [
+      "Sigourney Weaver",
+      "John Hurt",
+      "Tom Skerritt",
+      "Veronica Cartwright",
+      "Ian Holm"
+    ],
     "genre": "Sci-Fi",
     "length": 117,
     "year": 1979,
@@ -356,7 +446,7 @@
     "language": "Engelska",
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-    "trailer": "https://www.youtube.com/watch?v=LjLamj-b0I8",
+    "trailer": "https://www.youtube.com/embed/LjLamj-b0I8",
     "price": 140
   }
 ]
