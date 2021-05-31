@@ -14,7 +14,7 @@ const SeatMap = ({ showing }) => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child)
   }, [tickets]);
 
-  const handleSeatClick = (e) => {
+  const handleSeatClick = () => {
     // Check if any seat from hover-array is in bookedSeats-array
     // Add seats to chosenSeats-array in context
     let ok = true;
