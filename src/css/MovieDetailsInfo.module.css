@@ -7,6 +7,7 @@
     justify-content: center;
     padding: 1rem 0rem 1rem 0rem;
     position: relative;
+    margin-bottom: 1.5rem;
 }
 
 .mainBtn {
@@ -17,7 +18,7 @@
     cursor: pointer;
 }
 
-.infoBtnName{
+.infoBtnName {
     position: absolute;
     z-index: 10;
     top: 53%;
@@ -26,11 +27,7 @@
     font-size: 1.2rem;
 }
 
-.actorList{
-    color: white;
-}
-
-.infoHeadingP{
+.infoHeadingP {
     display: flex;
 }
 
@@ -43,5 +40,5 @@
 }
 
 .movieInfoP{
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
