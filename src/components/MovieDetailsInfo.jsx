@@ -30,9 +30,6 @@ function MovieDetailsInfo({movieId}) {
                         {movieById.actors.map(actor => <p className={styles.actorList}>{actor}</p>)}
                     <br></br>
                     <p>{movieById.description}</p>
-                    
-
-
                 </div>
             }
         </div>
