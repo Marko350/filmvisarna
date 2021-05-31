@@ -67,7 +67,6 @@
 
 .gradientWrapper img {
   object-fit: cover;
-  object-position: 100% 0%;
 }
 
 .modal {
