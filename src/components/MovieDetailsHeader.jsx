@@ -55,7 +55,7 @@ function MovieDetailsHeader({ movieId }) {
           <div className={styles.modal} onClick={showModal}>
             {movieById ? (
               <div className={styles.box}>
-                <i class="far fa-times-circle"></i>
+                <i className="far fa-times-circle"></i>
                 <iframe
                   allow="fullscreen"
                   width="100%"
