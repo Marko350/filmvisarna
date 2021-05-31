@@ -26,10 +26,11 @@ function MovieDetailsInfo({movieId}) {
                     <br></br>
                     <h3 className={styles.infoHeading}>Regissör: </h3> <p>{movieById.director}</p>
                     <br></br>
-                    <div className={styles.infoHeading}> Skådespelare: 
-                        {movieById.actors.map(actor => <ul className={styles.actorList}>{actor}</ul>)}
-                    </div>
+                    <h3 className={styles.infoHeading}> Skådespelare: </h3>
+                        {movieById.actors.map(actor => <p className={styles.actorList}>{actor}</p>)}
                     <br></br>
+                    <p>{movieById.description}</p>
+                    
 
 
                 </div>
