@@ -13,6 +13,10 @@ const MovieProvider = (props) => {
     console.log("this is today:", todaysSchema);
   }, [todaysSchema])
 
+  useEffect(() => {
+    console.log("detta är posters", todaysPosters);
+  }, [todaysPosters])
+
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
@@ -117,7 +121,7 @@ const MovieProvider = (props) => {
     showings.map((show) => {
       show.movieId.map((movie) => {
         //creating new array of obj with posters
-        posterArr.push({ poster: movie.poster });
+        posterArr.push({ poster: movie.poster, id: movie._id});
       });
     });
 
