@@ -34,6 +34,14 @@
     display: flex;
 }
 
+.infoHeading{
+    margin-right: 0.5rem;
+}
+
+.infoP{
+    padding-top: 3px;
+}
+
 .movieInfoP{
     font-size: 0.95rem;
 }
