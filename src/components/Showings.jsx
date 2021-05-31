@@ -38,7 +38,7 @@ function Showings({ movieId }) {
                         <p className={styles.screen}>{showing.screenId[0].name}</p>
                     </div>
                 ))) : (
-                    <p>Inga visningar detta datum</p>
+                    <p>Inga visningar på valt datum</p>
                 )}
             </div>
         </div>
