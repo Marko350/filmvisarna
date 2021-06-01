@@ -119,3 +119,9 @@
 .chosen .seatNrCss {
   color: rgb(243, 243, 243);
 }
+
+@media screen and (min-width: 700px) {
+  .seatMapWrapper {
+    width: 60%;
+  }
+}

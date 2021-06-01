@@ -1,4 +1,6 @@
 .container {
+  background-color: darkkhaki;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   margin-top: 1rem;
@@ -74,7 +76,14 @@
   margin-left: 3px;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
+  .container {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+/* @media only screen and (min-width: 768px) {
   .tickets img,
   .barnTicket img {
     width: 150px;
@@ -104,4 +113,4 @@
   .counter span {
     font-size: 1.6rem;
   }
-}
+} */

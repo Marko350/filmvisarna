@@ -15,7 +15,7 @@
 
 .bookingWrapper h3 {
   font-size: 1.15rem;
-  margin: .5rem 0 .6rem 0;
+  margin: .5rem 0 1rem 0;
   color: var(--main-header);
 }
 
@@ -23,8 +23,32 @@
   color: var(--main-header);
 }
 
+.overviewWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.yourInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
 .yourInfoWrapper h4 {
   margin-bottom: .1rem;
+}
+
+.yourInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.yourInfo p {
+  font-size: 1.2rem;
+  margin-bottom: .2rem;
 }
 
 .bookingWrapper .hrGray {
@@ -44,6 +68,14 @@
   font-size: 1.15rem;
 }
 
+.yourSeatsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
 .chosenSeatsDisplay {
   margin-top: .5rem;
   display: flex;
@@ -55,10 +87,6 @@
   background-color: rgb(104, 104, 104);
 }
 
-.yourSeatsWrapper {
-  margin-top: .5rem;
-}
-
 .yourSeats {
   color: rgb(224, 224, 224);
   margin: 0 .2rem;
@@ -66,32 +94,53 @@
   font-size: 1.2rem;
 }
 
+.hideSmall {
+  display: none;
+}
+
 .btnContainer {
-  margin: 2rem auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  height: 50px;
 }
 
 .btn {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .btn p {
+  font-size: 1.2rem;
   position: absolute;
-  left: 55px;
-  top: 20px;
-  cursor: pointer;
-}
-
-.btnContainer img {
-  width: 150px;
-  cursor: pointer;
 }
 
 .ticketsWrapper {
+  width: 100%;
   margin-bottom: 1.2rem;
-  /* background-color: #434343; */
+  background-color: #484848;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    margin: 0;
+  }
+  .overviewWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .yourInfoWrapper {
+    width: 45%;
+  }
+  .ticketsWrapper {
+    display: flex;
+  }
+  .showSmall {
+    display: none;
+  }
+  .hideSmall {
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -101,7 +150,7 @@
   }
 
   .btnContainer img {
-    width: 200px;
+    
   }
 
   .btn p {

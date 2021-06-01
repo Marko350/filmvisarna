@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import Ticket from "../components/Ticket";
 import Tickets from "../components/Tickets";
-import Btn from "../assets/buttonImg/btn-small.png";
+import Btn from "../assets/buttonImg/btn-medium.png";
 import { btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
 import style from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
@@ -56,9 +56,17 @@ const Booking = (props) => {
           </div>
           <hr className={style.hrGray} />
           <div className={style.ticketsWrapper}>
-            <Tickets showing={showing}/>
+            <div className={style.chooseTicketsWrapper}>
+              <Tickets showing={showing}/>
+              <div className={`${style.yourSeatsWrapper} ${style.hideSmall}`}>
+                <h4>Valda platser</h4>
+                <div className={style.chosenSeatsDisplay}>
+                  {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
+                </div>
+              </div>
+            </div>
             <SeatMap showing={showing}/>
-            <div className={style.yourSeatsWrapper}>
+            <div className={`${style.yourSeatsWrapper} ${style.showSmall}`}>
               <h4>Valda platser</h4>
               <div className={style.chosenSeatsDisplay}>
                 {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
@@ -68,25 +76,26 @@ const Booking = (props) => {
           <div>
             <h2>Sammanfattning</h2>
             <hr className={style.hrGray} />
-            <Ticket showing={showing}/>
-            <div className={style.yourInfoWrapper}>
-              <h3>Dina uppgifter</h3>
-              <h4>E-post:</h4>
-              <p>lorem.andersson@gmail.com</p>
-              <h4>Telefonnummer:</h4>
-              <p>070-32 123 412</p>
+            <div className={style.overviewWrapper}>
+              <Ticket showing={showing}/>
+              <div className={style.yourInfoWrapper}>
+                <h3>Dina uppgifter</h3>
+                <div className={style.yourInfo}>
+                  <h4>E-post:</h4>
+                  <p>lorem.andersson@gmail.com</p>
+                  <h4>Telefonnummer:</h4>
+                  <p>070-32 123 412</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            onClick={handleBookingBtn}
-            className={btnContainer}
-          >
-          <div className={btn}>
-            <p>Boka</p>
-            <img src={Btn} alt="Button" />
-          </div>
-        </div>
-      </div>}
+          <div onClick={handleBookingBtn} className={btnContainer}>
+            <div className="mainBtn btnMedium">
+              <p className="btnLabel">Boka biljetter</p>
+              <img src={Btn} alt="button test page"></img>
+            </div>
+          </div>  
+        </div>}
     </div>
   );
 };
