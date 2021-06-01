@@ -6,6 +6,7 @@ import StartPage from "./pages/StartPage";
 import MovieDetails from "./pages/MovieDetails";
 import Start from "./pages/Start";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/movie-list" component={MovieList} />
           <Route exact path="/movie-list/:id" component={MovieDetails} />
           <Route exact path="/test" component={Start} />
+          <Footer />
         </MovieProvider>
       </BrowserRouter>
     </div>
