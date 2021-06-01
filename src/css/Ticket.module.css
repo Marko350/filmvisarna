@@ -4,13 +4,20 @@
 }
 
 .ticketInfoWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
   width: 100%;
+  height: 100%;
+  /* min-height: 140px; */
 }
 
 .ticketInfo {
-  position: relative;
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: .8rem 0;
 }
 
 .bgImg {
@@ -22,24 +29,28 @@
 }
 
 .ticketTitle {
-  font-size: .95rem;
-  margin-bottom: .1rem;
+  font-size: .8rem;
+  margin-bottom: .15rem;
 }
 
 .ticketTime {
  font-size: .75rem;
- margin-bottom: .2rem;
+ margin-bottom: .15rem;
+ opacity: 1;
+ font-weight: bold;
 }
 
 .ticketPrice {
-  font-size: .9rem;
+  font-size: .75rem;
+  font-weight: bold;
+  margin-top: auto;
 }
 
 .ticketPrice hr {
   margin-bottom: .2rem;
 }
 
-.ticketInfo hr {
+.ticketInfoWrapper hr {
   opacity: .6;
 }
 
@@ -47,23 +58,23 @@
   display: flex;
   flex-direction: column;
   font-family: 'Roboto Mono';
-  padding: .3rem .4rem;
-  width: 70%;
+  padding: 0 0 0 .6rem;
   z-index: 5;
 }
 
 .ticketTypes {
-  height: 100%;
-  margin: .5rem 0;
-  font-size: .8rem;
+  margin: .2rem 0;
+  font-size: .7rem;
+  opacity: .9;
 }
 
 .imageContainer {
-  height: 160px;
+  /* align-self: flex-start; */
+  height: 95px;
   z-index: 5;
 }
 
-.ticketInfo .poster {
+.poster {
   border-radius: 3px;
   height: 100%;
 }
