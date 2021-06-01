@@ -12,5 +12,26 @@
 
 .confirmationBox{
     background-color: #434343;
+    padding: 1rem;
     margin: 0rem 0rem 0rem 1rem;
+}
+
+.confirmPoster{
+    width: 150px;
+    height: auto;
+}
+
+.confirmHeading{
+    color: var(--secondary-header);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.confirmP{
+    font-size: 0.8rem;
+}
+
+.confirmTotal{
+    font-size: 0.9rem;
+    margin-top: 2rem;
 }

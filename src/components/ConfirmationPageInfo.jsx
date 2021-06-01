@@ -7,16 +7,16 @@ function ConfirmationPageInfo({bookedTicket}) {
     return (
         <div className={styles.confirmationWrapper} >
             <img
-                src={bookedTicket.seats}
+                src={bookedTicket.poster}
                 alt={bookedTicket.movieTitle}
                 className={styles.confirmPoster}
             />
             <div className={styles.confirmationBox}>
-                <h3>{bookedTicket.movieTitle}, {bookedTicket.time}</h3>
-                <p>(Bokningsnr. 000000)</p>
-                <p>Stolar: {bookedTicket.seats}</p>
+                <h3 className={styles.confirmHeading}>{bookedTicket.movieTitle}, {bookedTicket.time}</h3>
+                <p className={styles.confirmP}>(Bokningsnr. 000000)</p>
+                <p className={styles.confirmP}>Stolar: {bookedTicket.seats}</p>
                 <br></br>
-                <p>Summa: {bookedTicket.ticketTypes.totalPrice} :- </p>
+                <p className={styles.confirmTotal}>Summa: {bookedTicket.ticketTypes.totalPrice} :- </p>
             </div>
         </div>
     )
