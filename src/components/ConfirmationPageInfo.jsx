@@ -1,8 +1,6 @@
 import styles from "../css/ConfirmationPage.module.css";
-import btn from "../assets/buttonImg/btn-small.png";
 
 function ConfirmationPageInfo({bookedTicket}) {
-    console.log("hola",bookedTicket)
 
     return (
         <div className="container">
@@ -21,10 +19,6 @@ function ConfirmationPageInfo({bookedTicket}) {
                     <p className={styles.confirmTotal}>Summa: {bookedTicket.ticketTypes.totalPrice} :- </p>
                     <p className={styles.findOrderHistoryText}>Du hittar alltid din orderhistorik under Mina sidor. </p>
                 </div>
-            </div>
-            <div className={styles.btnDiv}>
-                <img src={btn}className="mainBtn btnSmall" alt="Knapp för att komma tillbaka till startsidan."/>
-                <h4 className={styles.confirmBtnName}>Tillbaka till startsidan</h4>
             </div>
         </div>
     )
