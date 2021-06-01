@@ -8,50 +8,77 @@
 
 .confirmationWrapper{
     display: flex;
-    flex-direction: row;
+    height: 450px;
 }
 
 .confirmationBox{
     background-color: #434343;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    padding: 0.7rem;
+    height: 200px;
 }
 
 .confirmPoster{
-    width: 150px;
-    height: auto;
+    height: 200px;
+    margin: 0rem 0.5rem 0rem 0rem;
 }
 
 .confirmHeading{
     color: var(--secondary-header);
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+}
+
+.confirmDate{
+    color: var(--secondary-header);
+    font-size: 0.55rem;
+    margin-bottom: 0.2rem;
 }
 
 .confirmP{
-    font-size: 0.8rem;
+    font-size: 0.55rem;
 }
 
 .confirmTotal{
-    font-size: 0.9rem;
-    margin-top: 2rem;
-}
-
-.findOrderHistory{
-    padding: 10px 25px;
-    border: 3px solid white;
-    border-radius: 15px;
-    background-color: var(--main-header);
-    color: white;
-    font-size: 1.1rem;
-}
-.findOrderHistoryText{
     font-size: 0.6rem;
+    margin-top: 1.2rem;
+}
 
+.findOrderHistoryText{
+    margin: 0.5rem 0rem 0rem 0rem;
+    font-size: 0.5rem;
 }
 
 .confirmationInfo{
     display: flex;
     flex-direction: column;
+}
+
+
+@media screen and (min-width: 768px) {
+    .confirmPoster{
+        height: 300px;
+    }
+
+    .confirmationBox{
+        padding: 2rem 1.3rem;
+        line-height: 1.6;
+    }
+    .confirmHeading{
+        font-size: 1rem;
+    }
+    .confirmP{
+        font-size: 0.8rem;
+    }
+    
+    .confirmTotal{
+        font-size: 0.9rem;
+    }
+    
+    .findOrderHistoryText{
+        font-size: 0.8rem;
+    }
+}
+  
+@media screen and (min-width: 1200px) {
+
 }
