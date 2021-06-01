@@ -1,4 +1,5 @@
 import styles from "../css/HeroComp.module.css";
+import Btn from "../assets/buttonImg/btn-small.png";
 
 const Hero = () => {
     return(
@@ -6,8 +7,11 @@ const Hero = () => {
             <div className={styles.heroGreeting}>
                 <h1>Välj bland ett urval av gamla godingar</h1>
             </div>
-            <div className={styles.heroBtn}>
-                <button type="button">Välj Film</button>
+            <div className={styles.btnContainer}>
+                <div className={styles.btn}>
+                    <p>Välj film</p>
+                    <img src={Btn} alt="Button" />
+                </div>
             </div>
         </div>
     )
