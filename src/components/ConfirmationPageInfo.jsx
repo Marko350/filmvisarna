@@ -13,6 +13,7 @@ function ConfirmationPageInfo({bookedTicket}) {
                 <div className={styles.confirmationBox}>
                     <h3 className={styles.confirmHeading}>{bookedTicket.movieTitle}</h3>
                     <h3 className={styles.confirmDate}>{bookedTicket.date}, {bookedTicket.time}</h3>
+                    <hr/>
                     <p className={styles.confirmP}>(Bokningsnr?)</p>
                     <p className={styles.confirmP}>Stolar: {bookedTicket.seats}</p>
                     <br></br>

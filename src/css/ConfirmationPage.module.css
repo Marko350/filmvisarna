@@ -1,14 +1,16 @@
 .textContainer{
     text-align: center;
-    margin: 3rem 0rem 3rem 0rem;
+    margin: 3rem 0rem 0rem 0rem;
 }
 .confirmationH1{
     color: var(--main-header);
 }
 
 .confirmationWrapper{
-    display: flex;
     height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .confirmationBox{
@@ -26,28 +28,38 @@
 
 .confirmHeading{
     color: var(--secondary-header);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     margin-bottom: 0.2rem;
 }
 
 .confirmDate{
     color: var(--secondary-header);
-    font-size: 0.55rem;
-    margin-bottom: 0.2rem;
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #707070;
+    padding-bottom: 0.5rem;
 }
 
 .confirmP{
-    font-size: 0.55rem;
+    font-size: 0.60rem;
+    margin-bottom: 0.3rem;
 }
 
 .confirmTotal{
-    font-size: 0.6rem;
-    margin-top: 1.2rem;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 .findOrderHistoryText{
     margin: 0.5rem 0rem 0rem 0rem;
-    font-size: 0.5rem;
+    font-size: 0.55rem;
 }
 
 .confirmationInfo{
@@ -75,30 +87,77 @@
 
 
 @media screen and (min-width: 768px) {
+    .textContainer{
+        font-size: 1.2rem;
+    }
+    .confirmationWrapper{
+        height: 370px;
+    }
+
     .confirmPoster{
         height: 300px;
     }
 
     .confirmationBox{
+        height: 300px;
         padding: 2rem 1.3rem;
         line-height: 1.6;
     }
     .confirmHeading{
-        font-size: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .confirmDate{
+        font-size: 1.1rem;
     }
     .confirmP{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .confirmTotal{
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        margin-top: 0.1rem;
     }
     
     .findOrderHistoryText{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
   
 @media screen and (min-width: 1200px) {
+    .textContainer{
+        font-size: 1.6rem;
+    }
+    .confirmationWrapper{
+        height: 470px;
+    }
 
+    .confirmPoster{
+        height: 350px;
+    }
+
+    .confirmationBox{
+        height: 350px;
+        padding: 2rem 1.3rem;
+        line-height: 1.6;
+    }
+    .confirmHeading{
+        font-size: 1.6rem;
+    }
+
+    .confirmDate{
+        font-size: 1.3rem;
+    }
+    .confirmP{
+        font-size: 1.2rem;
+    }
+    
+    .confirmTotal{
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+    
+    .findOrderHistoryText{
+        font-size: 1rem;
+    }
 }
