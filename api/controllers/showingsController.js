@@ -68,11 +68,30 @@ const addSeats = async (req, res) => {
     }
 };
 
+const removeBookedSeats = async (req, res) => {
+    try {
+        let exists = await Showings.exists({ _id: req.params.showingsId });
+
+        if(exists) {
+            await Showings.findOneAndUpdate(
+                { _id: req.params.showingsId },
+                //removing one or more seats in arr
+                { $pull: { bookedSeats: { $in: req.body.seats }}}).exec();
+            res.json({ msg: `seats ${req.body.seats} have been deleted!`});
+        }
+        return;
+    } catch(err) {
+        res.status(400).json({ error: "Something went wrong!" });
+        console.log(err);
+        return;
+    }
+}
 
 module.exports = {
     addShowing,
     getShowingById,
     getShowingsByMovieAndDate,
     getShowingByTodaysDate,
-    addSeats
+    addSeats,
+    removeBookedSeats
 }
