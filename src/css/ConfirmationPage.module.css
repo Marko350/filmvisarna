@@ -8,6 +8,7 @@
 
 .confirmationWrapper{
     display: flex;
+    flex-direction: row;
 }
 
 .confirmationBox{
@@ -15,7 +16,6 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    margin: 0rem 0rem 0rem 1rem;
 }
 
 .confirmPoster{
@@ -49,4 +49,10 @@
 .findOrderHistoryText{
     font-size: 0.6rem;
 
+}
+
+.confirmationInfo{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }

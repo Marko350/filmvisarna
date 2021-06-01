@@ -10,7 +10,7 @@ function ConfirmationPageInfo({bookedTicket}) {
                 alt={bookedTicket.movieTitle}
                 className={styles.confirmPoster}
             />
-            <div>
+            <div className={styles.confirmationInfo}>
                 <div className={styles.confirmationBox}>
                     <h3 className={styles.confirmHeading}>{bookedTicket.movieTitle}, {bookedTicket.time}</h3>
                     <p className={styles.confirmP}>(Bokningsnr. 000000)</p>
