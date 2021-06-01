@@ -33,21 +33,23 @@ const Ticket = ({ showing }) => {
       <h3>Din biljett</h3>
       <div className={ticketInfo}>
         <div className={imageContainer}>
-          <img
+          <img className={style.poster}
             src={showing.movieId[0].poster}
             alt="Poster"
           />
         </div>
         <div className={movieInfo}>
-          <span>{showing.movieId[0].title}</span>
-          <span>{showing.date} - {showing.time}</span>
+          <span className={style.ticketTitle}>{showing.movieId[0].title}: A Longer Title For Testing</span>
+          <span className={style.ticketTime}>{showing.date} - {showing.time}</span>
           <hr />
           { renderTicketTypes() }
-          <hr />
-          <span>Totalt pris: {tickets.totalPrice} kr</span> 
+          <div className={style.ticketPrice}>
+            <hr />
+            <span className={style.totalPrice}>Totalt pris: {tickets.totalPrice} kr</span> 
+          </div>
         </div>
+        <img src={TicketPicture} className={style.bgImg} alt="Ticket" />
       </div>
-      <img src={TicketPicture} alt="Ticket" />
     </div>
   );
 };
