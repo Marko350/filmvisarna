@@ -6,11 +6,9 @@ import styles from '../css/About.module.css';
 function About() {
     return (
         <div className={styles.about}>
-            <div className={styles.hero}>
-                <img src={heroImg} alt="Tickets" className={styles.heroImg} />
-            </div>
             <div className="container">
                 <h1>Om oss</h1>
+                <img src={heroImg} alt="Tickets" className={styles.heroImg} />
                 <div className="company">
                     <h2>Vårt företag</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloribus ipsam quia voluptate ad ab voluptatum, voluptas quam dignissimos laborum minus iure odio architecto numquam accusamus reprehenderit quibusdam sit cumque quis inventore quo dolor! Deserunt ducimus, cupiditate dolorum optio velit nihil dolores vero modi vitae, id doloribus minima facere, iure earum temporibus. Quaerat rerum odio numquam atque, repudiandae corporis ut error ipsum magnam laboriosam voluptatem.</p>
@@ -32,9 +30,9 @@ function About() {
                 </div>
                 <div className={styles.contact}>
                     <h2>Kontakt</h2>
-                    <p>Ipsumgatan 34, Malmö</p>
-                    <p>010-12 34 56</p>
-                    <p>info@filmvisarna.com</p>
+                    <a href="https://www.google.se/maps/@55.5960224,13.0153738,14z">Ipsumgatan 34, Malmö</a>
+                    <a href="tel: 010-123456">010-12 34 56</a>
+                    <a href="mailto: info@filmvisarna.com">info@filmvisarna.com</a>
                 </div>
             </div>
         </div>
