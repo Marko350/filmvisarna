@@ -75,7 +75,7 @@ const removeBookedSeats = async (req, res) => {
         if(exists) {
             await Showings.findOneAndUpdate(
                 { _id: req.params.showingsId },
-                { $unset: { bookedSeats: req.body.seats }});
+                { $pull: { bookedSeats: req.body.seats }}).exec();
                 // { $pull: { bookedSeats: req.body.seats }});
             res.json({ msg: `seats ${req.body.seats} has been deleted!`});
         }
