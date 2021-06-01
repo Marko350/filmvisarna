@@ -3,7 +3,6 @@ import { MovieContext } from "../contexts/MovieContext";
 
 function ConfirmationPageInfo({bookedTicket}) {
 
-    console.log("heeeeeeeej", bookedTicket);
     return (
         <div className={styles.confirmationWrapper} >
             <img
