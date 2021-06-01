@@ -53,6 +53,23 @@
     flex-direction: column;
 }
 
+.btnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.confirmBtnName{
+    position: absolute;
+    z-index: 10;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 0.85rem;
+}
+
 
 @media screen and (min-width: 768px) {
     .confirmPoster{

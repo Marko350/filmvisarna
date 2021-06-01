@@ -22,7 +22,10 @@ function ConfirmationPageInfo({bookedTicket}) {
                     <p className={styles.findOrderHistoryText}>Du hittar alltid din orderhistorik under Mina sidor. </p>
                 </div>
             </div>
-            <img src={btn} alt="Knapp för att komma tillbaka till startsidan."/>
+            <div className={styles.btnDiv}>
+                <img src={btn}className="mainBtn btnSmall" alt="Knapp för att komma tillbaka till startsidan."/>
+                <h4 className={styles.confirmBtnName}>Tillbaka till startsidan</h4>
+            </div>
         </div>
     )
 }
