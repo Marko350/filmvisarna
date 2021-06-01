@@ -1,5 +1,4 @@
 .container {
-  background-color: darkkhaki;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -30,8 +29,9 @@
   justify-content: center;
   align-items: center;
   width: 45%;
-  height: 70px;
-  font-size: 1.1rem;
+  height: 60px;
+  font-size: 1rem;
+  font-family: "Roboto Mono";
 }
 
 .ticketType img {
@@ -56,7 +56,7 @@
 }
 
 .counter i {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   cursor: pointer;
 }
 
@@ -78,8 +78,22 @@
 
 @media screen and (min-width: 700px) {
   .container {
-    width: 50%;
+    width: 100%;
     margin: 0;
+  }
+  .counter {
+    min-width: 95px;
+  }
+  .counter i {
+    font-size: 1.4rem;
+  }
+  .ticketType {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 48px;
+    font-size: .85rem;
   }
 }
 

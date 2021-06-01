@@ -13,6 +13,7 @@ const Booking = (props) => {
 
   const { getShowingById, chosenSeats, tickets, addSeats } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
+  const [numOfSeats, setNumOfSeats] = useState(0);
 
   const getShowing = async () => {
     let show = await getShowingById(showingId);
@@ -22,6 +23,10 @@ const Booking = (props) => {
   useEffect(() => {
     getShowing();
   }, []);
+
+  useEffect(() => {
+    setNumOfSeats(tickets.standard + tickets.senior + tickets.child);    
+  }, [tickets])
 
   const handleBookingBtn = () => {
     // Creating ticket-object
@@ -51,10 +56,16 @@ const Booking = (props) => {
         <div>
           <div className={style.infoHeader}>
             <h1>Boka biljetter</h1>
-            <p>{ showing.movieId[0].title}</p>
-            <p>{ showing.date} {showing.time}</p>
+            <div className={style.infoTitle}>
+              <p>{ showing.movieId[0].title}</p>
+              <p>{ showing.date} {showing.time}</p>
+            </div>
           </div>
           <hr className={style.hrGray} />
+          <div className={style.ticketsHeader}>
+            <h2>Välj antal biljetter och platser</h2>
+            <div className={style.seatMapNumber}><span>Antal:</span><span>{numOfSeats}</span></div>
+          </div>
           <div className={style.ticketsWrapper}>
             <div className={style.chooseTicketsWrapper}>
               <Tickets showing={showing}/>

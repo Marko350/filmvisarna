@@ -67,10 +67,10 @@ const SeatMap = ({ showing }) => {
 
   return ( 
     <div className={style.seatMapWrapper}>
-      <div className={style.seatMapHeader}>
+      {/* <div className={style.seatMapHeader}>
         <h2>Välj platser</h2>
         <div className={style.seatMapNumber}><span>Antal:</span><span>{numOfSeats}</span></div>
-      </div>
+      </div> */}
       <div className={style.seatMap}>
         <div className={style.screenIndicator}>
           <div className={style.screenLine}></div>

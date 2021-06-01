@@ -122,6 +122,10 @@
 
 @media screen and (min-width: 700px) {
   .seatMapWrapper {
-    width: 60%;
+    width: 50%;
+    margin: 0;
+  }
+  .seatMapWrapper .screenHeading {
+    background-color: #484848;
   }
 }

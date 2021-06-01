@@ -43,7 +43,7 @@ const Tickets = ({ showing }) => {
 
   return (
     <div className={container}>
-      <h2>Välj antal biljetter</h2>
+      {/* <h2>Välj antal biljetter</h2> */}
       <div className={tickets}>
         <div className={style.ticketType}>
           <p>Standard</p>
