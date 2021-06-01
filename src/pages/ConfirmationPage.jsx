@@ -1,11 +1,11 @@
 import styles from "../css/ConfirmationPage.module.css";
-import {useContext} from "react";
+import {useContext, useState, useEffect} from "react";
 import ConfirmationPageInfo from "../components/ConfirmationPageInfo";
 import {MovieContext} from "../contexts/MovieContext";
 
 function ConfirmationPage() {
-
-    const {bookedTicket} = useContext(MovieContext);
+   
+    let bookedTicket = JSON.parse(localStorage.getItem("myItem"))
 
     return (
         <div className="container">

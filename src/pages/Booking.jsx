@@ -36,6 +36,7 @@ const Booking = () => {
         poster: showing.movieId[0].poster,
       }
       console.log('Ticket:', ticketObj);
+      localStorage.setItem("myItem", JSON.stringify(ticketObj))
       setBookedTicket(ticketObj)
       addSeats(showing._id, chosenSeats);
       history.push('/confirmation')
