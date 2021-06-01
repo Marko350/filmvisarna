@@ -1,8 +1,22 @@
-.startPageWrapper {}
+.schemaGreeting{
+    text-align: center;
+    color: var(--main-header);
+    font-size: 25px;
+    margin: 20px;
+}
 
 @media only screen and (min-width: 768px) {
     .mainWrapper {
         display: flex;
         flex-direction: row;
+    }
+    .schemaGreeting{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .schemaGreeting{
+        font-size: 40px;
     }
 }
