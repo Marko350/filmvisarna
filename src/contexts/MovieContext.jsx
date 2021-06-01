@@ -9,6 +9,8 @@ const MovieProvider = (props) => {
   const [todaysShowings, setTodaysShowings] = useState(null);
   const [todaysSchema, setTodaysSchema] = useState(null);
   const [todaysPosters, setTodaysPoster] = useState(false);
+  const [bookedTicket, setBookedTicket] = useState(null);
+
 
   useEffect(() => {
     console.log("this is today:", todaysSchema);
@@ -173,6 +175,7 @@ const MovieProvider = (props) => {
     setTickets,
     tickets,
     addSeats,
+    bookedTicket, setBookedTicket
   }
 
   return (

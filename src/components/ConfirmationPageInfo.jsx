@@ -1,16 +1,22 @@
 import styles from "../css/ConfirmationPage.module.css";
+import { MovieContext } from "../contexts/MovieContext";
 
-function ConfirmationPageInfo() {
+function ConfirmationPageInfo({bookedTicket}) {
 
+    console.log("heeeeeeeej", bookedTicket);
     return (
         <div className={styles.confirmationWrapper} >
-            <div className={styles.confirmPoster}>Placeholder image</div>
+            <img
+                src={bookedTicket.seats}
+                alt={bookedTicket.movieTitle}
+                className={styles.confirmPoster}
+            />
             <div className={styles.confirmationBox}>
-                <h3>FilmRubrik och tid 00000</h3>
-                <p>Bokningsnr. 000000</p>
-                <p>Stolar: A12, A13, A14</p>
+                <h3>{bookedTicket.movieTitle}, {bookedTicket.time}</h3>
+                <p>(Bokningsnr. 000000)</p>
+                <p>Stolar: {bookedTicket.seats}</p>
                 <br></br>
-                <p>Summa: 100SEK</p>
+                <p>Summa: {bookedTicket.ticketTypes.totalPrice} :- </p>
             </div>
         </div>
     )

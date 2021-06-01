@@ -10,11 +10,6 @@
     display: flex;
 }
 
-.confirmPoster{
-    background-color: green;
-    width: 150px;
-}
-
 .confirmationBox{
     background-color: #434343;
     margin: 0rem 0rem 0rem 1rem;
