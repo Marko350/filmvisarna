@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import { MovieContext } from '../contexts/MovieContext';
 import styles from '../css/Showings.module.css';
 
 function Showings({ movieId }) {
 
     const date = new Date().toISOString().slice(0, 10);
+    const history = useHistory();
 
     const { getShowingsByMovieAndDate, movieShowings } = useContext(MovieContext);
     const [newDate, setNewDate] = useState(date)
@@ -33,7 +35,7 @@ function Showings({ movieId }) {
             </div>
             <div className={styles.schedule}>
                 {movieShowings ? (movieShowings.map(showing => (
-                    <div key={showing._id} className={styles.scheduleItem}>
+                    <div key={showing._id} className={styles.scheduleItem} onClick={() => history.push(`/booking/${showing._id}`)}>
                         <p className={styles.time}>{showing.time}</p>
                         <p className={styles.screen}>{showing.screenId[0].name}</p>
                     </div>
