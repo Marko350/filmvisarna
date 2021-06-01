@@ -1,4 +1,5 @@
 import styles from "../css/ConfirmationPage.module.css";
+import btn from "../assets/buttonImg/btn-small.png";
 
 function ConfirmationPageInfo({bookedTicket}) {
     console.log("hola",bookedTicket)
@@ -21,6 +22,7 @@ function ConfirmationPageInfo({bookedTicket}) {
                     <p className={styles.findOrderHistoryText}>Du hittar alltid din orderhistorik under Mina sidor. </p>
                 </div>
             </div>
+            <img src={btn} alt="Knapp för att komma tillbaka till startsidan."/>
         </div>
     )
 }
