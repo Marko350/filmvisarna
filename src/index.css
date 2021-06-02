@@ -108,3 +108,13 @@ button {
     max-width: 1000px;
   }
 }
+
+@media (min-width: 1100px) {
+  .btnMedium {
+    width: 320px;
+    height: 80px;
+  }
+  .btnLabel {
+    font-size: 1.4rem;
+  }
+}

@@ -94,8 +94,14 @@
 .yourSeats {
   color: rgb(224, 224, 224);
   margin: 0 .2rem;
+  font-size: 1rem;
+  opacity: .8;
+}
+
+.uppercase {
   text-transform: uppercase;
   font-size: 1.2rem;
+  opacity: 1;
 }
 
 .showSmall {
@@ -103,11 +109,9 @@
 }
 
 .hideSmall {
+  position: relative;
+  top: -5px;
   display: none;
-}
-
-.btnContainer {
-  height: 50px;
 }
 
 .btn {
@@ -134,6 +138,9 @@
 
 .chooseTicketsWrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ticketsHeader {
@@ -147,7 +154,7 @@
   justify-content: space-between;
   font-size: 1.2rem;
   color: var(--main-header);
-  min-width: 80px;
+  min-width: 90px;
   text-align: right;
 }
 
@@ -229,14 +236,58 @@
     width: 400px;
     margin-top: 2rem;
   }
-
-  .btnContainer img {
-    
-  }
-
   .btn p {
     font-size: 1.3rem;
     left: 70px;
     top: 30px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .ticketType {
+    width: 35%;
+  }
+  .ticketsWrapper {
+    padding: 2.2rem 3rem;
+  }
+  .chooseTicketsWrapper {
+    width: 46%;
+  }
+  .yourSeatsWrapper {
+    margin-top: 1rem;
+  }
+  .yourSeatsWrapper h4 {
+    font-size: 1rem;
+  }
+  .chosenSeatsDisplay {
+    min-height: 40px;
+  }
+  .yourSeats {
+    font-size: 1rem;
+  }
+  .uppercase {
+    font-size: 1.2rem;
+  }
+  .infoHeader p {
+    font-size: 1.3rem;
+  }
+  .bookingWrapper h1 {
+    font-size: 1.7rem;
+  }
+  .bookingWrapper h2 {
+    font-size: 1.4rem;
+  }
+  .seatMapNumber {
+    font-size: 1.4rem;
+  }
+  .bookingWrapper h3 {
+    font-size: 1.2rem;
+  }
+  .yourInfo p {
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+  }
+  .yourInfo h4 {
+    font-size: 1.2rem;
   }
 }

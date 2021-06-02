@@ -127,34 +127,24 @@
   }
 }
 
-/* @media only screen and (min-width: 768px) {
-  .tickets img,
-  .barnTicket img {
-    width: 150px;
+@media screen and (min-width: 900px) {
+  .ticketType {
+    width: 45%;
+    height: 52px;
+    font-size: .85rem;
   }
+}
 
-  .container {
-    margin-bottom: 2rem;
+@media screen and (min-width: 1100px) {
+  .ticketType {
+    width: 40%;
+    height: 63px;
+    font-size: 1.1rem;
   }
-
-  .container h2 {
-    font-size: 25px;
+  .counter {
+    min-width: 145px;
   }
-
-  .tickets p {
-    font-size: 1.2rem;
-    left: 30px;
-    top: 20px;
+  .counter i {
+    font-size: 1.8rem;
   }
-
-  .barnTicket p {
-    font-size: 1.2rem;
-    left: 50px;
-    top: 20px;
-  }
-
-  .counter i,
-  .counter span {
-    font-size: 1.6rem;
-  }
-} */
+}

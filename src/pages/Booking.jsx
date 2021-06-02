@@ -74,7 +74,8 @@ const Booking = (props) => {
               <div className={`${style.yourSeatsWrapper} ${style.hideSmall}`}>
                 <h4>Valda platser</h4>
                 <div className={style.chosenSeatsDisplay}>
-                  {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
+                  { chosenSeats.length ? 
+                  chosenSeats.map((seat, i) => <span className={`${style.yourSeats} ${style.uppercase}`} key={i}>{seat}</span>) : <span className={style.yourSeats}>Inga platser valda</span>}
                 </div>
               </div>
             </div>
@@ -82,7 +83,8 @@ const Booking = (props) => {
             <div className={`${style.yourSeatsWrapper} ${style.showSmall}`}>
               <h4>Valda platser</h4>
               <div className={style.chosenSeatsDisplay}>
-                {chosenSeats.map((seat, i) => <span className={style.yourSeats} key={i}>{seat}</span>)}
+                { chosenSeats.length ? 
+                  chosenSeats.map((seat, i) => <span className={`${style.yourSeats} ${style.uppercase}`} key={i}>{seat}</span>) : <span className={style.yourSeats}>Inga platser valda</span>}
               </div>
             </div>
           </div>

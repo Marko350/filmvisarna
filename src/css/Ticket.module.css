@@ -65,6 +65,10 @@
   opacity: .3;
 }
 
+.bigScreen {
+  display: none;
+}
+
 .movieInfo {
   display: flex;
   flex-direction: column;
@@ -233,5 +237,44 @@
   .verticalLine {
     border-right: 2px dotted rgb(55, 64, 80);
     margin: 0 .3rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .ticketTitle {
+    font-size: .95rem;
+  }
+  .ticketTime {
+    font-size: .9rem;
+  }
+  .ticketPrice {
+    font-size: .9rem;
+  }
+  .ticketTypes {
+    font-size: .8rem;
+    margin: .2rem 0 .15rem 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .imageContainer {
+    width: 27%;
+    padding: 1rem 0;
+  }
+  .ticketTitle {
+    font-size: 1.3rem;
+  }
+  .ticketTime {
+    font-size: 1.1rem;
+  }
+  .ticketPrice {
+    font-size: 1.02rem;
+  }
+  .ticketTypes {
+    font-size: .9rem;
+    margin: .2rem 0 .15rem 0;
+  }
+  .movieInfo {
+    width: 52%;
   }
 }
