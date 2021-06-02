@@ -11,7 +11,7 @@
 }
 
 .datepickerLine input {
-    padding: 1px 3px;
+    padding: 2px 5px;
     margin-bottom: 6px;
     background-color: #262626;
     font-size: 0.9rem;
@@ -19,6 +19,10 @@
     outline: none;
     border: 1px solid var(--card-background);
     border-radius: 2px;
+}
+
+.datepickerLine input::-webkit-calendar-picker-indicator {
+    filter: invert(90%);
 }
 
 .schedule {
