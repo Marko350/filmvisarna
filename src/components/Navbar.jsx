@@ -7,6 +7,7 @@ import {
   hamburgerLinks,
   filmStrip,
   filmStripDesktop,
+  close,
 } from "../css/Navbar.module.css";
 import logo from "../assets/filmvisarna-logo.png";
 import FilmStrip from "../assets/Filmstrip.png";
@@ -25,11 +26,9 @@ const Navbar = () => {
       {!displayMenu ? (
         <i className="fas fa-bars" onClick={toggleNavMenu}></i>
       ) : (
-        <i
-          style={{ fontSize: "35px" }}
-          className="fas fa-times"
-          onClick={toggleNavMenu}
-        ></i>
+        <div className={close}>
+          <i className="fas fa-times" onClick={toggleNavMenu}></i>
+        </div>
       )}
       <div className={pic}>
         <img
