@@ -1,12 +1,19 @@
 import { useHistory } from "react-router-dom";
 import styles from "../css/Footer.module.css";
+import logo from "../assets/filmvisarna-logo.png";
 
 const Footer = () => {
   const history = useHistory();
   return (
     <div className={styles.container}>
       <div className={styles.mobile}>
-        <h1>Filmvisarna</h1>
+        <div className={styles.btnUp}>
+          <i
+            onClick={() => window.scrollTo(0, 0)}
+            className="fas fa-chevron-circle-up"
+          ></i>
+        </div>
+        <img src={logo} alt="Logo" />
         <div className={styles.info}>
           <div className={styles.icons}>
             <a href="https://www.facebook.com/">
@@ -48,7 +55,7 @@ const Footer = () => {
         </div>
         <div className={styles.info}>
           <div className={styles.ipad}>
-            <h1>Filmvisarna</h1>
+            <img src={logo} alt="Logo" />
             <p>Ipsumgatan 34 Malmö</p>
             <p>010-123456789</p>
           </div>
