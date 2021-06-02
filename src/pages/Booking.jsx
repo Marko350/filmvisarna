@@ -50,6 +50,8 @@ const Booking = (props) => {
     }
   }
 
+  let email = "lorem.andersson@gmail.com";
+
   return (
     <div className={`container ${bookingWrapper}`}>
       { showing && 
@@ -63,7 +65,7 @@ const Booking = (props) => {
           </div>
           <hr className={style.hrGray} />
           <div className={style.ticketsHeader}>
-            <h2>Välj antal biljetter och platser</h2>
+            <h2>Välj biljetter</h2>
             <div className={style.seatMapNumber}><span>Antal:</span><span>{numOfSeats}</span></div>
           </div>
           <div className={style.ticketsWrapper}>
@@ -93,7 +95,10 @@ const Booking = (props) => {
                 <h3>Dina uppgifter</h3>
                 <div className={style.yourInfo}>
                   <h4>E-post:</h4>
-                  <p>lorem.andersson@gmail.com</p>
+                  <p>{
+                    email.length > 25 ? 
+                      `${email.slice(0, 25)}...` : email
+                    }</p>
                   <h4>Telefonnummer:</h4>
                   <p>070-32 123 412</p>
                 </div>

@@ -44,7 +44,7 @@ const Ticket = ({ showing }) => {
           </div>
           <div className={style.verticalLine}></div>
           <div className={movieInfo}>
-            <span className={style.ticketTitle}>{showing.movieId[0].title}: The Longer Title</span>
+            <span className={style.ticketTitle}>{showing.movieId[0].title}</span>
             <span className={style.ticketTime}>{showing.date} {showing.time}</span>
             <hr />
             { renderTicketTypes() }

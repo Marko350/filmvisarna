@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto .7rem auto;
 }
 
 .ticketInfoWrapper {
@@ -165,7 +164,49 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
+  .ticketTitle {
+    font-size: 1.2rem;
+  }
+  .ticketTime {
+    font-size: 1.1rem;
+  }
+  .ticketPrice {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .container {
+    width: 50%;
+    margin: 0;
+  }
+  .ticketTitle {
+    font-size: .83rem;
+  }
+  .ticketTime {
+    font-size: .7rem;
+  }
+  .ticketPrice {
+    font-size: .62rem;
+  }
+  .ticketTypes {
+    font-size: .66rem;
+    margin: .2rem 0 .15rem 0;
+  }
+  .movieInfo {
+    width: 60%;
+  }
+  .imageContainer {
+    width: 30%;
+  }
+  .verticalLine {
+    border-right: 2px dotted rgb(55, 64, 80);
+    margin: 0 .3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .container {
     width: 50%;
     margin: 0;
@@ -177,10 +218,10 @@
     font-size: .8rem;
   }
   .ticketPrice {
-    font-size: .83rem;
+    font-size: .72rem;
   }
   .ticketTypes {
-    font-size: .8rem;
+    font-size: .75rem;
     margin: .2rem 0 .15rem 0;
   }
   .movieInfo {

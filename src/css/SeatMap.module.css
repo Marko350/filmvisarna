@@ -1,6 +1,5 @@
 .seatMapWrapper {
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   margin-top: 2rem;
 }
@@ -8,7 +7,6 @@
 .seatMap {
   width: 100%;
   margin: 0 auto;
-  max-width: 400px;
 }
 
 .screenIndicator {
@@ -120,12 +118,34 @@
   color: rgb(243, 243, 243);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
+  .seat {
+    height: 50px;
+    font-size: .9rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .seatMapWrapper {
-    width: 50%;
+    width: 55%;
     margin: 0;
+  }
+  .seat {
+    height: 35px;
+    font-size: .65rem;
   }
   .seatMapWrapper .screenHeading {
     background-color: #484848;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .seat {
+    height: 40px;
+    font-size: .85rem;
+  }
+  .seatMapWrapper {
+    width: 50%;
+    margin: 0;
   }
 }

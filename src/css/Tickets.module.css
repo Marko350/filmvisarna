@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   margin-top: 1rem;
 }
@@ -60,6 +59,10 @@
   cursor: pointer;
 }
 
+.counter i:active {
+  transform: scale(1.02);
+}
+
 .counter span {
   display: block;
   font-size: 1.4rem;
@@ -76,7 +79,23 @@
   margin-left: 3px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
+  .counter {
+    min-width: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ticketType {
+    width: 40%;
+    height: 70px;
+    font-size: 1.1rem;
+  }
+  .counter i {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .container {
     width: 100%;
     margin: 0;
@@ -85,15 +104,26 @@
     min-width: 95px;
   }
   .counter i {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .ticketType {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 45%;
+    height: 45px;
+    font-size: .8rem;
+  }
+  .counter span {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .ticketType {
     width: 45%;
     height: 48px;
     font-size: .85rem;
+  }
+  .counter span {
+    font-size: 1.4rem;
   }
 }
 
