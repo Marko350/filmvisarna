@@ -44,7 +44,7 @@ const getShowingsByMovieAndDate = async (req, res) => {
 
 const getShowingByTodaysDate = async (req, res) => {
     let queryDate = new Date().toISOString().slice(0, 10);
-    let todaysShowings = await Showings.find({'date': queryDate}).populate('movieId', 'title poster').exec();
+    let todaysShowings = await Showings.find({'date': queryDate}).populate('movieId', 'title poster').sort({ time: 1 }).exec();
     if (!todaysShowings.length) {
         res.json({ error: 'There are no showings today' });
         return;
