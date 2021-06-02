@@ -8,6 +8,7 @@ const StartPage = () => {
         <div className={styles.startPageWrapper}>
                 <Hero />
             <div className="container">
+                <h2 className={styles.schemaGreeting}>Dagens visningar</h2>
                 <div className={styles.mainWrapper}>
                     <Posters />
                     <Schema />

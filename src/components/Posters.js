@@ -17,10 +17,14 @@ const Posters = () => {
                 <div className={styles.posterContainerOne}>
                     <img className={styles.imgOne} onClick={() => clickToRender(todaysPosters[0].id)} src={todaysPosters[0].poster} alt="poster" />
                 </div>
-            <div className={styles.posterContainerTwo}>
-                <img className={styles.imgTwo} onClick={() => clickToRender(todaysPosters[1].id)} src={todaysPosters[1].poster} alt="poster" />
-                <img className={styles.imgThree} onClick={() => clickToRender(todaysPosters[2].id)} src={todaysPosters[2].poster} alt="poster" />
-            </div>
+                {todaysPosters.length > 2 ?
+                    <div className={styles.posterContainerTwo}>
+                        <img className={styles.imgTwo} onClick={() => clickToRender(todaysPosters[1].id)} src={todaysPosters[1].poster} alt="poster" />
+                        <img className={styles.imgThree} onClick={() => clickToRender(todaysPosters[2].id)} src={todaysPosters[2].poster} alt="poster" />
+                    </div>
+                :
+                    <div></div>
+                }
             </div>
         );
     };

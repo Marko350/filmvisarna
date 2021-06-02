@@ -7,12 +7,15 @@ import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
 import { useHistory } from "react-router-dom";
 
-const Booking = () => {
+const Booking = (props) => {
+
+  const showingId = props.match.params.showingId;
+
   const { getShowingById, chosenSeats, tickets, addSeats, setBookedTicket } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
   const history = useHistory()
   const getShowing = async () => {
-    let show = await getShowingById('60b4db5df09c565b4437b5fb');
+    let show = await getShowingById(showingId);
     setShowing(show);
   }
 
