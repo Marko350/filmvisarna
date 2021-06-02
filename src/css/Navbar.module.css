@@ -19,6 +19,14 @@
 .navbar i {
   font-size: 30px;
   padding: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.close i {
+  width: 67.8px;
+  height: 71.6px;
+  font-size: 38px;
 }
 
 .pic {
@@ -38,11 +46,11 @@
   flex-direction: column;
   background-color: #262626;
   width: 100%;
-  top: 75px;
+  top: 71px;
   height: 100vh;
   padding-top: 1rem;
   z-index: 2;
-  border-top: 1px solid white;
+  border-top: 1px solid #64646463;
 }
 
 .hamburgerLinks a {
