@@ -6,15 +6,17 @@ import { btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
 import style from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
 import { MovieContext } from '../contexts/MovieContext';
+import { useHistory } from "react-router-dom";
 
 const Booking = (props) => {
 
   const showingId = props.match.params.showingId;
 
-  const { getShowingById, chosenSeats, tickets, addSeats } = useContext(MovieContext);
+  const { getShowingById, chosenSeats, tickets, addSeats, setBookedTicket } = useContext(MovieContext);
   const [showing, setShowing] = useState(null);
   const [numOfSeats, setNumOfSeats] = useState(0);
 
+  const history = useHistory()
   const getShowing = async () => {
     let show = await getShowingById(showingId);
     setShowing(show);
@@ -44,7 +46,10 @@ const Booking = (props) => {
         poster: showing.movieId[0].poster,
       }
       console.log('Ticket:', ticketObj);
+      localStorage.setItem("myItem", JSON.stringify(ticketObj))
+      setBookedTicket(ticketObj)
       addSeats(showing._id, chosenSeats);
+      history.push('/confirmation')
     } else {
       console.log('Need to choose your seats');
     }

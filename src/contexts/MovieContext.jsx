@@ -9,6 +9,8 @@ const MovieProvider = (props) => {
   const [todaysShowings, setTodaysShowings] = useState(null);
   const [todaysSchema, setTodaysSchema] = useState(null);
   const [todaysPosters, setTodaysPoster] = useState(false);
+  const [bookedTicket, setBookedTicket] = useState(null);
+
 
   useEffect(() => {
     console.log("this is today:", todaysSchema);
@@ -153,7 +155,7 @@ const MovieProvider = (props) => {
     // getShowingById('60acc75a2e0da01dfcbd1854');
     // getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
-    // addSeats('60acbd0cceadf61dd85e83c3', []) // Put strings in the array
+    //addSeats('60b4ddeef09c565b4437b5fc', []) // Put strings in the array
   }, [])
 
   const values = {
@@ -173,6 +175,7 @@ const MovieProvider = (props) => {
     setTickets,
     tickets,
     addSeats,
+    bookedTicket, setBookedTicket
   }
 
   return (

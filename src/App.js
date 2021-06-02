@@ -6,6 +6,9 @@ import StartPage from "./pages/StartPage";
 import MovieDetails from "./pages/MovieDetails";
 import Start from "./pages/Start";
 import Navbar from "./components/Navbar";
+import ConfirmationPage from "./pages/ConfirmationPage";
+import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
           <Route exact path="/movie-list/:id" component={MovieDetails} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/test" component={Start} />
+          <Route exact path="/confirmation" component={ConfirmationPage} />
+          <Footer />
         </MovieProvider>
       </BrowserRouter>
     </div>
