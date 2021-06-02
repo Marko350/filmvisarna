@@ -1,6 +1,9 @@
 .btnDown i {
     font-size: 2rem;
     padding: 2.5rem;
+    text-align: center;
+    color: var(  --main-header);
     margin: 0 auto;
+    width: 99%;
 }
   
