@@ -12,7 +12,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=S9ID5DHsX8g",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://api.time.com/wp-content/uploads/2017/11/casablanca.jpeg"
   },
   {
     "title": "Jaws",
@@ -27,7 +28,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=4pxkU9GVAoA",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://miro.medium.com/max/3200/1*0HJNIQoYXxy53pQsUJ3BOw.jpeg"
   },
   {
     "title": "Breakfast At Tiffany's",
@@ -42,7 +44,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNGEwMTRmZTQtMDY4Ni00MTliLTk5ZmMtOWMxYWMyMTllMDg0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=hQ_O15kYlCI",
-    "price": 140
+    "price": 140,
+    "coverImg": "http://3.bp.blogspot.com/-UZHO1xPATFg/UPCqWeZ_YII/AAAAAAAADYA/LiLUIhjJ3I8/s1600/Breakfast+at+Tiffany%27s+1.jpg"
   },
   {
     "title": "Blade Runner",
@@ -57,7 +60,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=eogpIG53Cis",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://variety.com/wp-content/uploads/2013/05/bladerunner_sequel.jpg?w=681&h=383&crop=1"
   },
   {
     "title": "Psycho",
@@ -72,7 +76,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=Wz719b9QUqY",
-    "price": 100
+    "price": 100,
+    "coverImg": "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2018/06/Psycho-517331430.jpg"
   },
   {
     "title": "A Fistful Of Dollars",
@@ -87,7 +92,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYjA1MGVlMGItNzgxMC00OWY4LWI4YjEtNTNmYWIzMGUxOGQzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=-X2DtiE7VLw",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://pics.filmaffinity.com/A_Fistful_of_Dollars-560840614-large.jpg"
   },
   {
     "title": "Citizen Kane",
@@ -102,7 +108,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=8dxh3lwdOFw",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://cdn-stream.httpid.com/c201/wp-content/uploads/2020/05/n5bnyvypgiamr9q29d6ksvtetdk.jpg"
   },
   {
     "title": "Lawrence Of Arabia",
@@ -117,7 +124,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=vOlRhGEhG7k",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://static.rogerebert.com/uploads/review/primary_image/reviews/great-movie-lawrence-of-arabia-1962/EB20010902REVIEWS08109020301AR.jpg"
   },
   {
     "title": "The Godfather",
@@ -132,7 +140,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=1x0GpEZnwa8",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://pics.filmaffinity.com/The_Godfather-704723257-large.jpg"
   },
   {
     "title": "On The Waterfront",
@@ -147,7 +156,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BY2I0MWFiZDMtNWQyYy00Njk5LTk3MDktZjZjNTNmZmVkYjkxXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=boekTHsOIY8",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://readingatrecess.files.wordpress.com/2014/10/on-the-waterfront.png"
   },
   {
     "title": "Rocky",
@@ -162,7 +172,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMTY5MDMzODUyOF5BMl5BanBnXkFtZTcwMTQ3NTMyNA@@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=3VUblDwa648",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://m.media-amazon.com/images/M/MV5BMTUzNDIxOTc0MV5BMl5BanBnXkFtZTcwNTQ3NTMyNA@@._V1_.jpg"
   },
   {
     "title": "First Blood",
@@ -177,7 +188,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BODBmOWU2YWMtZGUzZi00YzRhLWJjNDAtYTUwNWVkNDcyZmU5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=IAqLKlxY3Eo",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://s3.amazonaws.com/files.collageplatform.com.prod/image_cache/2020x1160_fit/56d076fc6aa72c8630e65aa7/781c430666153b8127116d434ec968a7.jpeg"
   },
   {
     "title": "A Streetcar Named Desire",
@@ -192,7 +204,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzk2M2Y3MzYtNGMzMi00Y2FjLTkwODQtNmExYWU3ZWY3NzExXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=FVDecBMyyZI",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://i.pinimg.com/originals/8d/f5/e4/8df5e484abc403140782df626f455922.jpg"
   },
   {
     "title": "The Great Escape",
@@ -207,7 +220,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzA2NmYxMWUtNzBlMC00MWM2LTkwNmQtYTFlZjQwODNhOWE0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=r9Q_WESQUVw",
-    "price": 100
+    "price": 100,
+    "coverImg": "https://media2.fdncms.com/chicago/imager/u/original/68172466/great_escape.jpg"
   },
   {
     "title": "Back To The Future",
@@ -222,7 +236,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=qvsgGtivCgs",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://m.media-amazon.com/images/M/MV5BNjE4Mzk3NjM4MF5BMl5BanBnXkFtZTcwOTUxNDc0NA@@._V1_.jpg"
   },
   {
     "title": "Raiders Of The Lost Ark",
@@ -237,7 +252,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=XkkzKHCx154",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://upl.roob.la/2019/09/Raiders-of-the-Lost-Ark.jpg"
   },
   {
     "title": "Jurassic Park",
@@ -252,7 +268,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=QWBKEmWWL38",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://images.vice.com/vice/images/articles/meta/2015/06/13/how-jurassic-park-changed-the-dna-of-blockbusters-456-1434156048.jpg"
   },
   {
     "title": "Halloween",
@@ -267,7 +284,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzk1OGU2NmMtNTdhZC00NjdlLWE5YTMtZTQ0MGExZTQzOGQyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=xHuOtLTQ_1I",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://vistapointe.net/images/halloween-1978-6.jpg"
   },
   {
     "title": "Star Wars: Episode IV - A New Hope",
@@ -282,7 +300,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=vZ734NWnAHA",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://i1.wp.com/filmotomy.com/wp-content/uploads/2019/12/Star-Wars-A-New-Hope-4.jpg?fit=1201%2C677&ssl=1"
   },
   {
     "title": "Vacation",
@@ -297,7 +316,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmViMGQ4ZDktNzI3OC00YjVkLWJmZDgtOTI4N2FhNjhjNDVjXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=FHThGmVfE3A",
-    "price": 100
+    "price": 100,
+    "coverImg": "https://m.media-amazon.com/images/M/MV5BYzhmZTVkNTAtYjVjZi00N2JkLTk3ODEtYmM2ZjQ0ZjNiMDdlXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg"
   },
   {
     "title": "The Breakfast Club",
@@ -312,7 +332,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BOTM5N2ZmZTMtNjlmOS00YzlkLTk3YjEtNTU1ZmQ5OTdhODZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=BSXBvor47Zs",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://www.wallpaperup.com/uploads/wallpapers/2013/12/18/198716/83175bde77fae3f15558dc719d12f2b2-700.jpg"
   },
   {
     "title": "Yojimbo",
@@ -327,7 +348,8 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BZThiZjAzZjgtNDU3MC00YThhLThjYWUtZGRkYjc2ZWZlOTVjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=y_1iT_GmHTE",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://i.pinimg.com/originals/86/ba/8b/86ba8b85b1af10beba2ea1215265d1ed.png"
   },
   {
     "title": "Varning För Jönssonligan",
@@ -342,7 +364,8 @@
     "subtitles": "Inga",
     "poster": "https://m.media-amazon.com/images/M/MV5BZTBiZjNmMGEtNTM4OS00YmMzLTlhYzktZWQ1MzAwZWE2N2JkXkEyXkFqcGdeQXVyNzQxNDExNTU@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=Hf8QrgszdUQ",
-    "price": 120
+    "price": 120,
+    "coverImg": "https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/168940/434ba2182e4c128b81e3e1b2298722ca-varning4.jpg"
   },
   {
     "title": "Alien",
@@ -357,6 +380,7 @@
     "subtitles": "Svenska",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
     "trailer": "https://www.youtube.com/watch?v=LjLamj-b0I8",
-    "price": 140
+    "price": 140,
+    "coverImg": "https://i.pinimg.com/originals/4b/34/f7/4b34f766a940ea584ccb2d0f86dd4327.jpg"
   }
 ]
