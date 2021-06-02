@@ -15,10 +15,6 @@ function MovieDetailsInfo({movieId}) {
         <div className="container">
            { movieById && 
                 <div className={styles.infoSection}>
-                    <div className={styles.btnContainer}>
-                        <img src={infoBtn} alt="Knapp för att boka biljett" className="mainBtn btnSmall" />
-                        <h2 className={styles.infoBtnName}>Biljetter</h2>
-                    </div>
                     <div className={styles.movieDetailsLaptop} >
                         <div className={styles.movieDetailsColumn}>
                             <div className={styles.infoHeadingP} >
