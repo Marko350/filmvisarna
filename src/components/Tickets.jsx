@@ -1,12 +1,13 @@
 import { useState, useEffect, useContext } from "react";
 import { container } from "../css/Tickets.module.css";
-import Ticket from "../assets/ticket.png";
+import Ticket from "../assets/ticket-type-bg.png";
 import {
   tickets,
   barnTicket,
   counter,
   ticketNumber,
 } from "../css/Tickets.module.css";
+import style from "../css/Tickets.module.css";
 import { MovieContext } from "../contexts/MovieContext";
 
 const Tickets = ({ showing }) => {
@@ -42,10 +43,12 @@ const Tickets = ({ showing }) => {
 
   return (
     <div className={container}>
-      <h2>Välj antal biljetter</h2>
+      {/* <h2>Välj antal biljetter</h2> */}
       <div className={tickets}>
-        <p>Standard</p>
-        <img src={Ticket} alt="Ticket" />
+        <div className={style.ticketType}>
+          <p>Standard</p>
+          <img src={Ticket} alt="Ticket" />
+        </div>
         <div className={counter}>
           <i
             onClick={() => minusSeatFunc(standardTicket, setStandardTicket)}
@@ -61,8 +64,10 @@ const Tickets = ({ showing }) => {
         </div>
       </div>
       <div className={tickets}>
-        <p>Pensionär</p>
-        <img src={Ticket} alt="Ticket" />
+        <div className={style.ticketType}>
+          <p>Pensionär</p>
+          <img src={Ticket} alt="Ticket" />
+        </div>
         <div className={counter}>
           <i
             onClick={() => minusSeatFunc(pensionerTicket, setPensionerTicket)}
@@ -77,9 +82,11 @@ const Tickets = ({ showing }) => {
           ></i>
         </div>
       </div>
-      <div className={barnTicket}>
-        <p>Barn</p>
-        <img src={Ticket} alt="Ticket" />
+      <div className={tickets}>
+        <div className={style.ticketType}>
+          <p>Barn</p>
+          <img src={Ticket} alt="Ticket" />
+        </div>
         <div className={counter}>
           <i
             onClick={() => minusSeatFunc(childTicket, setChildTicket)}
