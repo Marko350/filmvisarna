@@ -18,6 +18,7 @@ function Showings({ movieId }) {
 
     const handleChange = (e) => {
         setNewDate(e.target.value);
+        window.scrollTo({ bottom: 0 });
     };
 
     return (
