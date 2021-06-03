@@ -1,11 +1,10 @@
 import styles from '../css/FeaturedMovie.module.css';
-import headerImg from '../assets/casablanca.jpeg';
 
 function FeaturedMovie({ movie }) {
     return (
         <div className={styles.featuredMovieWrapper}>
             <div className={styles.gradientWrapper}>
-                <img className={styles.headerImg} src={headerImg} alt="Casablanca placeholder" />
+                <img className={styles.headerImg} src={movie.coverImg} alt={movie.title} />
                 <div className={styles.gradient}></div>
             </div>
             <div className={styles.imgWrapper}>
