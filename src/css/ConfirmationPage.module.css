@@ -7,34 +7,55 @@
 }
 
 .confirmationWrapper{
-    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .confirmationBox{
     background-color: #434343;
-    padding: 0.7rem;
-    height: 200px;
+    padding: 1.3rem;
     box-shadow: var(--card-shadow);
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+        'main right '
+        'footer footer';
+    grid-gap: 12px;
+    padding: 5px;
 }
 
-.confirmPoster{
-    height: 200px;
-    margin: 0rem 0.5rem 0rem 0rem;
-    box-shadow: var(--card-shadow);
+.gridMain{
+    grid-area: main; 
+    padding: 1rem;
+}
+.gridFooter{
+    grid-area: footer; 
+    padding: 0rem 0rem 0rem 1rem;
+}
+.confirmationInfoBox{
+    display: flex;
+}
+
+.confirmPosterTest{
+    height: 165px;
+    grid-area: right; 
+    padding: 1rem;
 }
 
 .confirmHeading{
     color: var(--secondary-header);
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     margin-bottom: 0.2rem;
+    display: block;
+    width:160px;
+    word-wrap: break-word;
 }
 
 .confirmDate{
     color: var(--secondary-header);
-    font-size: 0.65rem;
+    font-size: 0.9rem;
     margin-bottom: 0.4rem;
 }
 
@@ -47,33 +68,36 @@
     padding-bottom: 0.5rem;
 }
 
-.confirmP{
-    font-size: 0.60rem;
+.confirmP, .confirmChair{
+    font-size: 0.85rem;
     margin-bottom: 0.3rem;
+}
+.confirmChair{
+    text-transform: capitalize;
+
+}
+
+.bookedChairs{
+    display: flex;
+
 }
 
 .confirmTotal{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
 }
 
 .findOrderHistoryText{
-    margin: 0.5rem 0rem 0rem 0rem;
-    font-size: 0.55rem;
+    margin: 1.7rem 0rem 0rem 0rem;
+    font-size: 0.8rem;
 }
 
-.confirmationInfo{
-    display: flex;
-    flex-direction: column;
-}
 
 .btnDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
-
 }
 
 .confirmBtnName{
