@@ -20,7 +20,7 @@ function MovieDetailsHeader({ movieId }) {
     movieById && (
       <div className={styles.movieThumbnailWrapper}>
             <div className={styles.gradientWrapper}>
-                <img className={styles.headerImg} src={headerImg} alt="Casablanca placeholder" />
+                <img className={styles.headerImg} src={movieById.coverImg} alt={movieById.title} />
                 <div className={styles.gradient}></div>
             </div>
             <div className={styles.imgWrapper}>
