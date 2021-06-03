@@ -19,33 +19,24 @@ function MovieDetailsHeader({ movieId }) {
 
   return (
     movieById && (
-      <div className={styles.moviePosterContainer}>
-        <div className={styles.gradientWrapper}>
-          <img
-            src={headerImg}
-            alt="placeholder"
-            className={styles.movieDetailsPlaceHolder}
-          />
-          <div className={styles.gradient}></div>
-        </div>
-
-        <div className={styles.posterTitleGenre}>
-          <img
-            src={movieById.poster}
-            alt={movieById.name}
-            className={styles.movieDetailsPoster}
-          />
-          <div className={styles.titleGenre}>
-            <h1 className={styles.detailsTitle}>{movieById.title}</h1>
-            <div className={styles.detailsGenreLength}>
-              <p className={styles.detailsGenre}>{movieById.genre} &nbsp;</p>
-              <p className={styles.detailsGenre}>
-                &nbsp; {movieById.length} min
-              </p>
+      <div className={styles.movieThumbnailWrapper}>
+            <div className={styles.gradientWrapper}>
+                <img className={styles.headerImg} src={headerImg} alt="Casablanca placeholder" />
+                <div className={styles.gradient}></div>
             </div>
-          </div>
-        </div>
-        <img
+            <div className={styles.imgWrapper}>
+                <img className={styles.posterImg} src={movieById.poster} alt={`${movieById.title} poster`} />
+                <div className={styles.movieInfo}>
+                    <p className={styles.title}>{movieById.title}</p>
+                    <div className={styles.detailsGenreLength}>
+                      <p className={styles.detailsGenre}>{movieById.genre} &nbsp;</p>
+                      <p className={styles.detailsGenre}>
+                        &nbsp; {movieById.length} min
+                      </p>
+                    </div> 
+                </div>
+            </div>
+            <img
           src={playbtn}
           alt="play"
           className={styles.playbtn}
