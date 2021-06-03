@@ -1,13 +1,8 @@
-.moviePosterContainer {
+.movieThumbnailWrapper {
+  max-height: 250px;
   position: relative;
-  margin-top: 2rem;
-}
-.movieDetailsPlaceHolder {
-  width: 100%;
-  height: 27vh;
-  object-fit: cover;
-  background-position: center;
-  position: relative;
+  display: flex;
+  margin-top: 3rem;
 }
 
 .gradientWrapper {
@@ -15,43 +10,68 @@
   display: flex;
 }
 
+.headerImg {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
 .gradient {
-  background: linear-gradient(180deg, #26262610 40%, #262626 95%);
+  background: linear-gradient(
+      180deg,
+      #26262610 40%,
+      #262626 95%
+    );
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+
 }
 
-.posterTitleGenre {
-  display: flex;
+.imgWrapper {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+
 }
 
-.movieDetailsPoster {
-  width: auto;
-  height: 100px;
+.posterImg {
+  width: 29%;
+  max-height: 250px;
+  object-fit: contain;
+  margin-right: 10px;
+  padding: 0 0 8px 8px;
 }
 
-.titleGenre {
-  margin-left: 10px;
-  align-self: flex-end;
+.movieInfo {
+  padding-bottom: 8px;
+  width: 100%;
 }
+
+.title {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
 
 .detailsTitle {
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 
 .detailsGenre {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: var(--secondary-header);
 }
 
 .detailsGenreLength {
   display: flex;
+  font-size: 1.2rem;
 }
 
 .playbtn {
@@ -95,34 +115,27 @@
 }
 
 @media screen and (min-width: 768px) {
-  .movieDetailsPlaceHolder {
-    height: 30vh;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
 
-  .movieDetailsPoster {
-    height: 190px;
-  }
+.movieThumbnailWrapper {
+  max-height: 300px;
+}
 
-    .posterTitleGenre{
-        display: flex;
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-    }
+.posterImg {
+    width: 33%;
+    padding: 0rem 0rem 0.5rem 0.5rem;
+    margin-right: 15px;
+}
 
-  .titleGenre {
-    padding-bottom: 10px;
-  }
-  .detailsTitle {
-    font-size: 1.4rem;
-  }
+.movieInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
-  .detailsGenre {
-    font-size: 1rem;
-  }
+.title {
+    font-size: 1.7rem;
+}
 
   .box {
     width: 100%;
@@ -137,38 +150,24 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .movieDetailsPlaceHolder {
-    height: 35vh;
+  .featuredMovieWrapper {
+    max-height: 300px;
   }
 
-  .gradient {
-    background: linear-gradient(180deg, #26262610 40%, #262626 95%);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  .headerImg {
+      max-height: 300px;
   }
 
-  .movieDetailsPoster {
-    position: relative;
-    height: 35vh;
+  .posterImg {
+      width: 50%;
+      max-height: 300px;
+      padding: 0rem 0rem 0.5rem 0rem;
   }
 
-  .detailsTitle {
-    font-size: 2.3rem;
+  .title {
+      font-size: 2rem;
   }
 
-  .detailsGenre {
-    font-size: 1.7rem;
-  }
-
-  .posterTitleGenre {
-    display: flex;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-  }
 
   .box {
     width: 80%;

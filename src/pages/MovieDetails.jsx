@@ -19,6 +19,13 @@ function MovieDetails(props) {
     return (
         <div className="container">
             <MovieDetailsHeader movieId={movieId} />
+            <p className={styles.arrowText}>Hitta visningar nedan</p>
+            <div className={styles.btnDown}>
+                <i
+                    onClick={() => window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight)}
+                    className="fas fa-chevron-circle-down"
+                ></i>
+            </div>
             <MovieDetailsInfo movieId={movieId}/>
             <Showings movieId={movieId} />
         </div>
