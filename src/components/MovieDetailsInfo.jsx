@@ -1,7 +1,6 @@
 import styles from '../css/MovieDetailsInfo.module.css';
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
-import infoBtn from "../assets/buttonImg/btn-medium.png";
 
 function MovieDetailsInfo({movieId}) {
 
@@ -9,16 +8,13 @@ function MovieDetailsInfo({movieId}) {
 
     useEffect(() => {
         getMovieById(movieId);
+        // eslint-disable-next-line
     }, [])
 
     return (
         <div className="container">
            { movieById && 
                 <div className={styles.infoSection}>
-                    <div className={styles.btnContainer}>
-                        <img src={infoBtn} alt="Knapp för att boka biljett" className="mainBtn btnSmall" />
-                        <h2 className={styles.infoBtnName}>Biljetter</h2>
-                    </div>
                     <div className={styles.movieDetailsLaptop} >
                         <div className={styles.movieDetailsColumn}>
                             <div className={styles.infoHeadingP} >
