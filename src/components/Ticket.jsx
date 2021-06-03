@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 import TicketPicture from "../assets/ticket-bg.png";
-import { MovieContext } from '../contexts/MovieContext';
+import { MovieContext } from "../contexts/MovieContext";
 import {
   container,
   movieInfo,
   imageContainer,
-  ticketTypes
+  ticketTypes,
 } from "../css/Ticket.module.css";
 import style from "../css/Ticket.module.css";
 
@@ -15,9 +15,11 @@ const Ticket = ({ showing }) => {
   const renderNumOfTickets = () => {
     let numOfTickets = tickets.standard + tickets.senior + tickets.child;
     return (
-      <div className={ticketTypes}><p>Antal biljetter: {numOfTickets}</p></div>
-    )
-  }
+      <div className={ticketTypes}>
+        <p>Antal biljetter: {numOfTickets}</p>
+      </div>
+    );
+  };
 
   // const renderTicketTypes = () => {
   //   if (tickets.standard > 0 || tickets.senior > 0 || tickets.child > 0) {
@@ -39,21 +41,28 @@ const Ticket = ({ showing }) => {
       <div className={style.ticketInfoWrapper}>
         <div className={style.ticketInfo}>
           <div className={imageContainer}>
-            <img className={style.poster}
+            <img
+              className={style.poster}
               src={showing.movieId[0].poster}
               alt="Poster"
             />
           </div>
           <div className={style.verticalLine}></div>
           <div className={movieInfo}>
-            <span className={style.ticketTitle}>{showing.movieId[0].title}</span>
-            <span className={style.ticketTime}>{showing.date} {showing.time}</span>
+            <span className={style.ticketTitle}>
+              {showing.movieId[0].title}
+            </span>
+            <span className={style.ticketTime}>
+              {showing.date} {showing.time}
+            </span>
             <hr />
-            { renderNumOfTickets() }
+            {renderNumOfTickets()}
             {/* { renderTicketTypes() } */}
             <div className={style.ticketPrice}>
               {/* <hr /> */}
-              <span className={style.totalPrice}>Totalt pris: {tickets.totalPrice} kr</span> 
+              <span className={style.totalPrice}>
+                Totalt pris: {tickets.totalPrice} kr
+              </span>
             </div>
           </div>
         </div>
