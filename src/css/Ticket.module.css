@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto .5rem auto;
 }
 
 .ticketInfoWrapper {
@@ -265,10 +265,10 @@
     font-size: 1.05rem;
   }
   .ticketTime {
-    font-size: 1.1rem;
+    font-size: 1.03rem;
   }
   .ticketPrice {
-    font-size: 1.02rem;
+    font-size: .97rem;
   }
   .ticketTypes {
     font-size: .9rem;
@@ -281,9 +281,19 @@
 
 @media screen and (min-width: 1200px) {
   .ticketTitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+  .ticketTime {
+    font-size: 1.05rem;
+  }
+  .ticketPrice {
+    font-size: .97rem;
+  }
+  .ticketTypes {
+    font-size: .97rem;
+    margin: .2rem 0 .15rem 0;
   }
   .movieInfo {
-    width: 56%;
+    width: 50%;
   }
 }
