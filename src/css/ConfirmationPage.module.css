@@ -7,73 +7,103 @@
 }
 
 .confirmationWrapper{
-    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .confirmationBox{
     background-color: #434343;
-    padding: 0.7rem;
-    height: 200px;
     box-shadow: var(--card-shadow);
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+        'main right '
+        'footer footer';
+    grid-gap: 12px;
+    padding: 5px;
 }
 
-.confirmPoster{
-    height: 200px;
-    margin: 0rem 0.5rem 0rem 0rem;
-    box-shadow: var(--card-shadow);
+.gridMain{
+    grid-area: main; 
+    padding: 0.5rem 0rem 0rem 0.5rem;
+}
+.gridFooter{
+    grid-area: footer; 
+    padding: 0rem 0rem 0rem 0.5rem;
+}
+.confirmationInfoBox{
+    display: flex;
+}
+
+.confirmPosterTest{
+    height: 165px;
+    justify-self: end;
+
+    grid-area: right; 
+    text-align: center;
+    padding: 0.6rem 0.5rem 0rem 0rem;
 }
 
 .confirmHeading{
     color: var(--secondary-header);
-    font-size: 0.75rem;
+    font-size: 1rem;
     margin-bottom: 0.2rem;
+    display: block;
+    width: 140px;
+    word-wrap: break-word;
 }
 
 .confirmDate{
     color: var(--secondary-header);
-    font-size: 0.65rem;
+    font-size: 0.9rem;
     margin-bottom: 0.4rem;
 }
 
+.confirmP, .confirmChair{
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+.confirmChair{
+    text-transform: capitalize;
 
-.confirmationWrapper hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #707070;
-    padding-bottom: 0.5rem;
 }
 
-.confirmP{
-    font-size: 0.60rem;
-    margin-bottom: 0.3rem;
+.bookedChairs{
+    display: flex;
+
 }
 
 .confirmTotal{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
 }
 
 .findOrderHistoryText{
-    margin: 0.5rem 0rem 0rem 0rem;
-    font-size: 0.55rem;
+    margin: 1.7rem 0rem 0rem 0rem;
+    font-size: 0.8rem;
+    display: block;
+    width:90%;
+    word-wrap: break-word;
 }
 
-.confirmationInfo{
-    display: flex;
-    flex-direction: column;
-}
 
 .btnDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
+}
 
+.mainBtnConfirm{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 2.5rem auto;
+    width: 240px;
 }
 
 .confirmBtnName{
@@ -82,82 +112,102 @@
     top: 53%;
     left: 50%;
     transform: translate(-50%, -60%);
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 
 @media screen and (min-width: 768px) {
+    .gridMain{
+        padding: 2.3rem 0rem 0rem 2.5rem;
+    }
+    .gridFooter{
+        padding: 2.3rem 2.5rem 0rem 2.5rem;
+    }
     .textContainer{
         font-size: 1.2rem;
-    }
-    .confirmationWrapper{
-        height: 370px;
+        margin-bottom: 1.2rem;
     }
 
-    .confirmPoster{
-        height: 300px;
+    .confirmPosterTest{
+        height: 250px;
+        grid-area: right; 
+        margin: 0 auto;
+        padding: 2.5rem 0rem 0rem 0rem;
     }
 
     .confirmationBox{
-        height: 300px;
-        padding: 2rem 1.3rem;
         line-height: 1.6;
     }
     .confirmHeading{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .confirmDate{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
-    .confirmP{
-        font-size: 1rem;
+    .confirmP , .confirmChair{
+        font-size: 1.2rem;
     }
     
     .confirmTotal{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         margin-top: 0.1rem;
     }
     
     .findOrderHistoryText{
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+    .mainBtnConfirm{
+        margin: 3.5rem auto;
+        width: 270px;
+    }
+    
+    .confirmBtnName{
+        font-size: 1.2rem;
     }
 }
   
 @media screen and (min-width: 1200px) {
-    .textContainer{
-        font-size: 1.6rem;
+    .gridMain{
+        padding: 2.3rem 0rem 0rem 3.5rem;
     }
-    .confirmationWrapper{
-        height: 470px;
+    .gridFooter{
+        padding: 2.3rem 2.5rem 0rem 2.5rem;
+    }
+    .confirmHeading{
+        width:95%;
+    }
+    
+    .textContainer{
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
     }
 
-    .confirmPoster{
-        height: 350px;
+    .confirmPosterTest{
+        height: 300px;
+        padding: 2.3rem 3.5rem 0rem 3.5rem;
     }
 
     .confirmationBox{
-        height: 350px;
         padding: 2rem 1.3rem;
         line-height: 1.6;
     }
     .confirmHeading{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .confirmDate{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
-    .confirmP{
-        font-size: 1.2rem;
+    .confirmP, .confirmChair{
+        font-size: 1.5rem;
     }
     
     .confirmTotal{
-        font-size: 1.3rem;
-        margin-top: 1rem;
+        font-size: 1.6rem;
     }
     
     .findOrderHistoryText{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }

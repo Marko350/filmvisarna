@@ -14,6 +14,11 @@
     font-size: 1.2rem;
     margin-bottom: 4px;
 }
+.movieCard h4:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
 
 .movieInfo {
     display: flex;
