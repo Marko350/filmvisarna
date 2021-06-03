@@ -72,6 +72,11 @@
   font-size: 1.15rem;
 }
 
+.infoHeader p.info {
+  font-size: 1.1rem;
+  opacity: .8;
+}
+
 .yourSeatsWrapper {
   display: flex;
   flex-direction: column;

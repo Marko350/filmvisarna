@@ -72,9 +72,8 @@ const Booking = (props) => {
             <h1>Boka biljetter</h1>
             <div className={style.infoTitle}>
               <p>{showing.movieId[0].title}</p>
-              <p>
-                {showing.date} {showing.time}
-              </p>
+              <p className={style.info}>{showing.date} {showing.time}</p>
+              {/* <p className={style.info}>{showing.movieId[0].price} kr</p> */}
             </div>
           </div>
           <hr className={style.hrGray} />

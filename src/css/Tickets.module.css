@@ -31,6 +31,7 @@
   height: 60px;
   font-size: 1rem;
   font-family: "Roboto Mono";
+  text-align: center;
 }
 
 .ticketType img {
@@ -40,6 +41,11 @@
 
 .tickets p {
   position: absolute;
+}
+
+.tickets p span {
+  font-size: 1rem;
+  opacity: .9;
 }
 
 .barnTicket p {
