@@ -2,6 +2,7 @@
     max-height: 250px;
     position: relative;
     display: flex;
+    cursor: pointer;
 }
 
 .gradientWrapper {
