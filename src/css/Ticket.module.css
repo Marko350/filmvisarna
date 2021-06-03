@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  margin: 0 auto .7rem auto;
+  margin: 0 auto 0 auto;
 }
 
 .ticketInfoWrapper {
@@ -262,7 +262,7 @@
     padding: 1rem 0;
   }
   .ticketTitle {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
   .ticketTime {
     font-size: 1.1rem;
@@ -276,5 +276,14 @@
   }
   .movieInfo {
     width: 52%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ticketTitle {
+    font-size: 1.1rem;
+  }
+  .movieInfo {
+    width: 56%;
   }
 }
