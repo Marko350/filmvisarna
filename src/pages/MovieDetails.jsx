@@ -1,20 +1,18 @@
-import styles from '../css/MovieDetails.module.css';
+import styles from "../css/MovieDetails.module.css";
 import MovieDetailsHeader from "../components/MovieDetailsHeader";
 import MovieDetailsInfo from "../components/MovieDetailsInfo";
-import Showings from '../components/Showings';
+import Showings from "../components/Showings";
 
 function MovieDetails(props) {
+  let movieId = props.match.params.id;
 
-    let movieId = props.match.params.id;
-
-    console.log(props);
-    return (
-        <div className="container">
-            <MovieDetailsHeader movieId={movieId} />
-            <MovieDetailsInfo movieId={movieId}/>
-            <Showings movieId={movieId} />
-        </div>
-    )
+  return (
+    <div className="container">
+      <MovieDetailsHeader movieId={movieId} />
+      <MovieDetailsInfo movieId={movieId} />
+      <Showings movieId={movieId} />
+    </div>
+  );
 }
 
 export default MovieDetails;
