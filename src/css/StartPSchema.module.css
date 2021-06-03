@@ -15,11 +15,6 @@
 .movieLink {
     font-size: 18px;
 }
-
-.movieLink:hover {
-    cursor: pointer;
-    font-size: 20px;
-}
 /* -END- FONT STYLES */
 
 .margin {
@@ -50,7 +45,10 @@
     }
 
     .movieLink:hover {
-        font-size: 27px;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
     }
     /* -END- FONT STYLES */
 
@@ -71,7 +69,7 @@
     }
 
     .movieLink:hover {
-        font-size: 32px;
+
     }
 
     .schema h2 {
