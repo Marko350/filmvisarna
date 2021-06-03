@@ -37,7 +37,7 @@ function MovieDetailsInfo({movieId}) {
                             <h3 className={styles.infoHeading}>Regissör: </h3> <p className={styles.infoP}>{movieById.director}</p>
                             <br></br>
                             <h3 className={styles.infoHeading}> Skådespelare: </h3>
-                            {movieById.actors.map(actor => <p key={actor} className={styles.infoP}>{actor}</p>)}
+                            {movieById.actors && movieById.actors.map(actor => <p key={actor} className={styles.infoP}>{actor}</p>)}
                             <br></br>
                         </div>
                         <p className={styles.movieInfoDesc} >{movieById.description}</p>
