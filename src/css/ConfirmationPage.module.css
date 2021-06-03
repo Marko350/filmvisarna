@@ -96,13 +96,23 @@
     position: relative;
 }
 
+.mainBtnConfirm{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 2.5rem auto;
+    width: 240px;
+}
+
 .confirmBtnName{
     position: absolute;
     z-index: 10;
     top: 53%;
     left: 50%;
     transform: translate(-50%, -60%);
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 
@@ -115,6 +125,7 @@
     }
     .textContainer{
         font-size: 1.2rem;
+        margin-bottom: 1.2rem;
     }
 
     .confirmPosterTest{
@@ -146,6 +157,14 @@
     .findOrderHistoryText{
         font-size: 1rem;
     }
+    .mainBtnConfirm{
+        margin: 3.5rem auto;
+        width: 270px;
+    }
+    
+    .confirmBtnName{
+        font-size: 1.2rem;
+    }
 }
   
 @media screen and (min-width: 1200px) {
@@ -161,6 +180,7 @@
     
     .textContainer{
         font-size: 1.7rem;
+        margin-bottom: 2rem;
     }
 
     .confirmPosterTest{

@@ -20,7 +20,7 @@ function ConfirmationPage() {
             <div className={styles.btnDiv}  onClick={() => {
                     history.push("/");
                 }}>
-                <img src={btn}className="mainBtn btnSmall" alt="Knapp för att komma tillbaka till startsidan."/>
+                <img src={btn}className={styles.mainBtnConfirm} alt="Knapp för att komma tillbaka till startsidan."/>
                 <h4 className={styles.confirmBtnName}>Tillbaka till startsidan</h4>
             </div>
         </div>
