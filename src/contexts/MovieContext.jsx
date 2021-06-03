@@ -32,7 +32,7 @@ const MovieProvider = (props) => {
   const getAllMovies = async () => {
     let movies = await fetch('/api/v1/movies');
     movies = await movies.json();
-    console.log(movies);
+
     setAllMovies(movies);
   }
 

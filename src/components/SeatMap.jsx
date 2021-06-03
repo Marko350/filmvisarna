@@ -12,6 +12,7 @@ const SeatMap = ({ showing }) => {
 
   useEffect(() => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child)
+    // eslint-disable-next-line
   }, [tickets]);
 
   const handleSeatClick = () => {
