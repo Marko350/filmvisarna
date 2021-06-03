@@ -51,6 +51,7 @@ function MovieDetailsHeader({ movieId }) {
                   width="100%"
                   height="100%"
                   src={movieById.trailer}
+                  title={movieById.title}
                 ></iframe>
               </div>
             ) : (
