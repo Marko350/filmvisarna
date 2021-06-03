@@ -15,6 +15,7 @@ const Booking = (props) => {
     useContext(MovieContext);
   const [showing, setShowing] = useState(null);
   const [numOfSeats, setNumOfSeats] = useState(0);
+  const [clickable, setClickable] = useState(false);
 
   const history = useHistory();
   const getShowing = async () => {
@@ -31,6 +32,11 @@ const Booking = (props) => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child);
     // eslint-disable-next-line   
   }, [tickets])
+
+  useEffect(() => {
+    chosenSeats.length > 0 ? setClickable(true) : setClickable(false);
+    // eslint-disable-next-line 
+  }, [chosenSeats])
 
   const handleBookingBtn = () => {
     // Creating ticket-object
@@ -66,9 +72,8 @@ const Booking = (props) => {
             <h1>Boka biljetter</h1>
             <div className={style.infoTitle}>
               <p>{showing.movieId[0].title}</p>
-              <p>
-                {showing.date} {showing.time}
-              </p>
+              <p className={style.info}>{showing.date} {showing.time}</p>
+              {/* <p className={style.info}>{showing.movieId[0].price} kr</p> */}
             </div>
           </div>
           <hr className={style.hrGray} />
@@ -137,7 +142,7 @@ const Booking = (props) => {
               </div>
             </div>
           </div>
-          <div onClick={handleBookingBtn} className={btnContainer}>
+          <div onClick={handleBookingBtn} className={`${btnContainer} ${clickable && style.btnClickable}`}>
             <div className="mainBtn btnMedium">
               <p className="btnLabel">Boka biljetter</p>
               <img src={Btn} alt="button test page"></img>

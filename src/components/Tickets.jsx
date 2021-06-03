@@ -19,6 +19,7 @@ const Tickets = ({ showing }) => {
 
   useEffect(() => {
     let price = showing.movieId[0].price
+    
     let totalPrice = (price * standardTicket) + ((price * .8) * pensionerTicket) + ((price * .7) * childTicket);
     setTickets({
       standard: standardTicket,
@@ -45,6 +46,7 @@ const Tickets = ({ showing }) => {
       {/* <h2>Välj antal biljetter</h2> */}
       <div className={tickets}>
         <div className={style.ticketType}>
+          {/* <p>Standard<br /><span>{price} kr</span></p> */}
           <p>Standard</p>
           <img src={Ticket} alt="Ticket" />
         </div>
