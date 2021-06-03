@@ -15,7 +15,7 @@ const movieSchema = new Schema({
     poster: String,
     trailer: String,
     price: Number,
-    coverImg: String
+    coverImg: String,
 });
 
 const Movie = mongoose.model("Movie", movieSchema);
