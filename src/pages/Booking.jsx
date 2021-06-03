@@ -15,6 +15,7 @@ const Booking = (props) => {
     useContext(MovieContext);
   const [showing, setShowing] = useState(null);
   const [numOfSeats, setNumOfSeats] = useState(0);
+  const [clickable, setClickable] = useState(false);
 
   const history = useHistory();
   const getShowing = async () => {
@@ -31,6 +32,11 @@ const Booking = (props) => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child);
     // eslint-disable-next-line   
   }, [tickets])
+
+  useEffect(() => {
+    chosenSeats.length > 0 ? setClickable(true) : setClickable(false);
+    // eslint-disable-next-line 
+  }, [chosenSeats])
 
   const handleBookingBtn = () => {
     // Creating ticket-object
@@ -137,7 +143,7 @@ const Booking = (props) => {
               </div>
             </div>
           </div>
-          <div onClick={handleBookingBtn} className={btnContainer}>
+          <div onClick={handleBookingBtn} className={`${btnContainer} ${clickable && style.btnClickable}`}>
             <div className="mainBtn btnMedium">
               <p className="btnLabel">Boka biljetter</p>
               <img src={Btn} alt="button test page"></img>
