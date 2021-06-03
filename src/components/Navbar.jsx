@@ -49,9 +49,9 @@ const Navbar = () => {
       <div className={links}>
         <NavLink to="/">Startsidan</NavLink> <span></span>
         <NavLink to="/movie-list">Alla Filmer</NavLink> <span></span>
-        <NavLink to="search">Sök Filmer</NavLink> <span></span>
-        <NavLink to="/about">Om oss</NavLink> <span></span>
-        <p style={{ cursor: "pointer" }}>Logga in/Registrera</p>
+        {/* <NavLink to="search">Sök Filmer</NavLink> <span></span> */}
+        <NavLink to="/about">Om oss</NavLink>
+        {/* <p style={{ cursor: "pointer" }}>Logga in/Registrera</p> */}
       </div>
       <img className={filmStrip} src={FilmStrip} alt="Filmstrip" />
       <img
@@ -65,19 +65,12 @@ const Navbar = () => {
           <NavLink onClick={toggleNavMenu} to="/">
             Startsidan
           </NavLink>{" "}
-          <span></span>
           <NavLink onClick={toggleNavMenu} to="/movie-list">
             Alla Filmer
           </NavLink>{" "}
-          <span></span>
-          <NavLink onClick={toggleNavMenu} to="search">
-            Sök Filmer
-          </NavLink>{" "}
-          <span></span>
           <NavLink onClick={toggleNavMenu} to="/about">
             Om oss
           </NavLink>{" "}
-          <span></span>
         </ul>
       )}
     </nav>
