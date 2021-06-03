@@ -108,7 +108,6 @@
 
 .confirmBtnName{
     position: absolute;
-    text-align: center;
     z-index: 10;
     top: 53%;
     left: 50%;
@@ -132,7 +131,8 @@
     .confirmPosterTest{
         height: 250px;
         grid-area: right; 
-        padding: 2.8rem 2.5rem 0rem 0rem;
+        margin: 0 auto;
+        padding: 2.5rem 0rem 0rem 0rem;
     }
 
     .confirmationBox{
@@ -169,10 +169,10 @@
   
 @media screen and (min-width: 1200px) {
     .gridMain{
-        padding: 2.3rem 0rem 0rem 4.5rem;
+        padding: 2.3rem 0rem 0rem 3.5rem;
     }
     .gridFooter{
-        padding: 2.3rem 2.5rem 0rem 4.5rem;
+        padding: 2.3rem 2.5rem 0rem 2.5rem;
     }
     .confirmHeading{
         width:95%;
@@ -184,8 +184,8 @@
     }
 
     .confirmPosterTest{
-        height: 330px;
-        padding: 2.6rem 4.5rem 0rem 0rem
+        height: 300px;
+        padding: 2.3rem 3.5rem 0rem 3.5rem;
     }
 
     .confirmationBox{
@@ -209,13 +209,5 @@
     
     .findOrderHistoryText{
         font-size: 1.3rem;
-    }
-    .mainBtnConfirm{
-        margin: 3.5rem auto;
-        width: 330px;
-    }
-    
-    .confirmBtnName{
-        font-size: 1.4rem;
     }
 }
