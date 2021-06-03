@@ -72,6 +72,11 @@
   font-size: 1.15rem;
 }
 
+.infoHeader p.info {
+  font-size: 1.1rem;
+  opacity: .8;
+}
+
 .yourSeatsWrapper {
   display: flex;
   flex-direction: column;
@@ -126,6 +131,14 @@
 .btn p {
   font-size: 1.2rem;
   position: absolute;
+}
+
+.btnContainer {
+  opacity: .6;
+}
+
+.btnClickable {
+  opacity: 1;
 }
 
 .ticketsWrapper {

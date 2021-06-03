@@ -41,11 +41,9 @@ const Ticket = ({ showing }) => {
       <div className={style.ticketInfoWrapper}>
         <div className={style.ticketInfo}>
           <div className={imageContainer}>
-            <img
-              className={style.poster}
+            <img className={style.poster}
               src={showing.movieId[0].poster}
-              alt="Poster"
-            />
+              alt="Poster"/>
           </div>
           <div className={style.verticalLine}></div>
           <div className={movieInfo}>
