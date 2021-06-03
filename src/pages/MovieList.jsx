@@ -6,10 +6,14 @@ import { MovieContext } from "../contexts/MovieContext";
 
 function MovieList() {
 
-  const { getMovieById, movieById } = useContext(MovieContext);
+  const { getMovieById, movieById, setMovieById } = useContext(MovieContext);
 
     useEffect(() => {
-        getMovieById("60b49a37b62f8359984329e7");
+        getMovieById("60b78cc1b1aaf62cf04fd65e");
+
+        return () => {
+          setMovieById(null);
+        }
         // eslint-disable-next-line
     }, []);
 
