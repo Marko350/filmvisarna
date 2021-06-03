@@ -27,7 +27,8 @@ const Booking = (props) => {
   }, []);
 
   useEffect(() => {
-    setNumOfSeats(tickets.standard + tickets.senior + tickets.child);    
+    setNumOfSeats(tickets.standard + tickets.senior + tickets.child);
+    // eslint-disable-next-line   
   }, [tickets])
 
   const handleBookingBtn = () => {
@@ -51,7 +52,7 @@ const Booking = (props) => {
       addSeats(showing._id, chosenSeats);
       history.push('/confirmation')
     } else {
-      console.log('Need to choose your seats');
+      return;
     }
   }
 
