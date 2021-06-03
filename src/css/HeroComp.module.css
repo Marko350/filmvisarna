@@ -1,43 +1,90 @@
 .heroWrapper {
   background: url("https://images.unsplash.com/photo-1513111168953-34fc252c9279?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1867&q=80");
   background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 40vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .heroWrapper h1 {
   font-size: 25px;
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
+/*--Btn Styles--*/
+.btnContainer {
+  margin-bottom: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: absolute;
+}
+
+.btn p {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  text-align: center;
+
+  cursor: pointer;
+  font-family: var(--special-font);
+  font-size: 22px;
+}
+
+.btnContainer img {
+  width: 150px;
+  cursor: pointer;
+}
+/*--END Btn Styles--*/
+
 @media only screen and (min-width: 768px) {
+  .heroWrapper {
+    min-height: 28vh;
+    padding-bottom: 15px;
+  }
+  
   .heroWrapper h1 {
-    font-size: 40px;
+    font-size: 35px;
     padding-left: 10rem;
     padding-right: 10rem;
   }
 
   .heroWrapper button {
-    font-size: 22px;
-    margin-bottom: 2rem;
+    font-size: 20px;
     margin-top: 1rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .heroWrapper {
+    min-height: 35vh;
+  }
+
   .heroWrapper h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .heroWrapper button {
+    font-size: 25px;
+  }
+
+   /*--Btn Styles--*/
+   .btn p {
     font-size: 28px;
-    margin-bottom: 2rem;
+   }
+   .btnContainer img {
+    width: 200px;
+  }
+  /*--END Btn Styles--*/
+  .heroWrapper {
+    min-height: 50vh;
   }
 }
 
