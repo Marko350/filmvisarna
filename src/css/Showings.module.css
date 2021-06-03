@@ -22,9 +22,11 @@
 }
 
 .schedule {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    row-gap: 15px;
+    margin-bottom: 20px;
 }
 
 .scheduleItem {
@@ -34,8 +36,6 @@
     padding: 3px 6px;
     align-items: center;
     box-shadow: var(--card-shadow);
-    width: 48%;
-    margin-bottom: 15px;
     cursor: pointer;
 }
 
@@ -49,9 +49,11 @@
 
 @media (min-width: 768px) {
 
-    .scheduleItem {
-        width: 49%;
+    .schedule {
+        grid-template-columns: 49% 49%;
+        column-gap: 2%;
     }
+    
 
     .time {
         margin-right: 15px;
@@ -66,14 +68,14 @@
 
 @media (min-width: 1200px) {
 
-    .scheduleItem {
-        width: 32%;
-        margin-bottom: 20px;
-    }
-
     .datepickerLine {
         margin: 35px 0 20px 0;
         padding-bottom: 5px;
+    }
+
+    .schedule {
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 2%;
     }
 
 }
