@@ -3,7 +3,6 @@ import { container } from "../css/Tickets.module.css";
 import Ticket from "../assets/ticket-type-bg.png";
 import {
   tickets,
-  barnTicket,
   counter,
   ticketNumber,
 } from "../css/Tickets.module.css";

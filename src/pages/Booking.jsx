@@ -28,7 +28,8 @@ const Booking = (props) => {
 
   useEffect(() => {
     setNumOfSeats(tickets.standard + tickets.senior + tickets.child);
-  }, [tickets]);
+    // eslint-disable-next-line   
+  }, [tickets])
 
   const handleBookingBtn = () => {
     // Creating ticket-object
@@ -48,7 +49,9 @@ const Booking = (props) => {
       localStorage.setItem("myItem", JSON.stringify(ticketObj));
       setBookedTicket(ticketObj);
       addSeats(showing._id, chosenSeats);
-      history.push("/confirmation");
+      history.push('/confirmation')
+    } else {
+      return;
     }
   };
 

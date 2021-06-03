@@ -11,7 +11,8 @@ const SeatMap = ({ showing }) => {
   const seatsPerRow = showing.screenId[0].seatsPerRow;
 
   useEffect(() => {
-    setNumOfSeats(tickets.standard + tickets.senior + tickets.child);
+    setNumOfSeats(tickets.standard + tickets.senior + tickets.child)
+    // eslint-disable-next-line
   }, [tickets]);
 
   const handleSeatClick = () => {

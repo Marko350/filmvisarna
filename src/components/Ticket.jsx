@@ -21,19 +21,19 @@ const Ticket = ({ showing }) => {
     );
   };
 
-  const renderTicketTypes = () => {
-    if (tickets.standard > 0 || tickets.senior > 0 || tickets.child > 0) {
-      return (
-        <div className={`${ticketTypes} ${style.bigScreen}`}>
-          {tickets.standard > 0 && <p>Standard: {tickets.standard}</p>}
-          {tickets.senior > 0 && <p>Pensionär: {tickets.senior}</p>}
-          {tickets.child > 0 && <p>Barn: {tickets.child}</p>}
-        </div>
-      );
-    } else {
-      return <div className={ticketTypes}>Inga biljetter valda</div>;
-    }
-  };
+  // const renderTicketTypes = () => {
+  //   if (tickets.standard > 0 || tickets.senior > 0 || tickets.child > 0) {
+  //     return (
+  //       <div className={`${ticketTypes} ${style.bigScreen}`}>
+  //         { tickets.standard > 0 && <p>Standard: {tickets.standard}</p> }
+  //         { tickets.senior > 0 && <p>Pensionär: {tickets.senior}</p> }
+  //         { tickets.child > 0 && <p>Barn: {tickets.child}</p> }  
+  //       </div>
+  //     )  
+  //   } else {
+  //     return <div className={ticketTypes}>Inga biljetter valda</div>
+  //   }
+  // }
 
   return (
     <div className={`${container} ${style.ticketWrapper}`}>
