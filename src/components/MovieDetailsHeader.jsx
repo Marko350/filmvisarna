@@ -2,7 +2,6 @@ import styles from "../css/MovieDetailsHeader.module.css";
 import { useContext, useEffect, useState } from "react";
 import { MovieContext } from "../contexts/MovieContext";
 import playbtn from "../assets/playicon.png";
-import headerImg from "../assets/casablanca.jpeg";
 
 function MovieDetailsHeader({ movieId }) {
   const { movieById, getMovieById } = useContext(MovieContext);
@@ -22,8 +21,8 @@ function MovieDetailsHeader({ movieId }) {
       <div className={styles.moviePosterContainer}>
         <div className={styles.gradientWrapper}>
           <img
-            src={headerImg}
-            alt="placeholder"
+            src={movieById.coverImg}
+            alt={movieById.title}
             className={styles.movieDetailsPlaceHolder}
           />
           <div className={styles.gradient}></div>

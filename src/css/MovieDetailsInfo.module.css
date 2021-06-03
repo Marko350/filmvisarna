@@ -1,75 +1,83 @@
-.infoHeading{
-    color: var(--secondary-header);
+.infoHeading {
+  color: var(--secondary-header);
 }
 
-.btnContainer{
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0rem 1rem 0rem;
-    position: relative;
-    margin-bottom: 1.5rem;
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem 1rem 0rem;
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .mainBtn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .infoBtnName {
-    position: absolute;
-    z-index: 10;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    font-size: 1.2rem;
+  position: absolute;
+  z-index: 10;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 1.2rem;
 }
 
 .infoHeadingP {
+  display: flex;
+}
+
+.infoHeading {
+  margin-right: 0.5rem;
+}
+
+.infoP {
+  padding-top: 3px;
+}
+
+.movieInfoDesc {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  .movieDetailsLaptop {
     display: flex;
-}
+    margin: 0 auto;
+  }
 
-.infoHeading{
-    margin-right: 0.5rem;
-}
+  .movieDetailsColumn {
+    margin-right: 5rem;
+  }
 
-.infoP{
-    padding-top: 3px;
+  .btnContainer {
+    margin-bottom: 0;
+  }
 }
-
-.movieInfoDesc{
-    font-size: 0.9rem;
-}
-
 
 @media screen and (min-width: 1200px) {
+  .btnContainer {
+    display: none;
+  }
 
-    .btnContainer{
-        display: none;
-    }
+  .movieDetailsLaptop {
+    padding-top: 3.5rem;
+  }
 
-    .movieDetailsLaptop{
-        display: flex;
-        padding-top: 3.5rem;
-        margin: 0 auto;
-    }
-    .movieDetailsColumn{
-        margin-right: 5rem;
-    }
+  .infoHeading {
+    font-size: 1.3rem;
+  }
 
-    .infoHeading{
-        font-size: 1.3rem;
-    }
+  .infoP {
+    font-size: 1.2rem;
+  }
 
-    .infoP{
-        font-size: 1.2rem;
-    }
-
-    .movieInfoDesc{
-        font-size: 1.1rem;
-        line-height: 1.7;
-        width: 60%;
-    }
+  .movieInfoDesc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    width: 60%;
+  }
 }
