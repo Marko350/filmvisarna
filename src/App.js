@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import ConfirmationPage from "./pages/ConfirmationPage";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Scroll from "./components/Scroll";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <MovieProvider>
           <Navbar />
+          <Scroll />
           <Route exact path="/booking/:showingId" component={Booking} />
           <Route exact path="/" component={StartPage} />
           <Route exact path="/movie-list" component={MovieList} />
