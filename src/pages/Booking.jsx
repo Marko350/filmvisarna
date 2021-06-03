@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Ticket from "../components/Ticket";
 import Tickets from "../components/Tickets";
 import Btn from "../assets/buttonImg/btn-medium.png";
-import { btn, btnContainer, bookingWrapper } from "../css/Booking.module.css";
+import { btnContainer, bookingWrapper } from "../css/Booking.module.css";
 import style from "../css/Booking.module.css";
 import SeatMap from "../components/SeatMap";
 import { MovieContext } from "../contexts/MovieContext";
@@ -24,6 +24,7 @@ const Booking = (props) => {
 
   useEffect(() => {
     getShowing();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

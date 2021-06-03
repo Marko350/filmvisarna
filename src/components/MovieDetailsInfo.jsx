@@ -1,7 +1,6 @@
 import styles from '../css/MovieDetailsInfo.module.css';
 import { useContext, useEffect } from "react";
 import { MovieContext } from "../contexts/MovieContext";
-import infoBtn from "../assets/buttonImg/btn-medium.png";
 
 function MovieDetailsInfo({movieId}) {
 
@@ -9,6 +8,7 @@ function MovieDetailsInfo({movieId}) {
 
     useEffect(() => {
         getMovieById(movieId);
+        // eslint-disable-next-line
     }, [])
 
     return (

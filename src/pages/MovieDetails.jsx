@@ -13,6 +13,7 @@ function MovieDetails(props) {
         return () => {
             setMovieById(null);
           }
+          // eslint-disable-next-line
     }, [])
 
     return (

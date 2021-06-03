@@ -11,10 +11,6 @@ const MovieProvider = (props) => {
   const [todaysPosters, setTodaysPoster] = useState(false);
   const [bookedTicket, setBookedTicket] = useState(null);
 
-  useEffect(() => {}, [todaysSchema]);
-
-  useEffect(() => {}, [todaysPosters]);
-
   // Booking-data
   const [chosenSeats, setChosenSeats] = useState([]);
   const [tickets, setTickets] = useState({
@@ -127,9 +123,9 @@ const MovieProvider = (props) => {
   function fixPosters(showings, poster) {
     let posterArr = [];
     showings.map((show) => {
-      show.movieId.map((movie) => {
+       return show.movieId.map((movie) => {
         //creating new array of obj with posters
-        posterArr.push({ poster: movie.poster, id: movie._id });
+        return posterArr.push({ poster: movie.poster, id: movie._id });
       });
     });
 
@@ -148,6 +144,7 @@ const MovieProvider = (props) => {
     // getShowingsByMovieAndDate('60acacd346075c18aeee45b8', '2021-06-13')
     getShowingsByCurrentDate();
     //addSeats('60b4ddeef09c565b4437b5fc', []) // Put strings in the array
+    // eslint-disable-next-line
   }, []);
 
   const values = {
@@ -157,7 +154,6 @@ const MovieProvider = (props) => {
     getMovieById,
     movieById,
     setMovieById,
-    getShowingsByMovieAndDate,
     movieShowings,
     todaysShowings,
     todaysSchema,

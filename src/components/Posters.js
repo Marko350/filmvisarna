@@ -1,7 +1,7 @@
 import styles from "../css/Posters.module.css";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MovieContext } from "../contexts/MovieContext";
-import { useHistory, UseHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Posters = () => {
     const {todaysPosters} = useContext(MovieContext);
