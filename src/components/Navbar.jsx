@@ -59,7 +59,7 @@ const Navbar = () => {
         src={FilmStripDesktop}
         alt="Filmstrip"
       />
-      <i className="fas fa-user"></i>
+      <i style={{ visibility: "hidden" }} className="fas fa-user"></i>
       {displayMenu && (
         <ul className={hamburgerLinks}>
           <NavLink onClick={toggleNavMenu} to="/">
